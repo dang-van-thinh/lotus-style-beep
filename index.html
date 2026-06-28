@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +14,7 @@
         extend: {
           fontFamily: {
             display: ['Poppins', 'sans-serif'],
-            body:    ['Inter', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
           },
         },
       },
@@ -21,11 +22,14 @@
   </script>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
   <!-- Custom styles -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body class="bg-white text-gray-900 antialiased">
 
   <!-- ════════════════════════════════════
@@ -42,33 +46,40 @@
 
       <!-- Desktop nav -->
       <nav class="hidden md:flex items-center gap-8">
-        <a href="portfolio.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Portfolio</a>
+        <a href="portfolio.html"
+          class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Portfolio</a>
         <div class="nav-has-dropdown">
-          <a href="services.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1">
+          <a href="services.html"
+            class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1">
             Services
-            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <path d="M2 4l4 4 4-4" />
+            </svg>
           </a>
           <div class="nav-dropdown-menu">
-            <a class="nav-dropdown-item" href="services.html#hdr"><span class="nav-dropdown-dot"></span>Photo Editing</a>
-            <a class="nav-dropdown-item" href="services.html#removal"><span class="nav-dropdown-dot"></span>Item Removal</a>
-            <a class="nav-dropdown-item" href="services.html#staging"><span class="nav-dropdown-dot"></span>Virtual Staging</a>
+            <a class="nav-dropdown-item" href="services.html#hdr"><span class="nav-dropdown-dot"></span>Photo
+              Editing</a>
+            <a class="nav-dropdown-item" href="services.html#removal"><span class="nav-dropdown-dot"></span>Item
+              Removal</a>
+            <a class="nav-dropdown-item" href="services.html#staging"><span class="nav-dropdown-dot"></span>Virtual
+              Staging</a>
             <a class="nav-dropdown-item" href="services.html#dusk"><span class="nav-dropdown-dot"></span>Day to Dusk</a>
-            <a class="nav-dropdown-item" href="services.html#renovation"><span class="nav-dropdown-dot"></span>Virtual Renovation</a>
+            <a class="nav-dropdown-item" href="services.html#renovation"><span class="nav-dropdown-dot"></span>Virtual
+              Renovation</a>
           </div>
         </div>
-        <a href="order.html"     class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-        <a href="contact.html"   class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
-        <a href="order.html"     class="btn-primary text-sm font-semibold px-5 py-2.5 rounded-xl">Place Order</a>
+        <a href="order.html"
+          class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+        <a href="contact.html"
+          class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+        <a href="order.html" class="btn-primary text-sm font-semibold px-5 py-2.5 rounded-xl">Place Order</a>
       </nav>
 
       <!-- Hamburger -->
-      <button
-        class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-        onclick="document.getElementById('mobile-nav').classList.toggle('open')"
-        aria-label="Toggle menu"
-      >
+      <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+        onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Toggle menu">
         <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <path d="M3 6h16M3 12h16M3 18h16"/>
+          <path d="M3 6h16M3 12h16M3 18h16" />
         </svg>
       </button>
     </div>
@@ -76,10 +87,10 @@
     <!-- Mobile nav -->
     <div id="mobile-nav" class="md:hidden border-t border-gray-100 bg-white px-6 py-5 flex flex-col gap-4">
       <a href="portfolio.html" class="text-sm font-medium text-gray-700">Portfolio</a>
-      <a href="services.html"  class="text-sm font-medium text-gray-700">Services</a>
-      <a href="order.html"     class="text-sm font-medium text-gray-700">Pricing</a>
-      <a href="contact.html"   class="text-sm font-medium text-gray-700">Contact</a>
-      <a href="order.html"     class="btn-primary text-sm font-semibold px-4 py-3 rounded-xl text-center">Place Order</a>
+      <a href="services.html" class="text-sm font-medium text-gray-700">Services</a>
+      <a href="order.html" class="text-sm font-medium text-gray-700">Pricing</a>
+      <a href="contact.html" class="text-sm font-medium text-gray-700">Contact</a>
+      <a href="order.html" class="btn-primary text-sm font-semibold px-4 py-3 rounded-xl text-center">Place Order</a>
     </div>
   </header>
 
@@ -103,13 +114,18 @@
             to Every Image
           </h1>
           <p class="hero-3 text-gray-500 text-[17px] leading-relaxed mb-9 max-w-md">
-            Precision lighting, flawless color correction, and expert retouching — delivered fast so your listings always look their best.
+            Precision lighting, flawless color correction, and expert retouching — delivered fast so your listings
+            always look their best.
           </p>
           <div class="hero-4 flex flex-wrap gap-4">
             <a href="order.html" class="btn-primary font-semibold px-7 py-3.5 rounded-xl text-sm">View Pricing</a>
-            <a href="#work" class="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 px-6 py-3.5 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors">
+            <a href="#work"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 px-6 py-3.5 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors">
               See Our Work
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 5l4 3-4 3"/></svg>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 8h10M9 5l4 3-4 3" />
+              </svg>
             </a>
           </div>
         </div>
@@ -119,24 +135,22 @@
           <!-- Oversized accent number — the signature element -->
           <div
             class="absolute -top-10 -right-6 font-display font-extrabold leading-none select-none pointer-events-none"
-            style="font-size:170px; color:var(--orange); opacity:0.07; z-index:0;"
-          >500</div>
+            style="font-size:170px; color:var(--orange); opacity:0.07; z-index:0;">500</div>
 
           <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=960&q=85"
-              alt="Professional real estate photo — modern home exterior"
-              class="w-full h-[400px] object-cover"
-            />
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=960&q=85"
+              alt="Professional real estate photo — modern home exterior" class="w-full h-[400px] object-cover" />
             <!-- Floating stat badge -->
             <div class="absolute bottom-4 left-4 bg-white rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3">
               <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background:#FFF3E0">
                 <svg width="20" height="20" viewBox="0 0 20 20">
-                  <path d="M10 1l2.4 4.9 5.4.8-3.9 3.8.9 5.3L10 13.5 5.2 15.8l.9-5.3L2.2 6.7l5.4-.8L10 1z" fill="#FF9500"/>
+                  <path d="M10 1l2.4 4.9 5.4.8-3.9 3.8.9 5.3L10 13.5 5.2 15.8l.9-5.3L2.2 6.7l5.4-.8L10 1z"
+                    fill="#FF9500" />
                 </svg>
               </div>
               <div>
-                <div class="font-display font-bold text-[17px] text-gray-900 leading-none">4.98 <span class="text-xs text-gray-400 font-normal">/ 5</span></div>
+                <div class="font-display font-bold text-[17px] text-gray-900 leading-none">4.98 <span
+                    class="text-xs text-gray-400 font-normal">/ 5</span></div>
                 <div class="text-xs text-gray-400 mt-0.5">Client Satisfaction</div>
               </div>
             </div>
@@ -155,19 +169,23 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="reveal text-center lg:text-left">
-          <div class="font-display font-extrabold text-[2.6rem] text-gray-900 mb-0.5">500<span style="color:var(--orange)">+</span></div>
+          <div class="font-display font-extrabold text-[2.6rem] text-gray-900 mb-0.5">500<span
+              style="color:var(--orange)">+</span></div>
           <div class="text-sm text-gray-400">Projects Completed</div>
         </div>
         <div class="reveal text-center lg:text-left" style="transition-delay:80ms">
-          <div class="font-display font-extrabold text-[2.6rem] text-gray-900 mb-0.5">120<span style="color:var(--orange)">+</span></div>
+          <div class="font-display font-extrabold text-[2.6rem] text-gray-900 mb-0.5">120<span
+              style="color:var(--orange)">+</span></div>
           <div class="text-sm text-gray-400">Happy Clients</div>
         </div>
         <div class="reveal text-center lg:text-left" style="transition-delay:160ms">
-          <div class="font-display font-extrabold text-[2.6rem] text-gray-900 mb-0.5">24<span style="color:var(--orange)">h</span></div>
+          <div class="font-display font-extrabold text-[2.6rem] text-gray-900 mb-0.5">24<span
+              style="color:var(--orange)">h</span></div>
           <div class="text-sm text-gray-400">Avg. Turnaround</div>
         </div>
         <div class="reveal text-center lg:text-left" style="transition-delay:240ms">
-          <div class="font-display font-extrabold text-[2.6rem] text-gray-900 mb-0.5">98<span style="color:var(--orange)">%</span></div>
+          <div class="font-display font-extrabold text-[2.6rem] text-gray-900 mb-0.5">98<span
+              style="color:var(--orange)">%</span></div>
           <div class="text-sm text-gray-400">On-Time Delivery</div>
         </div>
       </div>
@@ -187,9 +205,11 @@
             <span class="w-2 h-2 rounded-full shrink-0" style="background:var(--orange)"></span>
             <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">What We Do</span>
           </div>
-          <h2 class="font-display font-extrabold text-4xl text-gray-900">Popular <span style="color:var(--orange)">Services</span></h2>
+          <h2 class="font-display font-extrabold text-4xl text-gray-900">Popular <span
+              style="color:var(--orange)">Services</span></h2>
         </div>
-        <a href="services.html" class="reveal text-sm font-semibold transition-colors shrink-0" style="color:var(--orange)">Explore All Services →</a>
+        <a href="services.html" class="reveal text-sm font-semibold transition-colors shrink-0"
+          style="color:var(--orange)">Explore All Services →</a>
       </div>
 
       <!-- 3-col top row + 2-col bottom row -->
@@ -200,9 +220,14 @@
           <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/2/DSC05872.jpg" alt="Photo Editing" loading="lazy" />
           <div class="home-svc-overlay"></div>
           <div class="home-svc-body">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
-            <p class="font-display font-bold text-white text-lg leading-tight">HDR Blending &amp;<br>Color Correction</p>
-            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 7h8M8 4l3 3-3 3"/></svg></span>
+            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
+              style="background:var(--orange);color:#fff">Photo Editing</span>
+            <p class="font-display font-bold text-white text-lg leading-tight">HDR Blending &amp;<br>Color Correction
+            </p>
+            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round">
+                <path d="M3 7h8M8 4l3 3-3 3" />
+              </svg></span>
           </div>
         </a>
 
@@ -211,9 +236,13 @@
           <img src="images/Sample%20Lotus%20Foto/Item%20Removal/2.jpg" alt="Item Removal" loading="lazy" />
           <div class="home-svc-overlay"></div>
           <div class="home-svc-body">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Item Removal</span>
+            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
+              style="background:var(--orange);color:#fff">Item Removal</span>
             <p class="font-display font-bold text-white text-lg leading-tight">Object &amp; Clutter<br>Removal</p>
-            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 7h8M8 4l3 3-3 3"/></svg></span>
+            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round">
+                <path d="M3 7h8M8 4l3 3-3 3" />
+              </svg></span>
           </div>
         </a>
 
@@ -222,9 +251,13 @@
           <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/2after.jpg" alt="Virtual Staging" loading="lazy" />
           <div class="home-svc-overlay"></div>
           <div class="home-svc-body">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Virtual Staging</span>
+            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
+              style="background:var(--orange);color:#fff">Virtual Staging</span>
             <p class="font-display font-bold text-white text-lg leading-tight">Empty to<br>Furnished</p>
-            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 7h8M8 4l3 3-3 3"/></svg></span>
+            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round">
+                <path d="M3 7h8M8 4l3 3-3 3" />
+              </svg></span>
           </div>
         </a>
       </div>
@@ -236,20 +269,29 @@
           <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/11.jpg" alt="Day to Dusk" loading="lazy" />
           <div class="home-svc-overlay"></div>
           <div class="home-svc-body">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Day to Dusk</span>
+            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
+              style="background:var(--orange);color:#fff">Day to Dusk</span>
             <p class="font-display font-bold text-white text-lg leading-tight">Twilight Conversion<br>for Exteriors</p>
-            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 7h8M8 4l3 3-3 3"/></svg></span>
+            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round">
+                <path d="M3 7h8M8 4l3 3-3 3" />
+              </svg></span>
           </div>
         </a>
 
         <!-- Virtual Renovation -->
         <a href="services.html#renovation" class="home-svc-card reveal" style="height:240px;transition-delay:240ms">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/DSC09914_1.jpg" alt="Virtual Renovation" loading="lazy" />
+          <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/DSC09914_1.jpg" alt="Virtual Renovation"
+            loading="lazy" />
           <div class="home-svc-overlay"></div>
           <div class="home-svc-body">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Virtual Renovation</span>
+            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
+              style="background:var(--orange);color:#fff">Virtual Renovation</span>
             <p class="font-display font-bold text-white text-lg leading-tight">Property's<br>Full Potential</p>
-            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 7h8M8 4l3 3-3 3"/></svg></span>
+            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round">
+                <path d="M3 7h8M8 4l3 3-3 3" />
+              </svg></span>
           </div>
         </a>
 
@@ -277,63 +319,81 @@
 
         <!-- Step 1: Upload -->
         <div class="reveal">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(255,149,0,0.12)">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
+            style="background:rgba(255,149,0,0.12)">
             <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <path d="M6 22v2a2 2 0 002 2h16a2 2 0 002-2v-2" stroke="#FF9500" stroke-width="2" stroke-linecap="round"/>
-              <path d="M16 6v14M10 12l6-6 6 6" stroke="#FF9500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 22v2a2 2 0 002 2h16a2 2 0 002-2v-2" stroke="#FF9500" stroke-width="2"
+                stroke-linecap="round" />
+              <path d="M16 6v14M10 12l6-6 6 6" stroke="#FF9500" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </div>
           <div class="flex items-center gap-3 mb-3">
-            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0" style="background:var(--orange);color:#fff">1</span>
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0"
+              style="background:var(--orange);color:#fff">1</span>
             <h3 class="font-display font-semibold text-white text-lg">Send Your Photos</h3>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed pl-10">Upload via Google Drive, WeTransfer, Dropbox, or FTP — any way works.</p>
+          <p class="text-gray-400 text-sm leading-relaxed pl-10">Upload via Google Drive, WeTransfer, Dropbox, or FTP —
+            any way works.</p>
         </div>
 
         <!-- Step 2: Edit -->
         <div class="reveal" style="transition-delay:80ms">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(255,149,0,0.12)">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
+            style="background:rgba(255,149,0,0.12)">
             <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <rect x="4" y="4" width="24" height="24" rx="4" stroke="#FF9500" stroke-width="2"/>
-              <path d="M10 16h12M10 11h7M10 21h5" stroke="#FF9500" stroke-width="2" stroke-linecap="round"/>
-              <path d="M22 18l2 2-4 4h-2v-2l4-4z" stroke="#FF9500" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="4" y="4" width="24" height="24" rx="4" stroke="#FF9500" stroke-width="2" />
+              <path d="M10 16h12M10 11h7M10 21h5" stroke="#FF9500" stroke-width="2" stroke-linecap="round" />
+              <path d="M22 18l2 2-4 4h-2v-2l4-4z" stroke="#FF9500" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </div>
           <div class="flex items-center gap-3 mb-3">
-            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0" style="background:var(--orange);color:#fff">2</span>
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0"
+              style="background:var(--orange);color:#fff">2</span>
             <h3 class="font-display font-semibold text-white text-lg">We Edit</h3>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed pl-10">Our editors process each image with precision — HDR, color, sky, and more.</p>
+          <p class="text-gray-400 text-sm leading-relaxed pl-10">Our editors process each image with precision — HDR,
+            color, sky, and more.</p>
         </div>
 
         <!-- Step 3: Review -->
         <div class="reveal" style="transition-delay:160ms">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(255,149,0,0.12)">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
+            style="background:rgba(255,149,0,0.12)">
             <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <circle cx="16" cy="16" r="11" stroke="#FF9500" stroke-width="2"/>
-              <path d="M10 16l4 4 8-8" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="16" cy="16" r="11" stroke="#FF9500" stroke-width="2" />
+              <path d="M10 16l4 4 8-8" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </div>
           <div class="flex items-center gap-3 mb-3">
-            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0" style="background:var(--orange);color:#fff">3</span>
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0"
+              style="background:var(--orange);color:#fff">3</span>
             <h3 class="font-display font-semibold text-white text-lg">Review &amp; Revise</h3>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed pl-10">Check the results and request revisions — free until you're satisfied.</p>
+          <p class="text-gray-400 text-sm leading-relaxed pl-10">Check the results and request revisions — free until
+            you're satisfied.</p>
         </div>
 
         <!-- Step 4: Download -->
         <div class="reveal" style="transition-delay:240ms">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5" style="background:rgba(255,149,0,0.12)">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
+            style="background:rgba(255,149,0,0.12)">
             <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <path d="M6 22v2a2 2 0 002 2h16a2 2 0 002-2v-2" stroke="#FF9500" stroke-width="2" stroke-linecap="round"/>
-              <path d="M16 6v14M10 14l6 6 6-6" stroke="#FF9500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 22v2a2 2 0 002 2h16a2 2 0 002-2v-2" stroke="#FF9500" stroke-width="2"
+                stroke-linecap="round" />
+              <path d="M16 6v14M10 14l6 6 6-6" stroke="#FF9500" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </div>
           <div class="flex items-center gap-3 mb-3">
-            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0" style="background:var(--orange);color:#fff">4</span>
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0"
+              style="background:var(--orange);color:#fff">4</span>
             <h3 class="font-display font-semibold text-white text-lg">Download Results</h3>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed pl-10">Receive high-res files ready for MLS, listings, and marketing — within 24h.</p>
+          <p class="text-gray-400 text-sm leading-relaxed pl-10">Receive high-res files ready for MLS, listings, and
+            marketing — within 24h.</p>
         </div>
 
       </div>
@@ -354,7 +414,8 @@
             <span class="w-2 h-2 rounded-full shrink-0" style="background:var(--orange)"></span>
             <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Why Lotus</span>
           </div>
-          <h2 class="font-display font-extrabold text-4xl text-gray-900">Core <span style="color:var(--orange)">Features</span></h2>
+          <h2 class="font-display font-extrabold text-4xl text-gray-900">Core <span
+              style="color:var(--orange)">Features</span></h2>
         </div>
         <div class="flex items-center gap-4">
           <div class="cf-pill-bar">
@@ -370,32 +431,50 @@
       <div class="cf-slide active grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center" id="cf-0">
         <div>
           <!-- Faded big accent -->
-          <div class="font-display font-extrabold select-none pointer-events-none mb-2" style="font-size:100px;line-height:1;color:var(--orange);opacity:0.07;">01</div>
+          <div class="font-display font-extrabold select-none pointer-events-none mb-2"
+            style="font-size:100px;line-height:1;color:var(--orange);opacity:0.07;">01</div>
           <h3 class="font-display font-extrabold text-3xl md:text-[2.4rem] text-gray-900 leading-[1.1] mb-6 -mt-6">
             Professional Quality<br>at <span style="color:var(--orange)">Unbeatable Price</span>
           </h3>
           <div class="space-y-4 mb-8">
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:#FFF3E0">
-                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="#FF9500" fill-opacity=".15"/><path d="M5 9l3 3 5-5" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
+                style="background:#FFF3E0">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+                  <circle cx="9" cy="9" r="9" fill="#FF9500" fill-opacity=".15" />
+                  <path d="M5 9l3 3 5-5" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
               </div>
               <div>
                 <p class="font-semibold text-gray-900 text-sm">Starting at just $1.50 / image</p>
-                <p class="text-gray-400 text-sm mt-0.5">No subscription, no minimum order — pay only for what you send.</p>
+                <p class="text-gray-400 text-sm mt-0.5">No subscription, no minimum order — pay only for what you send.
+                </p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:#FFF3E0">
-                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="#FF9500" fill-opacity=".15"/><path d="M5 9l3 3 5-5" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
+                style="background:#FFF3E0">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+                  <circle cx="9" cy="9" r="9" fill="#FF9500" fill-opacity=".15" />
+                  <path d="M5 9l3 3 5-5" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
               </div>
               <div>
                 <p class="font-semibold text-gray-900 text-sm">24h delivery on standard orders</p>
-                <p class="text-gray-400 text-sm mt-0.5">Rush 12h turnaround available on the Advanced plan when you need it fast.</p>
+                <p class="text-gray-400 text-sm mt-0.5">Rush 12h turnaround available on the Advanced plan when you need
+                  it fast.</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:#FFF3E0">
-                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="#FF9500" fill-opacity=".15"/><path d="M5 9l3 3 5-5" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
+                style="background:#FFF3E0">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+                  <circle cx="9" cy="9" r="9" fill="#FF9500" fill-opacity=".15" />
+                  <path d="M5 9l3 3 5-5" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
               </div>
               <div>
                 <p class="font-semibold text-gray-900 text-sm">Free revision on every order</p>
@@ -403,18 +482,27 @@
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:#FFF3E0">
-                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="#FF9500" fill-opacity=".15"/><path d="M5 9l3 3 5-5" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
+                style="background:#FFF3E0">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+                  <circle cx="9" cy="9" r="9" fill="#FF9500" fill-opacity=".15" />
+                  <path d="M5 9l3 3 5-5" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
               </div>
               <div>
                 <p class="font-semibold text-gray-900 text-sm">No hidden fees</p>
-                <p class="text-gray-400 text-sm mt-0.5">Transparent pricing shown upfront. What you see is what you pay.</p>
+                <p class="text-gray-400 text-sm mt-0.5">Transparent pricing shown upfront. What you see is what you pay.
+                </p>
               </div>
             </div>
           </div>
-          <a href="order.html" class="btn-primary font-semibold px-7 py-3.5 rounded-xl text-sm inline-flex items-center gap-2">
+          <a href="order.html"
+            class="btn-primary font-semibold px-7 py-3.5 rounded-xl text-sm inline-flex items-center gap-2">
             See Pricing
-            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 7.5h9M9 4l3 3.5-3 3.5"/></svg>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <path d="M3 7.5h9M9 4l3 3.5-3 3.5" />
+            </svg>
           </a>
         </div>
 
@@ -422,29 +510,48 @@
         <div class="hidden md:flex justify-center items-center">
           <div class="relative w-full max-w-sm">
             <!-- Glow -->
-            <div class="absolute inset-0 rounded-3xl blur-2xl opacity-20" style="background:var(--orange);transform:scale(0.9)"></div>
-            <div class="relative rounded-3xl p-8 text-white" style="background:linear-gradient(135deg,#1A1A1A 0%,#2A2A2A 100%)">
+            <div class="absolute inset-0 rounded-3xl blur-2xl opacity-20"
+              style="background:var(--orange);transform:scale(0.9)"></div>
+            <div class="relative rounded-3xl p-8 text-white"
+              style="background:linear-gradient(135deg,#1A1A1A 0%,#2A2A2A 100%)">
               <div class="flex items-center gap-2 mb-6">
                 <img src="images/logo/logo.png" alt="LOTUS" class="h-6 w-auto brightness-0 invert opacity-60" />
               </div>
               <div class="mb-1 text-gray-400 text-xs font-bold uppercase tracking-widest">Standard Plan</div>
-              <div class="font-display font-extrabold text-white mb-1" style="font-size:3.2rem;line-height:1">$3<span class="text-2xl text-gray-400 font-bold">.00</span></div>
+              <div class="font-display font-extrabold text-white mb-1" style="font-size:3.2rem;line-height:1">$3<span
+                  class="text-2xl text-gray-400 font-bold">.00</span></div>
               <div class="text-gray-400 text-sm mb-6">per image · 24h delivery</div>
               <div class="space-y-3 border-t border-white/10 pt-6">
                 <div class="flex items-center gap-3 text-sm text-gray-300">
-                  <svg width="16" height="16" fill="none"><circle cx="8" cy="8" r="8" fill="#FF9500" fill-opacity=".2"/><path d="M5 8l2 2 4-4" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" fill="none">
+                    <circle cx="8" cy="8" r="8" fill="#FF9500" fill-opacity=".2" />
+                    <path d="M5 8l2 2 4-4" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                   HDR Blending &amp; Sky Replacement
                 </div>
                 <div class="flex items-center gap-3 text-sm text-gray-300">
-                  <svg width="16" height="16" fill="none"><circle cx="8" cy="8" r="8" fill="#FF9500" fill-opacity=".2"/><path d="M5 8l2 2 4-4" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" fill="none">
+                    <circle cx="8" cy="8" r="8" fill="#FF9500" fill-opacity=".2" />
+                    <path d="M5 8l2 2 4-4" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                   Object &amp; Clutter Removal
                 </div>
                 <div class="flex items-center gap-3 text-sm text-gray-300">
-                  <svg width="16" height="16" fill="none"><circle cx="8" cy="8" r="8" fill="#FF9500" fill-opacity=".2"/><path d="M5 8l2 2 4-4" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" fill="none">
+                    <circle cx="8" cy="8" r="8" fill="#FF9500" fill-opacity=".2" />
+                    <path d="M5 8l2 2 4-4" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                   Color Correction &amp; Enhancement
                 </div>
                 <div class="flex items-center gap-3 text-sm text-gray-300">
-                  <svg width="16" height="16" fill="none"><circle cx="8" cy="8" r="8" fill="#FF9500" fill-opacity=".2"/><path d="M5 8l2 2 4-4" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" fill="none">
+                    <circle cx="8" cy="8" r="8" fill="#FF9500" fill-opacity=".2" />
+                    <path d="M5 8l2 2 4-4" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                   Free Revision Included
                 </div>
               </div>
@@ -456,64 +563,95 @@
       <!-- Slide 1 — Increase Your Sales -->
       <div class="cf-slide grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center" id="cf-1">
         <div>
-          <div class="font-display font-extrabold select-none pointer-events-none mb-2" style="font-size:100px;line-height:1;color:var(--orange);opacity:0.07;">02</div>
+          <div class="font-display font-extrabold select-none pointer-events-none mb-2"
+            style="font-size:100px;line-height:1;color:var(--orange);opacity:0.07;">02</div>
           <h3 class="font-display font-extrabold text-3xl md:text-[2.4rem] text-gray-900 leading-[1.1] mb-6 -mt-6">
             Turn Better Photos<br>into <span style="color:var(--orange)">Faster Closings</span>
           </h3>
           <div class="space-y-4 mb-8">
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:#FFF3E0">
-                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><path d="M2 13L7 8l4 3 5-8" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
+                style="background:#FFF3E0">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+                  <path d="M2 13L7 8l4 3 5-8" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
               </div>
               <div>
                 <p class="font-semibold text-gray-900 text-sm">47% more listing views</p>
-                <p class="text-gray-400 text-sm mt-0.5">Properties with professional photos receive significantly more online attention.</p>
+                <p class="text-gray-400 text-sm mt-0.5">Properties with professional photos receive significantly more
+                  online attention.</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:#FFF3E0">
-                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7" stroke="#FF9500" stroke-width="1.8"/><path d="M9 6v3l2 2" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
+                style="background:#FFF3E0">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+                  <circle cx="9" cy="9" r="7" stroke="#FF9500" stroke-width="1.8" />
+                  <path d="M9 6v3l2 2" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
               </div>
               <div>
                 <p class="font-semibold text-gray-900 text-sm">Sell 32% faster on average</p>
-                <p class="text-gray-400 text-sm mt-0.5">Listings edited by professionals spend less time on the market.</p>
+                <p class="text-gray-400 text-sm mt-0.5">Listings edited by professionals spend less time on the market.
+                </p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:#FFF3E0">
-                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><path d="M9 2v14M5 6l4-4 4 4" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
+                style="background:#FFF3E0">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+                  <path d="M9 2v14M5 6l4-4 4 4" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
               </div>
               <div>
                 <p class="font-semibold text-gray-900 text-sm">Up to 11% higher sale price</p>
-                <p class="text-gray-400 text-sm mt-0.5">Better visual presentation commands higher offers from buyers.</p>
+                <p class="text-gray-400 text-sm mt-0.5">Better visual presentation commands higher offers from buyers.
+                </p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:#FFF3E0">
-                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><circle cx="9" cy="7" r="3" stroke="#FF9500" stroke-width="1.8"/><path d="M3 17c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
+                style="background:#FFF3E0">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+                  <circle cx="9" cy="7" r="3" stroke="#FF9500" stroke-width="1.8" />
+                  <path d="M3 17c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#FF9500" stroke-width="1.8"
+                    stroke-linecap="round" />
+                </svg>
               </div>
               <div>
                 <p class="font-semibold text-gray-900 text-sm">Trusted by 120+ agents</p>
-                <p class="text-gray-400 text-sm mt-0.5">Real estate professionals across the US rely on Lotus every day.</p>
+                <p class="text-gray-400 text-sm mt-0.5">Real estate professionals across the US rely on Lotus every day.
+                </p>
               </div>
             </div>
           </div>
-          <a href="portfolio.html" class="btn-primary font-semibold px-7 py-3.5 rounded-xl text-sm inline-flex items-center gap-2">
+          <a href="portfolio.html"
+            class="btn-primary font-semibold px-7 py-3.5 rounded-xl text-sm inline-flex items-center gap-2">
             View Our Work
-            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 7.5h9M9 4l3 3.5-3 3.5"/></svg>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <path d="M3 7.5h9M9 4l3 3.5-3 3.5" />
+            </svg>
           </a>
         </div>
 
         <!-- Right visual — stats graphic -->
         <div class="hidden md:block">
           <div class="relative rounded-3xl overflow-hidden" style="height:420px">
-            <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/11.jpg" alt="Result example" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(20,20,20,0.7) 0%,rgba(20,20,20,0.1) 55%,transparent 100%)"></div>
+            <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/11.jpg" alt="Result example"
+              class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0"
+              style="background:linear-gradient(to top,rgba(20,20,20,0.7) 0%,rgba(20,20,20,0.1) 55%,transparent 100%)">
+            </div>
             <!-- Floating stat cards -->
             <div class="absolute bottom-6 left-6 right-6 flex flex-col gap-3">
               <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 flex items-center gap-3">
                 <div class="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style="background:#FFF3E0">
-                  <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M2 10L6 6l3 3 5-7" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
+                    <path d="M2 10L6 6l3 3 5-7" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </div>
                 <div>
                   <div class="font-display font-bold text-gray-900 text-sm">+47% Views</div>
@@ -522,7 +660,10 @@
               </div>
               <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 flex items-center gap-3">
                 <div class="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style="background:#FFF3E0">
-                  <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" stroke="#FF9500" stroke-width="1.6"/><path d="M8 5v3l2 2" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round"/></svg>
+                  <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="6" stroke="#FF9500" stroke-width="1.6" />
+                    <path d="M8 5v3l2 2" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round" />
+                  </svg>
                 </div>
                 <div>
                   <div class="font-display font-bold text-gray-900 text-sm">32% Faster Sale</div>
@@ -536,14 +677,22 @@
 
       <!-- Slider controls -->
       <div class="flex items-center gap-5 mt-10">
-        <button onclick="cfPrev()" class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center hover:border-orange-400 transition-colors group">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" class="group-hover:stroke-orange-500 transition-colors"><path d="M10 4L6 8l4 4"/></svg>
+        <button onclick="cfPrev()"
+          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center hover:border-orange-400 transition-colors group">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            class="group-hover:stroke-orange-500 transition-colors">
+            <path d="M10 4L6 8l4 4" />
+          </svg>
         </button>
         <div class="cf-progress-track flex-1 max-w-[140px]">
           <div class="cf-progress-bar" id="cf-prog"></div>
         </div>
-        <button onclick="cfNext()" class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center hover:border-orange-400 transition-colors group">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" class="group-hover:stroke-orange-500 transition-colors"><path d="M6 4l4 4-4 4"/></svg>
+        <button onclick="cfNext()"
+          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center hover:border-orange-400 transition-colors group">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            class="group-hover:stroke-orange-500 transition-colors">
+            <path d="M6 4l4 4-4 4" />
+          </svg>
         </button>
         <span class="text-xs text-gray-400 font-semibold tabular-nums" id="cf-counter">1 / 2</span>
       </div>
@@ -564,10 +713,12 @@
             <span class="w-2 h-2 rounded-full shrink-0" style="background:var(--orange)"></span>
             <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Our Work</span>
           </div>
-          <h2 class="font-display font-extrabold text-4xl text-gray-900">What We've <span style="color:var(--orange)">Done</span></h2>
+          <h2 class="font-display font-extrabold text-4xl text-gray-900">What We've <span
+              style="color:var(--orange)">Done</span></h2>
           <p class="text-gray-400 mt-2 text-sm">Real photos. Real results. Every image edited by our team.</p>
         </div>
-        <a href="portfolio.html" class="reveal shrink-0 text-sm font-semibold transition-colors" style="color:var(--orange)">View Full Portfolio →</a>
+        <a href="portfolio.html" class="reveal shrink-0 text-sm font-semibold transition-colors"
+          style="color:var(--orange)">View Full Portfolio →</a>
       </div>
 
       <!-- Editorial grid: wide left + right stack -->
@@ -575,10 +726,12 @@
 
         <!-- Left: tall hero card -->
         <a href="portfolio.html" class="work-card reveal" style="height:480px">
-          <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/2/DSC05858.jpg" alt="HDR Blending result" loading="lazy" />
+          <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/2/DSC05884.jpg" alt="HDR Blending result"
+            loading="lazy" />
           <div class="work-overlay"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
+              style="background:var(--orange);color:#fff">Photo Editing</span>
             <p class="text-white font-display font-bold text-xl leading-tight">HDR Blending &amp;<br>Sky Replacement</p>
           </div>
         </a>
@@ -589,15 +742,18 @@
             <img src="images/Sample%20Lotus%20Foto/Item%20Removal/4.jpg" alt="Item Removal result" loading="lazy" />
             <div class="work-overlay"></div>
             <div class="absolute bottom-0 left-0 right-0 p-5">
-              <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5" style="background:var(--orange);color:#fff">Item Removal</span>
+              <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
+                style="background:var(--orange);color:#fff">Item Removal</span>
               <p class="text-white font-display font-bold text-lg leading-tight">Object &amp; Clutter Removal</p>
             </div>
           </a>
           <a href="portfolio.html" class="work-card reveal" style="height:228px;transition-delay:140ms">
-            <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/1after.jpg" alt="Virtual Staging result" loading="lazy" />
+            <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/1after.jpg" alt="Virtual Staging result"
+              loading="lazy" />
             <div class="work-overlay"></div>
             <div class="absolute bottom-0 left-0 right-0 p-5">
-              <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5" style="background:var(--orange);color:#fff">Virtual Staging</span>
+              <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
+                style="background:var(--orange);color:#fff">Virtual Staging</span>
               <p class="text-white font-display font-bold text-lg leading-tight">Empty to Furnished</p>
             </div>
           </a>
@@ -611,23 +767,28 @@
           <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/11.jpg" alt="Day to Dusk result" loading="lazy" />
           <div class="work-overlay"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5" style="background:var(--orange);color:#fff">Day to Dusk</span>
+            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
+              style="background:var(--orange);color:#fff">Day to Dusk</span>
             <p class="text-white font-display font-bold text-base leading-tight">Twilight Conversion</p>
           </div>
         </a>
         <a href="portfolio.html" class="work-card reveal" style="height:220px;transition-delay:130ms">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/DSC09914_1.jpg" alt="Virtual Renovation result" loading="lazy" />
+          <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/DSC09914_1.jpg" alt="Virtual Renovation result"
+            loading="lazy" />
           <div class="work-overlay"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5" style="background:var(--orange);color:#fff">Virtual Renovation</span>
+            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
+              style="background:var(--orange);color:#fff">Virtual Renovation</span>
             <p class="text-white font-display font-bold text-base leading-tight">Full Renovation Preview</p>
           </div>
         </a>
         <a href="portfolio.html" class="work-card reveal" style="height:220px;transition-delay:200ms">
-          <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/1/ET6A5819.jpg" alt="Exterior editing result" loading="lazy" />
+          <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/1/ET6A5819.jpg" alt="Exterior editing result"
+            loading="lazy" />
           <div class="work-overlay"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5" style="background:var(--orange);color:#fff">Exterior Edit</span>
+            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
+              style="background:var(--orange);color:#fff">Exterior Edit</span>
             <p class="text-white font-display font-bold text-base leading-tight">Exterior Enhancement</p>
           </div>
         </a>
@@ -651,14 +812,19 @@
         Get Your Work <span style="color:var(--orange)">Done Today</span>
       </h2>
       <p class="text-gray-400 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-        Upload your photos and receive professionally edited images within 24 hours. No long-term commitment, no minimum order.
+        Upload your photos and receive professionally edited images within 24 hours. No long-term commitment, no minimum
+        order.
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
-        <a href="order.html" class="btn-primary font-semibold px-9 py-4 rounded-xl text-sm inline-flex items-center gap-2">
+        <a href="order.html"
+          class="btn-primary font-semibold px-9 py-4 rounded-xl text-sm inline-flex items-center gap-2">
           Place an Order
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 7.5h9M9 4l3 3.5-3 3.5"/></svg>
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <path d="M3 7.5h9M9 4l3 3.5-3 3.5" />
+          </svg>
         </a>
-        <a href="contact.html" class="font-semibold px-9 py-4 rounded-xl text-sm border-2 border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white transition-colors">
+        <a href="contact.html"
+          class="font-semibold px-9 py-4 rounded-xl text-sm border-2 border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white transition-colors">
           Contact Us
         </a>
       </div>
@@ -678,7 +844,8 @@
           <div class="flex items-center gap-2.5 mb-4">
             <img src="images/logo/logo.png" alt="LOTUS" class="h-8 w-auto brightness-0 invert" />
           </div>
-          <p class="text-sm leading-relaxed max-w-xs">Professional real estate photo editing that delivers the perfect balance of lighting, color, and precision to every image.</p>
+          <p class="text-sm leading-relaxed max-w-xs">Professional real estate photo editing that delivers the perfect
+            balance of lighting, color, and precision to every image.</p>
         </div>
 
         <!-- Links -->
@@ -698,13 +865,10 @@
           <p class="text-sm mb-1">hello@lotus.com</p>
           <p class="text-sm mb-5">24/7 Support</p>
           <form id="footer-form" onsubmit="handleFooterForm(event)" class="flex gap-2">
-            <input
-              type="email"
-              placeholder="Your email"
-              required
-              class="flex-1 min-w-0 text-sm px-3 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400 transition-colors"
-            />
-            <button type="submit" id="footer-btn" class="btn-primary text-sm font-semibold px-4 py-2.5 rounded-lg shrink-0">Send</button>
+            <input type="email" placeholder="Your email" required
+              class="flex-1 min-w-0 text-sm px-3 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400 transition-colors" />
+            <button type="submit" id="footer-btn"
+              class="btn-primary text-sm font-semibold px-4 py-2.5 rounded-lg shrink-0">Send</button>
           </form>
         </div>
 
@@ -725,64 +889,65 @@
 
   <!-- ── Core Features Slider ── -->
   <script>
-  (function () {
-    var current = 0;
-    var total = 2;
-    var DURATION = 5500;
-    var timer, progTimer, progStart, progEl;
+    (function () {
+      var current = 0;
+      var total = 2;
+      var DURATION = 5500;
+      var timer, progTimer, progStart, progEl;
 
-    function go(idx) {
-      // Update slides
-      document.querySelectorAll('.cf-slide').forEach(function (s, i) {
-        s.classList.toggle('active', i === idx);
+      function go(idx) {
+        // Update slides
+        document.querySelectorAll('.cf-slide').forEach(function (s, i) {
+          s.classList.toggle('active', i === idx);
+        });
+        // Update pills
+        document.querySelectorAll('.cf-pill').forEach(function (p, i) {
+          p.classList.toggle('active', i === idx);
+        });
+        // Update counter
+        var counter = document.getElementById('cf-counter');
+        if (counter) counter.textContent = (idx + 1) + ' / ' + total;
+        current = idx;
+        // Restart progress bar
+        startProgress();
+      }
+
+      function startProgress() {
+        if (progTimer) cancelAnimationFrame(progTimer);
+        progEl = progEl || document.getElementById('cf-prog');
+        if (!progEl) return;
+        progEl.style.transition = 'none';
+        progEl.style.width = '0%';
+        progStart = Date.now();
+        (function tick() {
+          var pct = Math.min(100, ((Date.now() - progStart) / DURATION) * 100);
+          progEl.style.width = pct + '%';
+          if (pct < 100) {
+            progTimer = requestAnimationFrame(tick);
+          }
+        })();
+      }
+
+      function autoPlay() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(function () {
+          go((current + 1) % total);
+        }, DURATION);
+      }
+
+      // Expose globally for onclick handlers
+      window.cfGo = function (idx) { go(idx); autoPlay(); };
+      window.cfNext = function () { go((current + 1) % total); autoPlay(); };
+      window.cfPrev = function () { go((current - 1 + total) % total); autoPlay(); };
+
+      // Boot on DOM ready
+      document.addEventListener('DOMContentLoaded', function () {
+        go(0);
+        autoPlay();
       });
-      // Update pills
-      document.querySelectorAll('.cf-pill').forEach(function (p, i) {
-        p.classList.toggle('active', i === idx);
-      });
-      // Update counter
-      var counter = document.getElementById('cf-counter');
-      if (counter) counter.textContent = (idx + 1) + ' / ' + total;
-      current = idx;
-      // Restart progress bar
-      startProgress();
-    }
-
-    function startProgress() {
-      if (progTimer) cancelAnimationFrame(progTimer);
-      progEl = progEl || document.getElementById('cf-prog');
-      if (!progEl) return;
-      progEl.style.transition = 'none';
-      progEl.style.width = '0%';
-      progStart = Date.now();
-      (function tick() {
-        var pct = Math.min(100, ((Date.now() - progStart) / DURATION) * 100);
-        progEl.style.width = pct + '%';
-        if (pct < 100) {
-          progTimer = requestAnimationFrame(tick);
-        }
-      })();
-    }
-
-    function autoPlay() {
-      if (timer) clearInterval(timer);
-      timer = setInterval(function () {
-        go((current + 1) % total);
-      }, DURATION);
-    }
-
-    // Expose globally for onclick handlers
-    window.cfGo = function (idx) { go(idx); autoPlay(); };
-    window.cfNext = function () { go((current + 1) % total); autoPlay(); };
-    window.cfPrev = function () { go((current - 1 + total) % total); autoPlay(); };
-
-    // Boot on DOM ready
-    document.addEventListener('DOMContentLoaded', function () {
-      go(0);
-      autoPlay();
-    });
-  })();
+    })();
   </script>
 
 </body>
+
 </html>

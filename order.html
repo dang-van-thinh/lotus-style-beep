@@ -373,14 +373,44 @@
       e.preventDefault();
       const btn     = document.getElementById('order-btn');
       const success = document.getElementById('order-success');
+
       btn.textContent   = 'Submitting…';
       btn.disabled      = true;
       btn.style.opacity = '0.7';
-      setTimeout(() => {
+
+      const count = parseInt(document.getElementById('o-count').value) || 0;
+      const data = {
+        name:            document.getElementById('o-name').value,
+        email:           document.getElementById('o-email').value,
+        phone:           document.getElementById('o-phone').value || 'N/A',
+        plan:            selectedPlan.name + ' ($' + selectedPlan.price.toFixed(2) + '/img)',
+        delivery_time:   selectedPlan.delivery,
+        image_count:     count || 'N/A',
+        service:         document.getElementById('o-service').value,
+        delivery_method: document.getElementById('o-delivery').value,
+        notes:           document.getElementById('o-notes').value || 'N/A',
+        total_estimate:  count > 0 ? '$' + (count * selectedPlan.price).toFixed(2) : 'N/A',
+        _subject:        'New Order from ' + document.getElementById('o-name').value,
+        _captcha:        'false'
+      };
+
+      fetch('https://formsubmit.co/ajax/a8b080cfcdf58230f426c023651f9acc', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(() => {
         btn.style.display = 'none';
         success.classList.remove('hidden');
         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 900);
+      })
+      .catch(() => {
+        btn.textContent   = 'Submit Order';
+        btn.disabled      = false;
+        btn.style.opacity = '1';
+        alert('Something went wrong. Please email us directly at contact.lotusfoto@gmail.com');
+      });
     }
   </script>
 </body>
