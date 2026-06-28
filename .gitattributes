@@ -1,0 +1,22 @@
+# Normalize all text files to LF in the repo (Linux servers)
+* text=auto eol=lf
+
+# Explicitly LF for web files
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+.htaccess text eol=lf
+_redirects text eol=lf
+
+# Binary — no conversion
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary

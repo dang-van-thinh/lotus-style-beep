@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/logo/logo.png" />
+  <title>Contact — LOTUS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { display: ['Poppins','sans-serif'], body: ['Inter','sans-serif'] } } }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- HEADER -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 shrink-0">
+        <img src="images/logo/logo.png" alt="LOTUS" class="h-9 w-auto" />
+        <span class="font-display font-bold text-[18px] tracking-wide text-gray-900">LOTUS</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="portfolio.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Portfolio</a>
+        <div class="nav-has-dropdown">
+          <a href="services.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1">
+            Services
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a class="nav-dropdown-item" href="services.html#hdr"><span class="nav-dropdown-dot"></span>Photo Editing</a>
+            <a class="nav-dropdown-item" href="services.html#removal"><span class="nav-dropdown-dot"></span>Item Removal</a>
+            <a class="nav-dropdown-item" href="services.html#staging"><span class="nav-dropdown-dot"></span>Virtual Staging</a>
+            <a class="nav-dropdown-item" href="services.html#dusk"><span class="nav-dropdown-dot"></span>Day to Dusk</a>
+            <a class="nav-dropdown-item" href="services.html#renovation"><span class="nav-dropdown-dot"></span>Virtual Renovation</a>
+          </div>
+        </div>
+        <a href="index.html#pricing" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+        <a href="contact.html"   class="nav-link is-active text-sm font-medium transition-colors" style="color:var(--orange)">Contact</a>
+        <a href="order.html"     class="btn-primary text-sm font-semibold px-5 py-2.5 rounded-xl">Place Order</a>
+      </nav>
+      <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Toggle menu">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h16M3 12h16M3 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-nav" class="md:hidden border-t border-gray-100 bg-white px-6 py-5 flex flex-col gap-4">
+      <a href="portfolio.html" class="text-sm font-medium text-gray-700">Portfolio</a>
+      <a href="services.html"  class="text-sm font-medium text-gray-700">Services</a>
+      <a href="index.html#pricing" class="text-sm font-medium text-gray-700">Pricing</a>
+      <a href="contact.html"   class="text-sm font-semibold" style="color:var(--orange)">Contact</a>
+      <a href="order.html"     class="btn-primary text-sm font-semibold px-4 py-3 rounded-xl text-center">Place Order</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero pt-28 pb-12 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="w-2 h-2 rounded-full shrink-0" style="background:var(--orange)"></span>
+        <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Reach Out</span>
+      </div>
+      <h1 class="font-display font-extrabold text-4xl md:text-5xl text-gray-900 mb-3">Get In Touch</h1>
+      <p class="text-gray-500 max-w-xl">Have a question, a large batch, or a custom request? We typically reply within 2 business hours.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-5 gap-14">
+
+        <!-- Left: Info -->
+        <div class="lg:col-span-2 space-y-8 reveal">
+
+          <!-- Response time -->
+          <div class="p-6 rounded-2xl border border-gray-100" style="background:#FAFAFA">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background:#FFF3E0">
+              <svg width="22" height="22" fill="none" viewBox="0 0 22 22">
+                <circle cx="11" cy="11" r="9" stroke="#FF9500" stroke-width="1.8"/>
+                <path d="M11 6v5l3 3" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-gray-900 mb-1">Fast Response</h3>
+            <p class="text-sm text-gray-500">We reply to all inquiries within 2 business hours, Mon – Sat 8am–8pm EST.</p>
+          </div>
+
+          <!-- Email -->
+          <div class="p-6 rounded-2xl border border-gray-100" style="background:#FAFAFA">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background:#FFF3E0">
+              <svg width="22" height="22" fill="none" viewBox="0 0 22 22">
+                <rect x="2" y="5" width="18" height="13" rx="2" stroke="#FF9500" stroke-width="1.8"/>
+                <path d="M2 8l9 6 9-6" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-gray-900 mb-1">Email Us</h3>
+            <a href="mailto:hello@lotus.com" class="text-sm font-medium transition-colors hover:underline" style="color:var(--orange)">hello@lotus.com</a>
+          </div>
+
+          <!-- Support -->
+          <div class="p-6 rounded-2xl border border-gray-100" style="background:#FAFAFA">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background:#FFF3E0">
+              <svg width="22" height="22" fill="none" viewBox="0 0 22 22">
+                <path d="M4 4h14v10H4z" stroke="#FF9500" stroke-width="1.8" rx="1"/>
+                <path d="M8 18h6M11 14v4" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-gray-900 mb-1">24/7 Support</h3>
+            <p class="text-sm text-gray-500">Critical orders and rush requests handled around the clock by our dedicated team.</p>
+          </div>
+
+          <!-- Ready to order -->
+          <div class="p-6 rounded-2xl" style="background:var(--orange)">
+            <h3 class="font-display font-bold text-white text-lg mb-2">Ready to order?</h3>
+            <p class="text-orange-100 text-sm mb-4">Skip the form and go straight to placing your order.</p>
+            <a href="order.html" class="inline-block bg-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:scale-105" style="color:var(--orange)">Place an Order →</a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="lg:col-span-3 reveal" style="transition-delay:100ms">
+          <form id="contact-form" onsubmit="handleContactForm(event)" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label" for="c-name">Full Name <span style="color:var(--orange)">*</span></label>
+                <input id="c-name" type="text" class="form-input" placeholder="John Smith" required />
+              </div>
+              <div>
+                <label class="form-label" for="c-email">Email Address <span style="color:var(--orange)">*</span></label>
+                <input id="c-email" type="email" class="form-input" placeholder="john@agency.com" required />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label" for="c-phone">Phone (optional)</label>
+                <input id="c-phone" type="tel" class="form-input" placeholder="+1 (555) 000-0000" />
+              </div>
+              <div>
+                <label class="form-label" for="c-service">Service Interested In <span style="color:var(--orange)">*</span></label>
+                <select id="c-service" class="form-input" required>
+                  <option value="" disabled selected>Select a service…</option>
+                  <option>Photo Editing / HDR Blending</option>
+                  <option>Item Removal</option>
+                  <option>Virtual Staging</option>
+                  <option>Day to Dusk</option>
+                  <option>Virtual Renovation</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label" for="c-images">Estimated Number of Images</label>
+              <input id="c-images" type="number" min="1" class="form-input" placeholder="e.g. 25" />
+            </div>
+
+            <div>
+              <label class="form-label" for="c-msg">Message <span style="color:var(--orange)">*</span></label>
+              <textarea id="c-msg" class="form-input" rows="5" placeholder="Tell us about your project, timeline, or any specific requirements…" required></textarea>
+            </div>
+
+            <!-- Success banner (hidden) -->
+            <div id="contact-success" class="hidden rounded-xl px-5 py-4 text-sm font-medium" style="background:#F0FDF4;color:#16a34a;border:1.5px solid #bbf7d0">
+              ✓ Message sent! We'll get back to you within 2 business hours.
+            </div>
+
+            <button type="submit" id="contact-btn" class="btn-primary w-full font-semibold py-4 rounded-xl text-sm">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ STRIP -->
+  <section class="py-20 px-6" style="background:#F5F5F5">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <h2 class="font-display font-extrabold text-3xl text-gray-900 mb-2">Common Questions</h2>
+        <p class="text-gray-500">Quick answers before you reach out.</p>
+      </div>
+      <div class="space-y-4">
+        <details class="bg-white rounded-2xl px-6 py-5 reveal group">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 text-sm list-none">
+            How do I send my photos?
+            <svg class="shrink-0 transition-transform group-open:rotate-180" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-gray-500 text-sm mt-3 leading-relaxed">You can share files via Google Drive, Dropbox, WeTransfer, or FTP. We'll provide a dedicated folder link once your order is confirmed.</p>
+        </details>
+        <details class="bg-white rounded-2xl px-6 py-5 reveal group">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 text-sm list-none">
+            What's the typical turnaround time?
+            <svg class="shrink-0 transition-transform group-open:rotate-180" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-gray-500 text-sm mt-3 leading-relaxed">Standard orders ship in 24 hours. Rush 12-hour delivery is available on the Advanced plan. We'll always confirm your deadline before starting.</p>
+        </details>
+        <details class="bg-white rounded-2xl px-6 py-5 reveal group">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 text-sm list-none">
+            How many revisions are included?
+            <svg class="shrink-0 transition-transform group-open:rotate-180" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-gray-500 text-sm mt-3 leading-relaxed">Basic includes 1 round of revisions. Standard includes 2. Advanced includes unlimited revisions until you're 100% satisfied.</p>
+        </details>
+        <details class="bg-white rounded-2xl px-6 py-5 reveal group">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 text-sm list-none">
+            What file formats do you deliver?
+            <svg class="shrink-0 transition-transform group-open:rotate-180" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-gray-500 text-sm mt-3 leading-relaxed">We deliver high-resolution JPEG (MLS-ready) by default. TIFF or PSD source files can be arranged on Enterprise plans.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2.5 mb-4">
+            <img src="images/logo/logo.png" alt="LOTUS" class="h-8 w-auto brightness-0 invert" />
+          </div>
+          <p class="text-sm leading-relaxed max-w-xs">Professional real estate photo editing that delivers the perfect balance of lighting, color, and precision to every image.</p>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Services</p>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="services.html" class="hover:text-white transition-colors">Photo Editing</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Item Removal</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Virtual Staging</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Day to Dusk</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Get In Touch</p>
+          <p class="text-sm mb-1">hello@lotus.com</p>
+          <p class="text-sm mb-5">24/7 Support</p>
+          <form onsubmit="handleFooterForm(event)" class="flex gap-2">
+            <input type="email" placeholder="Your email" required class="flex-1 min-w-0 text-sm px-3 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400 transition-colors" />
+            <button type="submit" id="footer-btn" class="btn-primary text-sm font-semibold px-4 py-2.5 rounded-lg shrink-0">Send</button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+        <span>© 2024 LOTUS. All rights reserved.</span>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    function handleContactForm(e) {
+      e.preventDefault();
+      const btn     = document.getElementById('contact-btn');
+      const success = document.getElementById('contact-success');
+      btn.textContent    = 'Sending…';
+      btn.disabled       = true;
+      btn.style.opacity  = '0.7';
+      setTimeout(() => {
+        btn.style.display     = 'none';
+        success.classList.remove('hidden');
+        e.target.querySelectorAll('input, textarea, select').forEach(el => { el.value = ''; });
+      }, 900);
+    }
+  </script>
+</body>
+</html>
