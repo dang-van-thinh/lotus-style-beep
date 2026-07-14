@@ -14,46 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-white text-gray-900 antialiased" data-page="portfolio">
 
-  <!-- HEADER -->
-  <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2.5 shrink-0">
-        <img src="images/logo/logo.png" alt="LOTUS" class="h-9 w-auto" />
-        <span class="font-display font-bold text-[18px] tracking-wide text-gray-900">LOTUS</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="portfolio.html" class="nav-link is-active text-sm font-medium transition-colors" style="color:var(--orange)">Portfolio</a>
-        <div class="nav-has-dropdown">
-          <a href="services.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1">
-            Services
-            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
-          </a>
-          <div class="nav-dropdown-menu">
-            <a class="nav-dropdown-item" href="services.html#hdr"><span class="nav-dropdown-dot"></span>Photo Editing</a>
-            <a class="nav-dropdown-item" href="services.html#removal"><span class="nav-dropdown-dot"></span>Item Removal</a>
-            <a class="nav-dropdown-item" href="services.html#staging"><span class="nav-dropdown-dot"></span>Virtual Staging</a>
-            <a class="nav-dropdown-item" href="services.html#dusk"><span class="nav-dropdown-dot"></span>Day to Dusk</a>
-            <a class="nav-dropdown-item" href="services.html#renovation"><span class="nav-dropdown-dot"></span>Virtual Renovation</a>
-          </div>
-        </div>
-        <a href="index.html#pricing" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-        <a href="contact.html"   class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
-        <a href="order.html"     class="btn-primary text-sm font-semibold px-5 py-2.5 rounded-xl">Place Order</a>
-      </nav>
-      <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Toggle menu">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h16M3 12h16M3 18h16"/></svg>
-      </button>
-    </div>
-    <div id="mobile-nav" class="md:hidden border-t border-gray-100 bg-white px-6 py-5 flex flex-col gap-4">
-      <a href="portfolio.html" class="text-sm font-semibold" style="color:var(--orange)">Portfolio</a>
-      <a href="services.html"  class="text-sm font-medium text-gray-700">Services</a>
-      <a href="index.html#pricing" class="text-sm font-medium text-gray-700">Pricing</a>
-      <a href="contact.html"   class="text-sm font-medium text-gray-700">Contact</a>
-      <a href="order.html"     class="btn-primary text-sm font-semibold px-4 py-3 rounded-xl text-center">Place Order</a>
-    </div>
-  </header>
+  <!-- HEADER (rendered from js/site-data.js) -->
+  <div id="header-placeholder"></div>
+  <script src="js/site-data.js"></script>
+  <script src="js/layout.js"></script>
 
   <!-- PAGE HERO -->
   <section class="page-hero pt-28 pb-12 px-6">
@@ -78,7 +44,6 @@
         <button class="filter-tab text-sm font-semibold px-4 py-2 rounded-lg border transition-all duration-200" data-cat="removal"    onclick="filterWork('removal',this)">Item Removal</button>
         <button class="filter-tab text-sm font-semibold px-4 py-2 rounded-lg border transition-all duration-200" data-cat="staging"    onclick="filterWork('staging',this)">Virtual Staging</button>
         <button class="filter-tab text-sm font-semibold px-4 py-2 rounded-lg border transition-all duration-200" data-cat="dusk"       onclick="filterWork('dusk',this)">Day to Dusk</button>
-        <button class="filter-tab text-sm font-semibold px-4 py-2 rounded-lg border transition-all duration-200" data-cat="renovation" onclick="filterWork('renovation',this)">Virtual Renovation</button>
       </div>
 
       <!-- Grid -->
@@ -87,7 +52,7 @@
         <!-- ── HDR BLENDING ── -->
         <div class="portfolio-card lg:col-span-2 relative overflow-hidden rounded-2xl cursor-pointer" data-cat="hdr">
           <div class="overflow-hidden h-72">
-            <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/1/ET6A5121.jpg" alt="HDR Blending result" class="portfolio-img w-full h-full object-cover" />
+            <img src="images/BAS/PE/DSC02237_1.jpg" alt="HDR Blending result" class="portfolio-img w-full h-full object-cover" />
           </div>
           <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
             <div>
@@ -99,7 +64,7 @@
 
         <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer" data-cat="hdr">
           <div class="overflow-hidden h-72">
-            <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/1/ET6A5129.jpg" alt="HDR Blending" class="portfolio-img w-full h-full object-cover" />
+            <img src="images/BAS/PE/DSC02242_1.jpg" alt="HDR Blending" class="portfolio-img w-full h-full object-cover" />
           </div>
           <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
             <div>
@@ -111,7 +76,7 @@
 
         <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer" data-cat="hdr">
           <div class="overflow-hidden h-60">
-            <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/1/ET6A5164.jpg" alt="HDR Blending" class="portfolio-img w-full h-full object-cover" />
+            <img src="images/BAS/PE/DSC02272_1.jpg" alt="HDR Blending" class="portfolio-img w-full h-full object-cover" />
           </div>
           <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
             <div>
@@ -123,7 +88,7 @@
 
         <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer" data-cat="hdr">
           <div class="overflow-hidden h-60">
-            <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/1/ET6A5192.jpg" alt="HDR Blending" class="portfolio-img w-full h-full object-cover" />
+            <img src="images/BAS/PE/IMG_0015_1.jpg" alt="HDR Blending" class="portfolio-img w-full h-full object-cover" />
           </div>
           <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
             <div>
@@ -135,7 +100,7 @@
 
         <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer" data-cat="hdr">
           <div class="overflow-hidden h-60">
-            <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/1/ET6A5813.jpg" alt="HDR Blending" class="portfolio-img w-full h-full object-cover" />
+            <img src="images/BAS/PE/IMG_0020_1.jpg" alt="HDR Blending" class="portfolio-img w-full h-full object-cover" />
           </div>
           <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
             <div>
@@ -145,48 +110,78 @@
           </div>
         </div>
 
-        <!-- ── ITEM REMOVAL ── -->
-        <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer" data-cat="removal">
-          <div class="overflow-hidden h-60">
-            <img src="images/Sample%20Lotus%20Foto/Item%20Removal/2.jpg" alt="Item removal" class="portfolio-img w-full h-full object-cover" />
+        <!-- ── ITEM REMOVAL (before/after sliders) ── -->
+        <div class="ba-card rounded-2xl overflow-hidden h-60" data-cat="removal">
+          <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8680.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <div class="ba-after">
+            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8680_final.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
-          <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
-            <div>
-              <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Item Removal</span>
-              <p class="text-white font-display font-bold text-lg">Object Removed</p>
-            </div>
-          </div>
+          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <input type="range" min="0" max="100" value="50" class="ba-input" />
         </div>
 
-        <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer" data-cat="removal">
-          <div class="overflow-hidden h-60">
-            <img src="images/Sample%20Lotus%20Foto/Item%20Removal/4.jpg" alt="Item removal" class="portfolio-img w-full h-full object-cover" />
+        <div class="ba-card rounded-2xl overflow-hidden h-60" data-cat="removal">
+          <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8685.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <div class="ba-after">
+            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8685_done.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
-          <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
-            <div>
-              <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Item Removal</span>
-              <p class="text-white font-display font-bold text-lg">Clutter Removal</p>
-            </div>
-          </div>
+          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <input type="range" min="0" max="100" value="50" class="ba-input" />
         </div>
 
-        <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer" data-cat="removal">
-          <div class="overflow-hidden h-60">
-            <img src="images/Sample%20Lotus%20Foto/Item%20Removal/6.jpg" alt="Item removal" class="portfolio-img w-full h-full object-cover" />
+        <div class="ba-card rounded-2xl overflow-hidden h-60" data-cat="removal">
+          <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8690.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <div class="ba-after">
+            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8690_done.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
-          <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
-            <div>
-              <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Item Removal</span>
-              <p class="text-white font-display font-bold text-lg">Clean &amp; Clear</p>
-            </div>
+          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <input type="range" min="0" max="100" value="50" class="ba-input" />
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-60" data-cat="removal">
+          <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8695.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <div class="ba-after">
+            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8695_done.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
+          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <input type="range" min="0" max="100" value="50" class="ba-input" />
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-60" data-cat="removal">
+          <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8700.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <div class="ba-after">
+            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8700_final.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          </div>
+          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <input type="range" min="0" max="100" value="50" class="ba-input" />
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-60" data-cat="removal">
+          <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8705.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <div class="ba-after">
+            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8705_final.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          </div>
+          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <input type="range" min="0" max="100" value="50" class="ba-input" />
         </div>
 
         <!-- ── VIRTUAL STAGING (before/after sliders) ── -->
         <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="staging">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/1before.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <img src="images/BAS/VIRTUAL_STAGING/0O2A9176.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           <div class="ba-after">
-            <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/1after.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+            <img src="images/BAS/VIRTUAL_STAGING/0O2A9176_final.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
           <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
           <span class="ba-label ba-label-before">Before</span>
@@ -195,9 +190,9 @@
         </div>
 
         <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="staging">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/2before.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <img src="images/BAS/VIRTUAL_STAGING/0O2A9182.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           <div class="ba-after">
-            <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/2after.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+            <img src="images/BAS/VIRTUAL_STAGING/0O2A9182_final.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
           <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
           <span class="ba-label ba-label-before">Before</span>
@@ -206,9 +201,9 @@
         </div>
 
         <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="staging">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/3before.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <img src="images/BAS/VIRTUAL_STAGING/0O2A9543.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           <div class="ba-after">
-            <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/3after.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+            <img src="images/BAS/VIRTUAL_STAGING/0O2A9543_final.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
           <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
           <span class="ba-label ba-label-before">Before</span>
@@ -217,9 +212,31 @@
         </div>
 
         <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="staging">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/4before.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <img src="images/BAS/VIRTUAL_STAGING/1126BobbieLane-28.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           <div class="ba-after">
-            <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/4after.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+            <img src="images/BAS/VIRTUAL_STAGING/1126BobbieLane-28_final.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          </div>
+          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <input type="range" min="0" max="100" value="50" class="ba-input" />
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="staging">
+          <img src="images/BAS/VIRTUAL_STAGING/DSC01838.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <div class="ba-after">
+            <img src="images/BAS/VIRTUAL_STAGING/DSC01838_final.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          </div>
+          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <input type="range" min="0" max="100" value="50" class="ba-input" />
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="staging">
+          <img src="images/BAS/VIRTUAL_STAGING/DSC01861.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <div class="ba-after">
+            <img src="images/BAS/VIRTUAL_STAGING/DSC01861_final.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
           <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
           <span class="ba-label ba-label-before">Before</span>
@@ -229,9 +246,9 @@
 
         <!-- ── DAY TO DUSK (before/after sliders) ── -->
         <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="dusk">
-          <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/1.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <img src="images/BAS/DTD/f3653632.DTE.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           <div class="ba-after">
-            <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/11.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+            <img src="images/BAS/DTD/f3653632.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
           <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
           <span class="ba-label ba-label-before">Day</span>
@@ -240,9 +257,9 @@
         </div>
 
         <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="dusk">
-          <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/2.JPG" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <img src="images/BAS/DTD/0O2A3573.DTE.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           <div class="ba-after">
-            <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/22.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+            <img src="images/BAS/DTD/0O2A3573.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
           <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
           <span class="ba-label ba-label-before">Day</span>
@@ -251,47 +268,13 @@
         </div>
 
         <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="dusk">
-          <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/3.JPG" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+          <img src="images/BAS/DTD/0O2A3560.DTE.1.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           <div class="ba-after">
-            <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/33.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
+            <img src="images/BAS/DTD/0O2A3560.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
           </div>
           <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
           <span class="ba-label ba-label-before">Day</span>
           <span class="ba-label ba-label-after">Dusk</span>
-          <input type="range" min="0" max="100" value="50" class="ba-input" />
-        </div>
-
-        <!-- ── VIRTUAL RENOVATION (before/after sliders) ── -->
-        <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="renovation">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/01122303.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
-          <div class="ba-after">
-            <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/01122303_.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
-          </div>
-          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
-          <input type="range" min="0" max="100" value="50" class="ba-input" />
-        </div>
-
-        <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="renovation">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/01122310.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
-          <div class="ba-after">
-            <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/01122310_.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
-          </div>
-          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
-          <input type="range" min="0" max="100" value="50" class="ba-input" />
-        </div>
-
-        <div class="ba-card rounded-2xl overflow-hidden h-72" data-cat="renovation">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/01122323_Room2.jpg" alt="Before" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
-          <div class="ba-after">
-            <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/01122323_Room2_.jpg" alt="After" class="absolute inset-0 w-full h-full object-cover select-none" draggable="false" />
-          </div>
-          <div class="ba-line"><div class="ba-handle"><svg width="18" height="18" fill="none" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"><path d="M6 4l-4 5 4 5M12 4l4 5-4 5"/></svg></div></div>
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
           <input type="range" min="0" max="100" value="50" class="ba-input" />
         </div>
 
@@ -306,44 +289,10 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 py-16 px-6 mt-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-4 gap-10 mb-12">
-        <div class="md:col-span-2">
-          <div class="flex items-center gap-2.5 mb-4">
-            <img src="images/logo/logo.png" alt="LOTUS" class="h-8 w-auto brightness-0 invert" />
-          </div>
-          <p class="text-sm leading-relaxed max-w-xs">Professional real estate photo editing that delivers the perfect balance of lighting, color, and precision to every image.</p>
-        </div>
-        <div>
-          <p class="text-white font-semibold text-sm mb-4">Services</p>
-          <ul class="space-y-2.5 text-sm">
-            <li><a href="services.html" class="hover:text-white transition-colors">Photo Editing</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Item Removal</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Virtual Staging</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Day to Dusk</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-white font-semibold text-sm mb-4">Get In Touch</p>
-          <p class="text-sm mb-1">hello@lotus.com</p>
-          <p class="text-sm mb-5">24/7 Support</p>
-          <form onsubmit="handleFooterForm(event)" class="flex gap-2">
-            <input type="email" placeholder="Your email" required class="flex-1 min-w-0 text-sm px-3 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400 transition-colors" />
-            <button type="submit" id="footer-btn" class="btn-primary text-sm font-semibold px-4 py-2.5 rounded-lg shrink-0">Send</button>
-          </form>
-        </div>
-      </div>
-      <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-        <span>© 2024 LOTUS. All rights reserved.</span>
-        <div class="flex gap-6">
-          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+  <script>renderFooter('mt-8');</script>
 
   <script src="js/main.js" defer></script>
+  <script src="js/floating-buttons.js" defer></script>
 </body>
 </html>

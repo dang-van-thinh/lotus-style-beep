@@ -30,134 +30,65 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-white text-gray-900 antialiased" data-page="home">
 
   <!-- ════════════════════════════════════
-       HEADER
+       HEADER (rendered from js/site-data.js)
   ════════════════════════════════════ -->
-  <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+  <div id="header-placeholder"></div>
+  <script src="js/site-data.js"></script>
+  <script src="js/layout.js"></script>
 
-      <!-- Logo -->
-      <a href="#" class="flex items-center gap-2.5 shrink-0">
-        <img src="images/logo/logo.png" alt="LOTUS" class="h-9 w-auto" />
-        <span class="font-display font-bold text-[18px] tracking-wide text-gray-900">LOTUS</span>
-      </a>
 
-      <!-- Desktop nav -->
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="portfolio.html"
-          class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Portfolio</a>
-        <div class="nav-has-dropdown">
-          <a href="services.html"
-            class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1">
-            Services
-            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-              <path d="M2 4l4 4 4-4" />
+  <!-- ════════════════════════════════════
+       HERO — rotating background (5s/slide),
+       text overlay pinned to left ~1/3
+  ════════════════════════════════════ -->
+  <section class="hero-banner">
+    <div id="hero-slides">
+      <div class="hero-slide active" data-src="images/services/banner2.jpg" data-loaded="1"
+        style="background-image:url('images/services/banner2.jpg')"></div>
+      <div class="hero-slide" data-src="images/services/banner3.jpg"></div>
+      <div class="hero-slide" data-src="images/services/banner4.jpg"></div>
+      <div class="hero-slide" data-src="images/services/banner5.jpg"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="relative z-10 h-full max-w-7xl mx-auto px-6 flex items-center">
+      <div class="w-full sm:w-4/5 md:w-1/2 lg:w-1/3">
+        <div class="hero-1 flex items-center gap-2 mb-5">
+          <span class="w-2 h-2 rounded-full shrink-0" style="background:var(--orange)"></span>
+          <span class="text-xs font-bold text-gray-200 uppercase tracking-[0.18em]">Real Estate Photo Editing</span>
+        </div>
+        <h1 class="hero-2 font-display font-extrabold text-[2.85rem] leading-[1.07] text-white mb-6">
+          We Bring the<br>
+          <span style="color:var(--orange)">Perfect Balance</span><br>
+          to Every Image
+        </h1>
+        <p class="hero-3 text-gray-200 text-[17px] leading-relaxed mb-9 max-w-md">
+          Precision lighting, flawless color correction, and expert retouching — delivered fast so your listings
+          always look their best.
+        </p>
+        <div class="hero-4 flex flex-wrap gap-4">
+          <a href="order.html" class="btn-primary font-semibold px-7 py-3.5 rounded-xl text-sm">View Pricing</a>
+          <a href="#work"
+            class="inline-flex items-center gap-2 text-sm font-semibold text-white px-6 py-3.5 rounded-xl border border-white/40 hover:bg-white/10 transition-colors">
+            See Our Work
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 8h10M9 5l4 3-4 3" />
             </svg>
           </a>
-          <div class="nav-dropdown-menu">
-            <a class="nav-dropdown-item" href="services.html#hdr"><span class="nav-dropdown-dot"></span>Photo
-              Editing</a>
-            <a class="nav-dropdown-item" href="services.html#removal"><span class="nav-dropdown-dot"></span>Item
-              Removal</a>
-            <a class="nav-dropdown-item" href="services.html#staging"><span class="nav-dropdown-dot"></span>Virtual
-              Staging</a>
-            <a class="nav-dropdown-item" href="services.html#dusk"><span class="nav-dropdown-dot"></span>Day to Dusk</a>
-            <a class="nav-dropdown-item" href="services.html#renovation"><span class="nav-dropdown-dot"></span>Virtual
-              Renovation</a>
-          </div>
         </div>
-        <a href="order.html"
-          class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-        <a href="contact.html"
-          class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
-        <a href="order.html" class="btn-primary text-sm font-semibold px-5 py-2.5 rounded-xl">Place Order</a>
-      </nav>
-
-      <!-- Hamburger -->
-      <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-        onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Toggle menu">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <path d="M3 6h16M3 12h16M3 18h16" />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile nav -->
-    <div id="mobile-nav" class="md:hidden border-t border-gray-100 bg-white px-6 py-5 flex flex-col gap-4">
-      <a href="portfolio.html" class="text-sm font-medium text-gray-700">Portfolio</a>
-      <a href="services.html" class="text-sm font-medium text-gray-700">Services</a>
-      <a href="order.html" class="text-sm font-medium text-gray-700">Pricing</a>
-      <a href="contact.html" class="text-sm font-medium text-gray-700">Contact</a>
-      <a href="order.html" class="btn-primary text-sm font-semibold px-4 py-3 rounded-xl text-center">Place Order</a>
-    </div>
-  </header>
-
-
-  <!-- ════════════════════════════════════
-       HERO
-  ════════════════════════════════════ -->
-  <section class="pt-32 pb-20 px-6 overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-        <!-- Text -->
-        <div>
-          <div class="hero-1 flex items-center gap-2 mb-5">
-            <span class="w-2 h-2 rounded-full shrink-0" style="background:var(--orange)"></span>
-            <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Real Estate Photo Editing</span>
-          </div>
-          <h1 class="hero-2 font-display font-extrabold text-[2.85rem] leading-[1.07] text-gray-900 mb-6">
-            We Bring the<br>
-            <span style="color:var(--orange)">Perfect Balance</span><br>
-            to Every Image
-          </h1>
-          <p class="hero-3 text-gray-500 text-[17px] leading-relaxed mb-9 max-w-md">
-            Precision lighting, flawless color correction, and expert retouching — delivered fast so your listings
-            always look their best.
-          </p>
-          <div class="hero-4 flex flex-wrap gap-4">
-            <a href="order.html" class="btn-primary font-semibold px-7 py-3.5 rounded-xl text-sm">View Pricing</a>
-            <a href="#work"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 px-6 py-3.5 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors">
-              See Our Work
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M3 8h10M9 5l4 3-4 3" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Image + accent -->
-        <div class="relative hero-5">
-          <!-- Oversized accent number — the signature element -->
-          <div
-            class="absolute -top-10 -right-6 font-display font-extrabold leading-none select-none pointer-events-none"
-            style="font-size:170px; color:var(--orange); opacity:0.07; z-index:0;">500</div>
-
-          <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=960&q=85"
-              alt="Professional real estate photo — modern home exterior" class="w-full h-[400px] object-cover" />
-            <!-- Floating stat badge -->
-            <div class="absolute bottom-4 left-4 bg-white rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background:#FFF3E0">
-                <svg width="20" height="20" viewBox="0 0 20 20">
-                  <path d="M10 1l2.4 4.9 5.4.8-3.9 3.8.9 5.3L10 13.5 5.2 15.8l.9-5.3L2.2 6.7l5.4-.8L10 1z"
-                    fill="#FF9500" />
-                </svg>
-              </div>
-              <div>
-                <div class="font-display font-bold text-[17px] text-gray-900 leading-none">4.98 <span
-                    class="text-xs text-gray-400 font-normal">/ 5</span></div>
-                <div class="text-xs text-gray-400 mt-0.5">Client Satisfaction</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
+    </div>
+
+    <!-- Slide indicators -->
+    <div class="absolute bottom-6 left-6 z-10 flex gap-2" id="hero-dots">
+      <button class="hero-dot active" data-idx="0" aria-label="Slide 1"></button>
+      <button class="hero-dot" data-idx="1" aria-label="Slide 2"></button>
+      <button class="hero-dot" data-idx="2" aria-label="Slide 3"></button>
+      <button class="hero-dot" data-idx="3" aria-label="Slide 4"></button>
     </div>
   </section>
 
@@ -184,9 +115,11 @@
           <div class="text-sm text-gray-400">Avg. Turnaround</div>
         </div>
         <div class="reveal text-center lg:text-left" style="transition-delay:240ms">
-          <div class="font-display font-extrabold text-[2.6rem] text-gray-900 mb-0.5">98<span
-              style="color:var(--orange)">%</span></div>
-          <div class="text-sm text-gray-400">On-Time Delivery</div>
+          <div class="font-display font-extrabold text-[2.6rem] text-gray-900 mb-0.5">12
+<span
+              style="color:var(--orange)">H</span></div>
+          <div class="text-sm text-gray-400">Turnaround
+Time</div>
         </div>
       </div>
     </div>
@@ -212,12 +145,12 @@
           style="color:var(--orange)">Explore All Services →</a>
       </div>
 
-      <!-- 3-col top row + 2-col bottom row -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+      <!-- 4-up row -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
         <!-- Photo Editing -->
         <a href="services.html#hdr" class="home-svc-card reveal" style="height:280px">
-          <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/2/DSC05872.jpg" alt="Photo Editing" loading="lazy" />
+          <img src="images/HERO/PE/7X5A7819_1.jpg" alt="Photo Editing" loading="lazy" />
           <div class="home-svc-overlay"></div>
           <div class="home-svc-body">
             <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
@@ -233,7 +166,7 @@
 
         <!-- Item Removal -->
         <a href="services.html#removal" class="home-svc-card reveal" style="height:280px;transition-delay:60ms">
-          <img src="images/Sample%20Lotus%20Foto/Item%20Removal/2.jpg" alt="Item Removal" loading="lazy" />
+          <img src="images/HERO/ITEM_REMOVAL/2.jpg" alt="Item Removal" loading="lazy" />
           <div class="home-svc-overlay"></div>
           <div class="home-svc-body">
             <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
@@ -248,7 +181,7 @@
 
         <!-- Virtual Staging -->
         <a href="services.html#staging" class="home-svc-card reveal" style="height:280px;transition-delay:120ms">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/2after.jpg" alt="Virtual Staging" loading="lazy" />
+          <img src="images/HERO/VIRTUAL_STAGING/_DSC4391.jpg" alt="Virtual Staging" loading="lazy" />
           <div class="home-svc-overlay"></div>
           <div class="home-svc-body">
             <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
@@ -260,34 +193,15 @@
               </svg></span>
           </div>
         </a>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
         <!-- Day to Dusk -->
-        <a href="services.html#dusk" class="home-svc-card reveal" style="height:240px;transition-delay:180ms">
-          <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/11.jpg" alt="Day to Dusk" loading="lazy" />
+        <a href="services.html#dusk" class="home-svc-card reveal" style="height:280px;transition-delay:180ms">
+          <img src="images/HERO/DTD/truoc.jpg" alt="Day to Dusk" loading="lazy" />
           <div class="home-svc-overlay"></div>
           <div class="home-svc-body">
             <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
               style="background:var(--orange);color:#fff">Day to Dusk</span>
             <p class="font-display font-bold text-white text-lg leading-tight">Twilight Conversion<br>for Exteriors</p>
-            <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor"
-                stroke-width="2.2" stroke-linecap="round">
-                <path d="M3 7h8M8 4l3 3-3 3" />
-              </svg></span>
-          </div>
-        </a>
-
-        <!-- Virtual Renovation -->
-        <a href="services.html#renovation" class="home-svc-card reveal" style="height:240px;transition-delay:240ms">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/DSC09914_1.jpg" alt="Virtual Renovation"
-            loading="lazy" />
-          <div class="home-svc-overlay"></div>
-          <div class="home-svc-body">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
-              style="background:var(--orange);color:#fff">Virtual Renovation</span>
-            <p class="font-display font-bold text-white text-lg leading-tight">Property's<br>Full Potential</p>
             <span class="home-svc-arrow">Learn More <svg width="14" height="14" fill="none" stroke="currentColor"
                 stroke-width="2.2" stroke-linecap="round">
                 <path d="M3 7h8M8 4l3 3-3 3" />
@@ -303,99 +217,90 @@
   <!-- ════════════════════════════════════
        HOW IT WORKS
   ════════════════════════════════════ -->
-  <section id="process" class="py-24 px-6" style="background:#1A1A1A">
+  <section id="process" class="py-24 px-6 overflow-hidden" style="background:#FAFAFA">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-14 reveal">
+      <div class="text-center mb-20 reveal">
         <div class="flex items-center justify-center gap-2 mb-3">
           <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
           <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Process</span>
           <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
         </div>
-        <h2 class="font-display font-extrabold text-4xl text-white mb-3">How It Works</h2>
-        <p class="text-gray-400 max-w-md mx-auto">Four simple steps from raw photos to publication-ready results.</p>
+        <h2 class="font-display font-extrabold text-4xl text-gray-900">How It Works</h2>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="relative hiw-row">
+        <!-- Dashed connector + paper airplane (desktop only) -->
+        <svg class="hiw-path" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M150 60 C 260 130, 340 130, 450 130 S 640 60, 750 60 S 940 130, 1050 130 C 1105 130, 1130 100, 1160 55"
+            fill="none" stroke="#DCDCDC" stroke-width="2" stroke-dasharray="7 9" stroke-linecap="round" />
+          <g transform="translate(1148,38) rotate(35)">
+            <path d="M0 16 L30 0 L11 6 Z" fill="#CDCDCD" />
+            <path d="M11 6 L15 18 L0 16 Z" fill="#B9B9B9" />
+          </g>
+        </svg>
 
-        <!-- Step 1: Upload -->
-        <div class="reveal">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
-            style="background:rgba(255,149,0,0.12)">
-            <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <path d="M6 22v2a2 2 0 002 2h16a2 2 0 002-2v-2" stroke="#FF9500" stroke-width="2"
-                stroke-linecap="round" />
-              <path d="M16 6v14M10 12l6-6 6 6" stroke="#FF9500" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
+        <div class="hiw-steps grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16">
+
+          <!-- Step 1 -->
+          <div class="hiw-step reveal">
+            <div class="hiw-hex">
+              <svg width="30" height="30" fill="none" viewBox="0 0 32 32">
+                <path d="M8 24l1.2-5.3L20.5 7.4a1.7 1.7 0 012.4 0l1.7 1.7a1.7 1.7 0 010 2.4L13.3 22.8 8 24z"
+                  stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 9.5l3.5 3.5" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" />
+                <circle cx="9" cy="24" r="1.4" fill="#FF9500" />
+              </svg>
+            </div>
+            <h3 class="hiw-title">Contact us</h3>
+            <p class="hiw-desc">Tell us about your requirements and wishes</p>
           </div>
-          <div class="flex items-center gap-3 mb-3">
-            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0"
-              style="background:var(--orange);color:#fff">1</span>
-            <h3 class="font-display font-semibold text-white text-lg">Send Your Photos</h3>
+
+          <!-- Step 2 -->
+          <div class="hiw-step hiw-step-offset reveal" style="transition-delay:80ms">
+            <div class="hiw-hex">
+              <svg width="30" height="30" fill="none" viewBox="0 0 32 32">
+                <circle cx="14" cy="14" r="8.5" stroke="#FF9500" stroke-width="1.8" />
+                <path d="M14 10v8M10 14h8" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M20 20l5 5" stroke="#FF9500" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="hiw-title">We Listen</h3>
+            <p class="hiw-desc">Tell us about your requirements and wishes</p>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed pl-10">Upload via Google Drive, WeTransfer, Dropbox, or FTP —
-            any way works.</p>
+
+          <!-- Step 3 -->
+          <div class="hiw-step reveal" style="transition-delay:160ms">
+            <div class="hiw-hex">
+              <svg width="30" height="30" fill="none" viewBox="0 0 32 32">
+                <rect x="4.5" y="9" width="7" height="14" rx="3" transform="rotate(-40 4.5 9)"
+                  stroke="#FF9500" stroke-width="1.8" />
+                <rect x="20.5" y="9" width="7" height="14" rx="3" transform="rotate(40 20.5 9)"
+                  stroke="#FF9500" stroke-width="1.8" />
+              </svg>
+            </div>
+            <h3 class="hiw-title">Relax</h3>
+            <p class="hiw-desc">Let us do our editing magic. Our team of experts will complete your job within 10-12
+              hours.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="hiw-step hiw-step-offset reveal" style="transition-delay:240ms">
+            <div class="hiw-hex">
+              <svg width="30" height="30" fill="none" viewBox="0 0 32 32">
+                <rect x="6.5" y="6.5" width="5" height="5" rx="1" stroke="#FF9500" stroke-width="1.6" />
+                <rect x="20.5" y="6.5" width="5" height="5" rx="1" stroke="#FF9500" stroke-width="1.6" />
+                <rect x="13.5" y="20.5" width="5" height="5" rx="1" stroke="#FF9500" stroke-width="1.6" />
+                <path d="M11.5 9l9 0M9.5 11.5l6 9M22.5 11.5l-6 9" stroke="#FF9500" stroke-width="1.4"
+                  stroke-dasharray="2.2 2.2" />
+                <text x="16" y="18" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="700"
+                  font-size="8" fill="#FF9500" opacity="0.65">A</text>
+              </svg>
+            </div>
+            <h3 class="hiw-title">Get Job Done</h3>
+            <p class="hiw-desc">Check out your professionally edited photos or videos once they're ready to view.</p>
+          </div>
+
         </div>
-
-        <!-- Step 2: Edit -->
-        <div class="reveal" style="transition-delay:80ms">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
-            style="background:rgba(255,149,0,0.12)">
-            <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <rect x="4" y="4" width="24" height="24" rx="4" stroke="#FF9500" stroke-width="2" />
-              <path d="M10 16h12M10 11h7M10 21h5" stroke="#FF9500" stroke-width="2" stroke-linecap="round" />
-              <path d="M22 18l2 2-4 4h-2v-2l4-4z" stroke="#FF9500" stroke-width="1.7" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="flex items-center gap-3 mb-3">
-            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0"
-              style="background:var(--orange);color:#fff">2</span>
-            <h3 class="font-display font-semibold text-white text-lg">We Edit</h3>
-          </div>
-          <p class="text-gray-400 text-sm leading-relaxed pl-10">Our editors process each image with precision — HDR,
-            color, sky, and more.</p>
-        </div>
-
-        <!-- Step 3: Review -->
-        <div class="reveal" style="transition-delay:160ms">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
-            style="background:rgba(255,149,0,0.12)">
-            <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <circle cx="16" cy="16" r="11" stroke="#FF9500" stroke-width="2" />
-              <path d="M10 16l4 4 8-8" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="flex items-center gap-3 mb-3">
-            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0"
-              style="background:var(--orange);color:#fff">3</span>
-            <h3 class="font-display font-semibold text-white text-lg">Review &amp; Revise</h3>
-          </div>
-          <p class="text-gray-400 text-sm leading-relaxed pl-10">Check the results and request revisions — free until
-            you're satisfied.</p>
-        </div>
-
-        <!-- Step 4: Download -->
-        <div class="reveal" style="transition-delay:240ms">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
-            style="background:rgba(255,149,0,0.12)">
-            <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-              <path d="M6 22v2a2 2 0 002 2h16a2 2 0 002-2v-2" stroke="#FF9500" stroke-width="2"
-                stroke-linecap="round" />
-              <path d="M16 6v14M10 14l6 6 6-6" stroke="#FF9500" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="flex items-center gap-3 mb-3">
-            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold font-display shrink-0"
-              style="background:var(--orange);color:#fff">4</span>
-            <h3 class="font-display font-semibold text-white text-lg">Download Results</h3>
-          </div>
-          <p class="text-gray-400 text-sm leading-relaxed pl-10">Receive high-res files ready for MLS, listings, and
-            marketing — within 24h.</p>
-        </div>
-
       </div>
     </div>
   </section>
@@ -639,7 +544,7 @@
         <!-- Right visual — stats graphic -->
         <div class="hidden md:block">
           <div class="relative rounded-3xl overflow-hidden" style="height:420px">
-            <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/11.jpg" alt="Result example"
+            <img src="images/BAS/DTD/0O2A3560.jpg" alt="Result example"
               class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0"
               style="background:linear-gradient(to top,rgba(20,20,20,0.7) 0%,rgba(20,20,20,0.1) 55%,transparent 100%)">
@@ -726,7 +631,7 @@
 
         <!-- Left: tall hero card -->
         <a href="portfolio.html" class="work-card reveal" style="height:480px">
-          <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/2/DSC05884.jpg" alt="HDR Blending result"
+          <img src="images/BAS/PE/DSC02007_1.jpg" alt="HDR Blending result"
             loading="lazy" />
           <div class="work-overlay"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6">
@@ -739,7 +644,7 @@
         <!-- Right: 2 stacked cards -->
         <div class="flex flex-col gap-4">
           <a href="portfolio.html" class="work-card reveal" style="height:228px;transition-delay:80ms">
-            <img src="images/Sample%20Lotus%20Foto/Item%20Removal/4.jpg" alt="Item Removal result" loading="lazy" />
+            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8710_final.jpg" alt="Item Removal result" loading="lazy" />
             <div class="work-overlay"></div>
             <div class="absolute bottom-0 left-0 right-0 p-5">
               <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
@@ -748,7 +653,7 @@
             </div>
           </a>
           <a href="portfolio.html" class="work-card reveal" style="height:228px;transition-delay:140ms">
-            <img src="images/Sample%20Lotus%20Foto/Virtual%20Staging/1after.jpg" alt="Virtual Staging result"
+            <img src="images/BAS/VIRTUAL_STAGING/0O2A9543_final.jpg" alt="Virtual Staging result"
               loading="lazy" />
             <div class="work-overlay"></div>
             <div class="absolute bottom-0 left-0 right-0 p-5">
@@ -761,10 +666,10 @@
 
       </div>
 
-      <!-- Second row: 3 cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+      <!-- Second row: 2 cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
         <a href="portfolio.html" class="work-card reveal" style="height:220px;transition-delay:60ms">
-          <img src="images/Sample%20Lotus%20Foto/Day%20To%20Dusk/11.jpg" alt="Day to Dusk result" loading="lazy" />
+          <img src="images/BAS/DTD/0O2A3573.jpg" alt="Day to Dusk result" loading="lazy" />
           <div class="work-overlay"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5">
             <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
@@ -773,17 +678,7 @@
           </div>
         </a>
         <a href="portfolio.html" class="work-card reveal" style="height:220px;transition-delay:130ms">
-          <img src="images/Sample%20Lotus%20Foto/Virtual%20Renovation/DSC09914_1.jpg" alt="Virtual Renovation result"
-            loading="lazy" />
-          <div class="work-overlay"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
-              style="background:var(--orange);color:#fff">Virtual Renovation</span>
-            <p class="text-white font-display font-bold text-base leading-tight">Full Renovation Preview</p>
-          </div>
-        </a>
-        <a href="portfolio.html" class="work-card reveal" style="height:220px;transition-delay:200ms">
-          <img src="images/Sample%20Lotus%20Foto/HDR%20Blending/1/ET6A5819.jpg" alt="Exterior editing result"
+          <img src="images/BAS/PE/SKY-B.jpg" alt="Exterior editing result"
             loading="lazy" />
           <div class="work-overlay"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5">
@@ -833,59 +728,64 @@
 
 
   <!-- ════════════════════════════════════
-       FOOTER
+       FOOTER (rendered from js/site-data.js)
   ════════════════════════════════════ -->
-  <footer class="bg-gray-900 text-gray-400 py-16 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-4 gap-10 mb-12">
-
-        <!-- Brand -->
-        <div class="md:col-span-2">
-          <div class="flex items-center gap-2.5 mb-4">
-            <img src="images/logo/logo.png" alt="LOTUS" class="h-8 w-auto brightness-0 invert" />
-          </div>
-          <p class="text-sm leading-relaxed max-w-xs">Professional real estate photo editing that delivers the perfect
-            balance of lighting, color, and precision to every image.</p>
-        </div>
-
-        <!-- Links -->
-        <div>
-          <p class="text-white font-semibold text-sm mb-4">Services</p>
-          <ul class="space-y-2.5 text-sm">
-            <li><a href="services.html#hdr" class="hover:text-white transition-colors">Photo Editing</a></li>
-            <li><a href="services.html#removal" class="hover:text-white transition-colors">Item Removal</a></li>
-            <li><a href="services.html#staging" class="hover:text-white transition-colors">Virtual Staging</a></li>
-            <li><a href="services.html#dusk" class="hover:text-white transition-colors">Day to Dusk</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact + form -->
-        <div>
-          <p class="text-white font-semibold text-sm mb-4">Get In Touch</p>
-          <p class="text-sm mb-1">hello@lotus.com</p>
-          <p class="text-sm mb-5">24/7 Support</p>
-          <form id="footer-form" onsubmit="handleFooterForm(event)" class="flex gap-2">
-            <input type="email" placeholder="Your email" required
-              class="flex-1 min-w-0 text-sm px-3 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400 transition-colors" />
-            <button type="submit" id="footer-btn"
-              class="btn-primary text-sm font-semibold px-4 py-2.5 rounded-lg shrink-0">Send</button>
-          </form>
-        </div>
-
-      </div>
-
-      <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-        <span>© 2024 LOTUS. All rights reserved.</span>
-        <div class="flex gap-6">
-          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <div id="footer-placeholder"></div>
+  <script>renderFooter();</script>
 
   <script src="js/main.js" defer></script>
+  <script src="js/floating-buttons.js" defer></script>
+
+  <!-- ── Hero Background Slider ── -->
+  <script>
+    (function () {
+      var slides = Array.prototype.slice.call(document.querySelectorAll('#hero-slides .hero-slide'));
+      var dots = Array.prototype.slice.call(document.querySelectorAll('#hero-dots .hero-dot'));
+      var total = slides.length;
+      var DURATION = 5000;
+      var current = 0;
+      var timer;
+
+      // Fetch a slide's image lazily so only the visible slide loads up front;
+      // each slide is preloaded one step ahead of when it's shown.
+      function preload(idx) {
+        var el = slides[idx];
+        if (!el || el.dataset.loaded) return;
+        var src = el.dataset.src;
+        if (!src) return;
+        var img = new Image();
+        img.onload = function () {
+          el.style.backgroundImage = 'url(' + src + ')';
+          el.dataset.loaded = '1';
+        };
+        img.src = src;
+      }
+
+      function go(idx) {
+        slides[current].classList.remove('active');
+        if (dots[current]) dots[current].classList.remove('active');
+        current = idx;
+        preload(current);
+        slides[current].classList.add('active');
+        if (dots[current]) dots[current].classList.add('active');
+        preload((current + 1) % total);
+      }
+
+      function autoPlay() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(function () { go((current + 1) % total); }, DURATION);
+      }
+
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () { go(i); autoPlay(); });
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        preload(1);
+        autoPlay();
+      });
+    })();
+  </script>
 
   <!-- ── Core Features Slider ── -->
   <script>

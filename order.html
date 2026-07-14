@@ -14,46 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-white text-gray-900 antialiased" data-page="order">
 
-  <!-- HEADER -->
-  <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2.5 shrink-0">
-        <img src="images/logo/logo.png" alt="LOTUS" class="h-9 w-auto" />
-        <span class="font-display font-bold text-[18px] tracking-wide text-gray-900">LOTUS</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="portfolio.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Portfolio</a>
-        <div class="nav-has-dropdown">
-          <a href="services.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1">
-            Services
-            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
-          </a>
-          <div class="nav-dropdown-menu">
-            <a class="nav-dropdown-item" href="services.html#hdr"><span class="nav-dropdown-dot"></span>Photo Editing</a>
-            <a class="nav-dropdown-item" href="services.html#removal"><span class="nav-dropdown-dot"></span>Item Removal</a>
-            <a class="nav-dropdown-item" href="services.html#staging"><span class="nav-dropdown-dot"></span>Virtual Staging</a>
-            <a class="nav-dropdown-item" href="services.html#dusk"><span class="nav-dropdown-dot"></span>Day to Dusk</a>
-            <a class="nav-dropdown-item" href="services.html#renovation"><span class="nav-dropdown-dot"></span>Virtual Renovation</a>
-          </div>
-        </div>
-        <a href="index.html#pricing" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-        <a href="contact.html"   class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
-        <a href="order.html"     class="btn-primary text-sm font-semibold px-5 py-2.5 rounded-xl is-active" style="background:#E08500">Place Order</a>
-      </nav>
-      <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Toggle menu">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h16M3 12h16M3 18h16"/></svg>
-      </button>
-    </div>
-    <div id="mobile-nav" class="md:hidden border-t border-gray-100 bg-white px-6 py-5 flex flex-col gap-4">
-      <a href="portfolio.html" class="text-sm font-medium text-gray-700">Portfolio</a>
-      <a href="services.html"  class="text-sm font-medium text-gray-700">Services</a>
-      <a href="index.html#pricing" class="text-sm font-medium text-gray-700">Pricing</a>
-      <a href="contact.html"   class="text-sm font-medium text-gray-700">Contact</a>
-      <a href="order.html"     class="btn-primary text-sm font-semibold px-4 py-3 rounded-xl text-center">Place Order</a>
-    </div>
-  </header>
+  <!-- HEADER (rendered from js/site-data.js) -->
+  <div id="header-placeholder"></div>
+  <script src="js/site-data.js"></script>
+  <script src="js/layout.js"></script>
 
   <!-- PAGE HERO -->
   <section class="page-hero pt-28 pb-12 px-6">
@@ -63,107 +29,42 @@
         <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Order</span>
       </div>
       <h1 class="font-display font-extrabold text-4xl md:text-5xl text-gray-900 mb-3">Place Your Order</h1>
-      <p class="text-gray-500 max-w-xl">Choose a plan, fill in your details, and we'll get started within the hour. Delivery guaranteed in 24–48 hours.</p>
+      <p class="text-gray-500 max-w-xl">Choose a plan, fill in your details, and we'll get started within the hour. Delivery guaranteed in 12–24 hours.</p>
     </div>
   </section>
 
-  <!-- STEP 1 — PLAN SELECTION -->
+  <!-- STEP 1 — SERVICE SELECTION -->
   <section class="py-16 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="flex items-center gap-3 mb-8">
         <div class="w-8 h-8 rounded-full flex items-center justify-center font-display font-bold text-sm text-white shrink-0" style="background:var(--orange)">1</div>
-        <h2 class="font-display font-bold text-2xl text-gray-900">Choose Your Plan</h2>
+        <h2 class="font-display font-bold text-2xl text-gray-900">Choose Your Service</h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-5" id="plan-grid">
-
-        <!-- Basic -->
-        <div class="plan-card rounded-2xl overflow-hidden" data-plan="basic" data-price="1.50" onclick="selectPlan(this)">
-          <div class="grid grid-cols-2 h-44">
-            <img src="images/Checkout/basic1.jpg" alt="Basic example" class="w-full h-full object-cover" />
-            <img src="images/Checkout/basic2.jpg" alt="Basic example" class="w-full h-full object-cover" />
-          </div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-3">
-              <div>
-                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Basic</p>
-                <div class="font-display font-extrabold text-3xl text-gray-900">$1<span class="text-lg text-gray-400 font-bold">.50</span><span class="text-sm text-gray-400 font-normal"> /img</span></div>
-              </div>
-              <div id="check-basic" class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center shrink-0 mt-1 transition-all duration-200"></div>
-            </div>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> Color &amp; brightness correction</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> Lens &amp; distortion fix</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> Straightening</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> 48h delivery · 1 revision</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Standard -->
-        <div class="plan-card rounded-2xl overflow-hidden chosen" data-plan="standard" data-price="3.00" onclick="selectPlan(this)">
-          <div class="relative">
-            <div class="grid grid-cols-2 h-44">
-              <img src="images/Checkout/stan1.jpg" alt="Standard example" class="w-full h-full object-cover" />
-              <img src="images/Checkout/stan2.jpg" alt="Standard example" class="w-full h-full object-cover" />
-            </div>
-            <div class="absolute top-3 left-3">
-              <span class="text-xs font-bold px-3 py-1.5 rounded-full shadow" style="background:var(--orange);color:#fff">Most Popular</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-3">
-              <div>
-                <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color:var(--orange)">Standard</p>
-                <div class="font-display font-extrabold text-3xl text-gray-900">$3<span class="text-lg text-gray-400 font-bold">.00</span><span class="text-sm text-gray-400 font-normal"> /img</span></div>
-              </div>
-              <div id="check-standard" class="w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 mt-1 transition-all duration-200" style="border-color:var(--orange);background:var(--orange)">
-                <svg width="12" height="12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg>
-              </div>
-            </div>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> Everything in Basic</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> HDR blending (day &amp; twilight)</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> Sky replacement</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> Object removal</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> 24h delivery · 2 revisions</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Advanced -->
-        <div class="plan-card rounded-2xl overflow-hidden" data-plan="advanced" data-price="5.00" onclick="selectPlan(this)">
-          <div class="grid grid-cols-2 h-44">
-            <img src="images/Checkout/adven1.jpg" alt="Advanced example" class="w-full h-full object-cover" />
-            <img src="images/Checkout/adven2.jpg" alt="Advanced example" class="w-full h-full object-cover" />
-          </div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-3">
-              <div>
-                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Advanced</p>
-                <div class="font-display font-extrabold text-3xl text-gray-900">$5<span class="text-lg text-gray-400 font-bold">.00</span><span class="text-sm text-gray-400 font-normal"> /img</span></div>
-              </div>
-              <div id="check-advanced" class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center shrink-0 mt-1 transition-all duration-200"></div>
-            </div>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> Everything in Standard</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> Virtual staging</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> Day to dusk conversion</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> 12h rush delivery</li>
-              <li class="flex items-center gap-2"><span style="color:var(--orange)">✓</span> Unlimited revisions</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="service-grid"></div>
     </div>
   </section>
 
-  <!-- STEP 2 — ORDER DETAILS -->
+  <!-- STEP 2 — PLAN SELECTION (revealed once a service is chosen) -->
+  <section class="py-8 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-8">
+        <div id="plan-step-num" class="w-8 h-8 rounded-full flex items-center justify-center font-display font-bold text-sm text-white shrink-0 opacity-40" style="background:var(--orange)">2</div>
+        <h2 class="font-display font-bold text-2xl text-gray-900">Choose Your Plan</h2>
+      </div>
+
+      <div id="plan-step" class="hidden">
+        <div id="plan-grid-dynamic" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      </div>
+      <p id="plan-step-hint" class="text-sm text-gray-400">Pick a service above to see its real plans, pricing, and included features.</p>
+    </div>
+  </section>
+
+  <!-- STEP 3 — ORDER DETAILS -->
   <section class="py-8 pb-20 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="flex items-center gap-3 mb-8">
-        <div class="w-8 h-8 rounded-full flex items-center justify-center font-display font-bold text-sm text-white shrink-0" style="background:var(--orange)">2</div>
+        <div class="w-8 h-8 rounded-full flex items-center justify-center font-display font-bold text-sm text-white shrink-0" style="background:var(--orange)">3</div>
         <h2 class="font-display font-bold text-2xl text-gray-900">Your Details</h2>
       </div>
 
@@ -192,19 +93,6 @@
                 <label class="form-label" for="o-count">Number of Images <span style="color:var(--orange)">*</span></label>
                 <input id="o-count" type="number" min="1" class="form-input" placeholder="e.g. 25" required oninput="updateSummary()" />
               </div>
-            </div>
-
-            <div>
-              <label class="form-label" for="o-service">Service Type <span style="color:var(--orange)">*</span></label>
-              <select id="o-service" class="form-input" required>
-                <option value="" disabled selected>Select service…</option>
-                <option>Photo Editing / HDR Blending</option>
-                <option>Item Removal</option>
-                <option>Virtual Staging</option>
-                <option>Day to Dusk</option>
-                <option>Virtual Renovation</option>
-                <option>Multiple Services</option>
-              </select>
             </div>
 
             <div>
@@ -244,12 +132,16 @@
 
             <div class="space-y-3 text-sm mb-5">
               <div class="flex items-center justify-between">
+                <span class="text-gray-500">Service</span>
+                <span id="sum-service" class="font-semibold text-gray-900">—</span>
+              </div>
+              <div class="flex items-center justify-between">
                 <span class="text-gray-500">Plan</span>
-                <span id="sum-plan" class="font-semibold text-gray-900">Standard</span>
+                <span id="sum-plan" class="font-semibold text-gray-900">—</span>
               </div>
               <div class="flex items-center justify-between">
                 <span class="text-gray-500">Price per image</span>
-                <span id="sum-price" class="font-semibold text-gray-900">$3.00</span>
+                <span id="sum-price" class="font-semibold text-gray-900">—</span>
               </div>
               <div class="flex items-center justify-between">
                 <span class="text-gray-500">Number of images</span>
@@ -257,7 +149,7 @@
               </div>
               <div class="flex items-center justify-between">
                 <span class="text-gray-500">Delivery</span>
-                <span class="font-semibold text-gray-900">24 hours</span>
+                <span id="sum-delivery" class="font-semibold text-gray-900">—</span>
               </div>
             </div>
 
@@ -291,86 +183,144 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 py-16 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-4 gap-10 mb-12">
-        <div class="md:col-span-2">
-          <div class="flex items-center gap-2.5 mb-4">
-            <img src="images/logo/logo.png" alt="LOTUS" class="h-8 w-auto brightness-0 invert" />
-          </div>
-          <p class="text-sm leading-relaxed max-w-xs">Professional real estate photo editing that delivers the perfect balance of lighting, color, and precision.</p>
-        </div>
-        <div>
-          <p class="text-white font-semibold text-sm mb-4">Services</p>
-          <ul class="space-y-2.5 text-sm">
-            <li><a href="services.html" class="hover:text-white transition-colors">Photo Editing</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Item Removal</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Virtual Staging</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Day to Dusk</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-white font-semibold text-sm mb-4">Get In Touch</p>
-          <p class="text-sm mb-1">hello@lotus.com</p>
-          <p class="text-sm mb-5">24/7 Support</p>
-          <form onsubmit="handleFooterForm(event)" class="flex gap-2">
-            <input type="email" placeholder="Your email" required class="flex-1 min-w-0 text-sm px-3 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400 transition-colors" />
-            <button type="submit" id="footer-btn" class="btn-primary text-sm font-semibold px-4 py-2.5 rounded-lg shrink-0">Send</button>
-          </form>
-        </div>
-      </div>
-      <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-        <span>© 2024 LOTUS. All rights reserved.</span>
-        <div class="flex gap-6">
-          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+  <script>renderFooter();</script>
 
   <script src="js/main.js" defer></script>
+  <script src="js/floating-buttons.js" defer></script>
+  <script src="js/services.js"></script>
   <script>
-    // ── Plan selection ──
-    let selectedPlan = { name: 'Standard', price: 3.00, delivery: '24 hours' };
+    // ── Service + plan selection ──
+    // Pulled straight from js/services.js (window.SERVICES_DATA) so the
+    // price and feature checklist shown here always match services.html —
+    // no second, driftable copy of pricing.
+    const SERVICE_IDS = ['hdr', 'removal', 'staging', 'dusk'];
+    const CHECK_SVG = '<svg width="12" height="12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg>';
 
-    function selectPlan(card) {
-      document.querySelectorAll('.plan-card').forEach(c => {
-        c.classList.remove('chosen');
-        const planId = c.dataset.plan;
-        const check  = document.getElementById('check-' + planId);
-        if (check) { check.innerHTML = ''; check.style.background = ''; check.style.borderColor = '#D1D5DB'; }
+    let selectedServiceId = null;
+    let selectedPlan = null; // { key, label, price }
+
+    function parsePrice(str) {
+      const m = String(str).match(/[\d.]+/);
+      return m ? parseFloat(m[0]) : null;
+    }
+
+    function setCheck(id, chosen) {
+      const check = document.getElementById(id);
+      if (!check) return;
+      if (chosen) {
+        check.style.background  = 'var(--orange)';
+        check.style.borderColor = 'var(--orange)';
+        check.innerHTML = CHECK_SVG;
+      } else {
+        check.innerHTML = '';
+        check.style.background  = '';
+        check.style.borderColor = '#D1D5DB';
+      }
+    }
+
+    function renderServiceCards() {
+      const grid = document.getElementById('service-grid');
+      grid.innerHTML = SERVICE_IDS.map(id => {
+        const svc = window.SERVICES_DATA[id];
+        return `
+          <div class="plan-card rounded-2xl overflow-hidden" data-service="${id}" onclick="selectService('${id}')">
+            <div class="h-36"><img src="${svc.hero.after}" alt="${svc.name}" class="w-full h-full object-cover" /></div>
+            <div class="p-5 flex items-start justify-between gap-3">
+              <div>
+                <p class="font-display font-bold text-gray-900 text-sm">${svc.name}</p>
+                <p class="text-xs text-gray-400 mt-0.5">${svc.subtitle}</p>
+              </div>
+              <div id="check-svc-${id}" class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center shrink-0 mt-0.5"></div>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    function selectService(id) {
+      selectedServiceId = id;
+      selectedPlan = null;
+
+      SERVICE_IDS.forEach(sid => {
+        document.querySelector(`#service-grid [data-service="${sid}"]`).classList.toggle('chosen', sid === id);
+        setCheck('check-svc-' + sid, sid === id);
       });
 
-      card.classList.add('chosen');
-      const planId = card.dataset.plan;
-      const check  = document.getElementById('check-' + planId);
-      if (check) {
-        check.style.background   = 'var(--orange)';
-        check.style.borderColor  = 'var(--orange)';
-        check.innerHTML = '<svg width="12" height="12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg>';
-      }
+      document.getElementById('plan-step').classList.remove('hidden');
+      document.getElementById('plan-step-hint').classList.add('hidden');
+      document.getElementById('plan-step-num').classList.remove('opacity-40');
+      renderPlanCards(id);
 
-      const planNames = { basic: 'Basic', standard: 'Standard', advanced: 'Advanced' };
-      const deliveries = { basic: '48 hours', standard: '24 hours', advanced: '12 hours (rush)' };
-      selectedPlan = { name: planNames[planId], price: parseFloat(card.dataset.price), delivery: deliveries[planId] };
+      document.getElementById('plan-step').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      updateSummary();
+    }
 
-      document.getElementById('sum-plan').textContent  = selectedPlan.name;
-      document.getElementById('sum-price').textContent = '$' + selectedPlan.price.toFixed(2);
-      document.querySelector('[data-label="delivery"]') && (document.querySelector('[data-label="delivery"]').textContent = selectedPlan.delivery);
+    function renderPlanCards(id) {
+      const svc  = window.SERVICES_DATA[id];
+      const grid = document.getElementById('plan-grid-dynamic');
+      grid.className = `grid sm:grid-cols-2 lg:grid-cols-${Math.min(svc.plans.length, 3)} gap-5`;
+      grid.innerHTML = svc.plans.map(p => `
+        <div class="plan-steps-card plan-card${p.popular ? ' plan-steps-featured' : ''}" data-plan="${p.key}" onclick="selectPlan('${p.key}')">
+          ${p.popular ? `<span class="plan-steps-badge">Most Popular</span>` : ''}
+          <div class="flex items-start justify-between">
+            <p class="plan-steps-eyebrow">${svc.name}</p>
+            <div id="check-plan-${p.key}" class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center shrink-0"></div>
+          </div>
+          <h3 class="plan-steps-title">${p.label} ${svc.planWord}</h3>
+          <div class="plan-steps-price">${p.price}</div>
+          <ul class="plan-steps-list">
+            ${svc.planSteps.map(s => window.renderPlanStepRow(s, p.key)).join('')}
+          </ul>
+        </div>`).join('');
+
+      const def = svc.plans.find(p => p.popular) || svc.plans[0];
+      selectPlan(def.key);
+    }
+
+    function selectPlan(key) {
+      const svc = window.SERVICES_DATA[selectedServiceId];
+      selectedPlan = svc.plans.find(p => p.key === key);
+
+      svc.plans.forEach(p => {
+        document.querySelector(`#plan-grid-dynamic [data-plan="${p.key}"]`).classList.toggle('chosen', p.key === key);
+        setCheck('check-plan-' + p.key, p.key === key);
+      });
+
       updateSummary();
     }
 
     function updateSummary() {
+      const svc   = selectedServiceId ? window.SERVICES_DATA[selectedServiceId] : null;
       const count = parseInt(document.getElementById('o-count').value) || 0;
-      document.getElementById('sum-count').textContent = count > 0 ? count : '—';
-      document.getElementById('sum-total').textContent = count > 0
-        ? '$' + (count * selectedPlan.price).toFixed(2)
-        : '—';
+
+      document.getElementById('sum-service').textContent = svc ? svc.name : '—';
+      document.getElementById('sum-plan').textContent     = selectedPlan ? (selectedPlan.label + ' ' + svc.planWord) : '—';
+      document.getElementById('sum-price').textContent    = selectedPlan ? selectedPlan.price : '—';
+      document.getElementById('sum-count').textContent    = count > 0 ? count : '—';
+
+      const clockItem = svc && svc.whyUs.find(w => w.icon === 'clock');
+      document.getElementById('sum-delivery').textContent = clockItem ? clockItem.title : '—';
+
+      const unit = selectedPlan ? parsePrice(selectedPlan.price) : null;
+      const totalEl = document.getElementById('sum-total');
+      if (unit != null && count > 0) totalEl.textContent = '$' + (unit * count).toFixed(2);
+      else if (selectedPlan) totalEl.textContent = 'Custom quote';
+      else totalEl.textContent = '—';
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      renderServiceCards();
+      updateSummary();
+    });
 
     function handleOrderForm(e) {
       e.preventDefault();
+
+      if (!selectedServiceId || !selectedPlan) {
+        alert('Please choose a service and a plan above before submitting.');
+        return;
+      }
+
       const btn     = document.getElementById('order-btn');
       const success = document.getElementById('order-success');
 
@@ -378,18 +328,22 @@
       btn.disabled      = true;
       btn.style.opacity = '0.7';
 
+      const svc   = window.SERVICES_DATA[selectedServiceId];
       const count = parseInt(document.getElementById('o-count').value) || 0;
+      const unit  = parsePrice(selectedPlan.price);
+      const clockItem = svc.whyUs.find(w => w.icon === 'clock');
+
       const data = {
         name:            document.getElementById('o-name').value,
         email:           document.getElementById('o-email').value,
         phone:           document.getElementById('o-phone').value || 'N/A',
-        plan:            selectedPlan.name + ' ($' + selectedPlan.price.toFixed(2) + '/img)',
-        delivery_time:   selectedPlan.delivery,
+        service:         svc.name,
+        plan:            selectedPlan.label + ' ' + svc.planWord + ' (' + selectedPlan.price + ')',
+        delivery_time:   clockItem ? clockItem.title : 'N/A',
         image_count:     count || 'N/A',
-        service:         document.getElementById('o-service').value,
         delivery_method: document.getElementById('o-delivery').value,
         notes:           document.getElementById('o-notes').value || 'N/A',
-        total_estimate:  count > 0 ? '$' + (count * selectedPlan.price).toFixed(2) : 'N/A',
+        total_estimate:  (unit != null && count > 0) ? '$' + (unit * count).toFixed(2) : 'Custom quote',
         _subject:        'New Order from ' + document.getElementById('o-name').value,
         _captcha:        'false'
       };

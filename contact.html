@@ -18,59 +18,12 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-white text-gray-900 antialiased" data-page="contact">
 
-  <!-- HEADER -->
-  <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2.5 shrink-0">
-        <img src="images/logo/logo.png" alt="LOTUS" class="h-9 w-auto" />
-        <span class="font-display font-bold text-[18px] tracking-wide text-gray-900">LOTUS</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="portfolio.html"
-          class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Portfolio</a>
-        <div class="nav-has-dropdown">
-          <a href="services.html"
-            class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1">
-            Services
-            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-              <path d="M2 4l4 4 4-4" />
-            </svg>
-          </a>
-          <div class="nav-dropdown-menu">
-            <a class="nav-dropdown-item" href="services.html#hdr"><span class="nav-dropdown-dot"></span>Photo
-              Editing</a>
-            <a class="nav-dropdown-item" href="services.html#removal"><span class="nav-dropdown-dot"></span>Item
-              Removal</a>
-            <a class="nav-dropdown-item" href="services.html#staging"><span class="nav-dropdown-dot"></span>Virtual
-              Staging</a>
-            <a class="nav-dropdown-item" href="services.html#dusk"><span class="nav-dropdown-dot"></span>Day to Dusk</a>
-            <a class="nav-dropdown-item" href="services.html#renovation"><span class="nav-dropdown-dot"></span>Virtual
-              Renovation</a>
-          </div>
-        </div>
-        <a href="index.html#pricing"
-          class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-        <a href="contact.html" class="nav-link is-active text-sm font-medium transition-colors"
-          style="color:var(--orange)">Contact</a>
-        <a href="order.html" class="btn-primary text-sm font-semibold px-5 py-2.5 rounded-xl">Place Order</a>
-      </nav>
-      <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-        onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Toggle menu">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <path d="M3 6h16M3 12h16M3 18h16" />
-        </svg>
-      </button>
-    </div>
-    <div id="mobile-nav" class="md:hidden border-t border-gray-100 bg-white px-6 py-5 flex flex-col gap-4">
-      <a href="portfolio.html" class="text-sm font-medium text-gray-700">Portfolio</a>
-      <a href="services.html" class="text-sm font-medium text-gray-700">Services</a>
-      <a href="index.html#pricing" class="text-sm font-medium text-gray-700">Pricing</a>
-      <a href="contact.html" class="text-sm font-semibold" style="color:var(--orange)">Contact</a>
-      <a href="order.html" class="btn-primary text-sm font-semibold px-4 py-3 rounded-xl text-center">Place Order</a>
-    </div>
-  </header>
+  <!-- HEADER (rendered from js/site-data.js) -->
+  <div id="header-placeholder"></div>
+  <script src="js/site-data.js"></script>
+  <script src="js/layout.js"></script>
 
   <!-- PAGE HERO -->
   <section class="page-hero pt-28 pb-12 px-6">
@@ -170,7 +123,6 @@
                   <option>Item Removal</option>
                   <option>Virtual Staging</option>
                   <option>Day to Dusk</option>
-                  <option>Virtual Renovation</option>
                   <option>General Inquiry</option>
                 </select>
               </div>
@@ -264,48 +216,11 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 py-16 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-4 gap-10 mb-12">
-        <div class="md:col-span-2">
-          <div class="flex items-center gap-2.5 mb-4">
-            <img src="images/logo/logo.png" alt="LOTUS" class="h-8 w-auto brightness-0 invert" />
-          </div>
-          <p class="text-sm leading-relaxed max-w-xs">Professional real estate photo editing that delivers the perfect
-            balance of lighting, color, and precision to every image.</p>
-        </div>
-        <div>
-          <p class="text-white font-semibold text-sm mb-4">Services</p>
-          <ul class="space-y-2.5 text-sm">
-            <li><a href="services.html" class="hover:text-white transition-colors">Photo Editing</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Item Removal</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Virtual Staging</a></li>
-            <li><a href="services.html" class="hover:text-white transition-colors">Day to Dusk</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-white font-semibold text-sm mb-4">Get In Touch</p>
-          <p class="text-sm mb-1">contact.lotusfoto@gmail.com</p>
-          <p class="text-sm mb-5">24/7 Support</p>
-          <form onsubmit="handleFooterForm(event)" class="flex gap-2">
-            <input type="email" placeholder="Your email" required
-              class="flex-1 min-w-0 text-sm px-3 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400 transition-colors" />
-            <button type="submit" id="footer-btn"
-              class="btn-primary text-sm font-semibold px-4 py-2.5 rounded-lg shrink-0">Send</button>
-          </form>
-        </div>
-      </div>
-      <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-        <span>© 2024 LOTUS. All rights reserved.</span>
-        <div class="flex gap-6">
-          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+  <script>renderFooter();</script>
 
   <script src="js/main.js" defer></script>
+  <script src="js/floating-buttons.js" defer></script>
   <script>
     function handleContactForm(e) {
       e.preventDefault();
