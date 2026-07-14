@@ -34,6 +34,9 @@
   const CHECK_DTD = CHECKOUT + 'DTD/';
   const BA_DTD = BAS + 'DTD/';
 
+  // VIRTUAL RENOVATION
+  const BA_RENO = BAS + 'RENOVATION/';
+
   /* ──────────────────────────────────
      SERVICE DATA
   ────────────────────────────────── */
@@ -101,7 +104,7 @@
         { before: BA_PE + 'DSC_0622_1.jpg', after: BA_PE + 'DSC_0622.jpg' },
         { before: BA_PE + 'DSC02007.jpg', after: BA_PE + 'DSC02007_1.jpg' },
       ],
-      popular: ['removal', 'staging', 'dusk'],
+      popular: ['removal', 'staging', 'dusk', 'renovation'],
       // "Compare by Plan" step checklist — what THIS service includes at
       // each plan level. Kept consistent with the Basic/Standard/Advanced
       // feature gates on order.html: Basic = corrections only; Standard
@@ -196,7 +199,7 @@
         { before: BA_IR + 'ITEM0006.jpg', after: BA_IR + 'ITEM0006_1.jpg' },
         { before: BA_IR + 'ITEM0007.jpg', after: BA_IR + 'ITEM0007_1.jpg' },
       ],
-      popular: ['hdr', 'staging', 'dusk'],
+      popular: ['hdr', 'staging', 'dusk', 'renovation'],
       // "Compare by Plan" step checklist — see note in the hdr service above.
       planWord: 'Removal',
       // EXAMPLE pricing — replace with real per-service rates.
@@ -282,7 +285,7 @@
         { before: BA_VS + 'DSC01888_final.jpg', after: BA_VS + 'DSC01888.jpg' },
         { before: BA_VS + 'DSC01870_final.jpg', after: BA_VS + 'DSC01870.jpg' },
       ],
-      popular: ['hdr', 'removal', 'dusk'],
+      popular: ['hdr', 'removal', 'dusk', 'renovation'],
       // "Compare by Plan" step checklist — see note in the hdr service above.
       // Virtual staging is an Advanced-only feature per order.html, so the
       // core service itself only lights up on the Advanced column.
@@ -381,7 +384,7 @@
         { before: BA_DTD + '0O2A3573.DTE.jpg', after: BA_DTD + '0O2A3573.jpg' },
         { before: BA_DTD + '0O2A9054dte.jpg', after: BA_DTD + '0O2A9054.jpg' },
       ],
-      popular: ['hdr', 'removal', 'staging'],
+      popular: ['hdr', 'removal', 'staging', 'renovation'],
       // "Compare by Plan" step checklist — see note in the hdr service above.
       // Day-to-dusk conversion is an Advanced-only feature per order.html,
       // so the core service itself only lights up on the Advanced column.
@@ -404,6 +407,96 @@
         {
           label: 'Delivery Speed', basic: true, standard: true, advanced: true,
           basicNote: '48h delivery', standardNote: '24h delivery', advancedNote: '12h rush delivery'
+        },
+      ],
+    },
+
+    /* ── 5. VIRTUAL RENOVATION ──────────────────────────────────────
+       Confirmed BA pairs (suffix _ or _1):
+         01122303 / 01122303_
+         01122310 / 01122310_
+         01122323_Room2 / 01122323_Room2_
+         DSC09914 / DSC09914_1
+         DSC09920 / DSC09920_1
+         DSC09921 / DSC09921_1
+       Gallery (after-only): same 6 after shots
+    ─────────────────────────────────────────────────────────────── */
+    renovation: {
+      id: 'renovation',
+      name: 'Virtual Renovation',
+      subtitle: "Show the Property's Full Potential",
+      hero: {
+        before: BA_RENO + '01122303.jpg',
+        after: BA_RENO + '01122303_.jpg',
+      },
+      whyUs: [
+        { icon: 'paint', title: 'Walls & Floors Updated', text: 'New paint colours, wallpaper, hardwood, tile, or luxury vinyl — applied photorealistically with correct lighting and shadow.' },
+        { icon: 'cost', title: 'No Contractor Needed', text: 'Show renovation potential without spending a single dollar on materials, labour, or staging.' },
+        { icon: 'buyer', title: 'Attract More Buyers', text: 'Help buyers see past dated finishes and envision the updated home — leading to faster, higher offers.' },
+        { icon: 'clock', title: '48–72h Turnaround', text: 'Complex renovation renders completed within 48–72 hours depending on scope.' },
+      ],
+      solutions: [
+        {
+          q: 'Can you change wall colours, remove wallpaper, or add texture?',
+          text: 'Yes — walls can be repainted to any colour, dated wallpaper removed, and textured finishes (wood panelling, Venetian plaster, brick) applied. We match the ambient light and shadow of the original photo for a completely authentic result.',
+          before: BA_RENO + '01122310.jpg',
+          after: BA_RENO + '01122310_.jpg',
+        },
+        {
+          q: 'Can you swap the flooring material?',
+          text: 'Absolutely. We replace carpet with hardwood, old tile with polished concrete, or linoleum with luxury vinyl plank. Perspective, grout lines, skirting boards, and surface reflections are all matched accurately for each room.',
+          before: BA_RENO + '01122323_Room2.jpg',
+          after: BA_RENO + '01122323_Room2_.jpg',
+        },
+        {
+          q: 'What about kitchen cabinets, countertops, and bathroom tiles?',
+          text: 'High-impact surface updates — cabinet repainting, stone countertop swaps, tile backsplash replacements, and bathroom vanity updates — are among our most requested renovation edits. These changes significantly increase perceived value per MLS dollar.',
+          before: BA_RENO + 'DSC09914.jpg',
+          after: BA_RENO + 'DSC09914_1.jpg',
+        },
+      ],
+      checkOut: [
+        BA_RENO + '01122303_.jpg',
+        BA_RENO + '01122310_.jpg',
+        BA_RENO + '01122323_Room2_.jpg',
+        BA_RENO + 'DSC09914_1.jpg',
+        BA_RENO + 'DSC09920_1.jpg',
+        BA_RENO + 'DSC09921_1.jpg',
+      ],
+      checkOutMoreLink: '#',
+      projects: [
+        { before: BA_RENO + '01122303.jpg', after: BA_RENO + '01122303_.jpg' },
+        { before: BA_RENO + '01122310.jpg', after: BA_RENO + '01122310_.jpg' },
+        { before: BA_RENO + '01122323_Room2.jpg', after: BA_RENO + '01122323_Room2_.jpg' },
+        { before: BA_RENO + 'DSC09914.jpg', after: BA_RENO + 'DSC09914_1.jpg' },
+        { before: BA_RENO + 'DSC09920.jpg', after: BA_RENO + 'DSC09920_1.jpg' },
+        { before: BA_RENO + 'DSC09921.jpg', after: BA_RENO + 'DSC09921_1.jpg' },
+      ],
+      popular: ['hdr', 'removal', 'staging', 'dusk'],
+      // "Compare by Plan" step checklist — see note in the hdr service above.
+      // Not explicitly listed on order.html's plan bullets, so it's grouped
+      // with the other Advanced-tier specialty transformations.
+      planWord: 'Renovation',
+      // EXAMPLE pricing — replace with real per-service rates.
+      plans: [
+        { key: 'basic', label: 'Basic', price: '$10/img' },
+        { key: 'standard', label: 'Standard', price: '$18/img', popular: true },
+        { key: 'advanced', label: 'Advanced', price: '$28/img' },
+      ],
+      planSteps: [
+        { label: 'Color & Brightness Correction', basic: true, standard: true, advanced: true },
+        { label: 'Lens Distortion Correction', basic: true, standard: true, advanced: true },
+        { label: 'Straightening', basic: true, standard: true, advanced: true },
+        { label: 'HDR Blending & Exposure Merge', basic: false, standard: true, advanced: true },
+        { label: 'Sky Replacement', basic: false, standard: true, advanced: true },
+        { label: 'Wall Colour / Wallpaper Replacement', basic: false, standard: false, advanced: true },
+        { label: 'Flooring Material Swap', basic: false, standard: false, advanced: true },
+        { label: 'Kitchen Cabinet & Countertop Update', basic: false, standard: false, advanced: true },
+        { label: 'Bathroom Tile & Vanity Update', basic: false, standard: false, advanced: true },
+        { label: 'Lighting & Shadow Match for New Finishes', basic: false, standard: false, advanced: true },
+        {
+          label: 'Revisions Included', basic: true, standard: true, advanced: true,
+          basicNote: '1 revision', standardNote: '2 revisions', advancedNote: 'Unlimited revisions'
         },
       ],
     },

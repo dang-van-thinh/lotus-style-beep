@@ -26,6 +26,7 @@ window.SITE_DATA = {
         { id: 'removal', label: 'Item Removal' },
         { id: 'staging', label: 'Virtual Staging' },
         { id: 'dusk', label: 'Day to Dusk' },
+        { id: 'renovation', label: 'Virtual Renovation' },
       ],
     },
     { id: 'pricing', label: 'Pricing', href: 'order.html' },
