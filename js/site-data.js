@@ -9,7 +9,7 @@ window.SITE_DATA = {
   brand: {
     name: 'LOTUS',
     mini_name: 'FOTO',
-    logo: 'images/logo/logo-lotus.png',
+    logo: 'images/logo/logo.png',
   },
 
   // Top-level nav items, in display order.
@@ -46,8 +46,8 @@ window.SITE_DATA = {
     // Social links shown under the brand tagline in the footer.
     // Replace the href placeholders with your real profile/chat links.
     social: [
-      { name: 'Facebook',  href: '#', icon: 'facebook' },
-      { name: 'Instagram', href: '#', icon: 'instagram' },
+      { name: 'Facebook',  href: 'https://www.facebook.com/profile.php?id=61579599152434', icon: 'facebook' },
+      { name: 'Instagram', href: 'https://www.instagram.com/lotus_foto_editing/', icon: 'instagram' },
       { name: 'WhatsApp',  href: '#', icon: 'whatsapp' },
     ],
   },

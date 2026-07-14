@@ -92,7 +92,7 @@
       ],
       // "View More" on Check Out What We Do — put the full gallery/portfolio
       // link for this service here.
-      checkOutMoreLink: 'https://drive.google.com/drive/folders/1-_rnCbR4F_R-iAC1A4VOVW2uXpkqj_mD?usp=sharing',
+      checkOutMoreLink: 'https://drive.google.com/drive/folders/1-_rnCbR4F_R-iAC1A4VOVW2uXpkqj_mD?usp=drive_link',
       projects: [
         { before: BA_PE + 'DSC_0602_1.jpg', after: BA_PE + 'DSC_0602.jpg' },
         { before: BA_PE + 'DSC_0607_1.jpg', after: BA_PE + 'DSC_0607.jpg' },
@@ -186,7 +186,7 @@
         CHECK_IR + '0O2A8710_final.jpg',
         CHECK_IR + '0O2A8715_final.jpg',
       ],
-      checkOutMoreLink: '#',
+      checkOutMoreLink: 'https://drive.google.com/drive/folders/1z_9XjvwTp7mOeNUg3vdz7SaqFFG6Hhor?usp=sharing',
       projects: [
         // { before: BA_IR + '0O2A8093_1.jpg', after: BA_IR + '0O2A8093.jpg' },
         { before: BA_IR + '0O2A8133_1.jpg', after: BA_IR + '0O2A8133.jpg' },
@@ -273,7 +273,7 @@
         BA_VS + 'DSC01889_final.jpg',
         BA_VS + 'DSC02122_final.jpg',
       ],
-      checkOutMoreLink: '#',
+      checkOutMoreLink: 'https://drive.google.com/drive/folders/1mptk2ZrTFAWgMcUZhYgqZWVc_N9p7z72?usp=drive_link',
       projects: [
         { before: BA_VS + 'DSC02366_final.jpg', after: BA_VS + 'DSC02366.jpg' },
         { before: BA_VS + 'DSC02360_finall.jpg', after: BA_VS + 'DSC02360.jpg' },
