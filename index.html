@@ -626,96 +626,228 @@ Time</div>
 
 
   <!-- ════════════════════════════════════
-       WHAT WE DONE (portfolio preview)
+       WHAT WE DONE (Full Category Filterable Portfolio)
   ════════════════════════════════════ -->
-  <section id="work" class="py-24 px-6 bg-white">
+  <section id="work" class="py-24 px-6" style="background:#0F172A">
     <div class="max-w-7xl mx-auto">
 
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-        <div class="reveal">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 reveal">
+        <div>
           <div class="flex items-center gap-2 mb-3">
             <span class="w-2 h-2 rounded-full shrink-0" style="background:var(--orange)"></span>
-            <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Our Work</span>
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Our Portfolio</span>
           </div>
-          <h2 class="font-display font-extrabold text-4xl text-gray-900">What We've <span
-              style="color:var(--orange)">Done</span></h2>
-          <p class="text-gray-400 mt-2 text-sm">Real photos. Real results. Every image edited by our team.</p>
+          <h2 class="font-display font-extrabold text-3xl md:text-5xl text-white">
+            What We've <span style="color:var(--orange)">Done</span>
+          </h2>
+          <p class="text-gray-400 mt-2 text-sm max-w-xl">
+            Browse our full real estate editing portfolio across every service — from HDR blending to virtual staging before &amp; after.
+          </p>
         </div>
-        <a href="services.html" class="reveal shrink-0 text-sm font-semibold transition-colors"
-          style="color:var(--orange)">Explore All Services →</a>
+        <a href="services.html" class="btn-primary font-semibold px-6 py-3.5 rounded-xl text-sm shrink-0 inline-flex items-center gap-2">
+          Explore All Services ↗
+        </a>
       </div>
 
-      <!-- Editorial grid: wide left + right stack -->
-      <div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-4">
-
-        <!-- Left: tall hero card -->
-        <a href="services.html#hdr" class="work-card reveal" style="height:480px">
-          <img src="images/BAS/PE/DSC02007_1.jpg" alt="HDR Blending result"
-            loading="lazy" />
-          <div class="work-overlay"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-2"
-              style="background:var(--orange);color:#fff">Photo Editing</span>
-            <p class="text-white font-display font-bold text-xl leading-tight">HDR Blending &amp;<br>Sky Replacement</p>
-          </div>
-        </a>
-
-        <!-- Right: 2 stacked cards -->
-        <div class="flex flex-col gap-4">
-          <a href="services.html#removal" class="work-card reveal" style="height:228px;transition-delay:80ms">
-            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8710_final.jpg" alt="Item Removal result" loading="lazy" />
-            <div class="work-overlay"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-5">
-              <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
-                style="background:var(--orange);color:#fff">Item Removal</span>
-              <p class="text-white font-display font-bold text-lg leading-tight">Object &amp; Clutter Removal</p>
-            </div>
-          </a>
-          <a href="services.html#staging" class="work-card reveal" style="height:228px;transition-delay:140ms">
-            <img src="images/BAS/VIRTUAL_STAGING/0O2A9543_final.jpg" alt="Virtual Staging result"
-              loading="lazy" />
-            <div class="work-overlay"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-5">
-              <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
-                style="background:var(--orange);color:#fff">Virtual Staging</span>
-              <p class="text-white font-display font-bold text-lg leading-tight">Empty to Furnished</p>
-            </div>
-          </a>
-        </div>
-
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap gap-2.5 mb-10" id="filter-tabs">
+        <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="all" onclick="filterWork('all',this)">All Work</button>
+        <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="hdr" onclick="filterWork('hdr',this)">Photo Editing</button>
+        <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="removal" onclick="filterWork('removal',this)">Item Removal</button>
+        <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="staging" onclick="filterWork('staging',this)">Virtual Staging</button>
+        <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="dusk" onclick="filterWork('dusk',this)">Day to Dusk</button>
+        <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="renovation" onclick="filterWork('renovation',this)">Virtual Renovation</button>
       </div>
 
-      <!-- Second row: 3 cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
-        <a href="services.html#dusk" class="work-card reveal" style="height:220px;transition-delay:60ms">
-          <img src="images/BAS/DTD/0O2A3573.jpg" alt="Day to Dusk result" loading="lazy" />
-          <div class="work-overlay"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
-              style="background:var(--orange);color:#fff">Day to Dusk</span>
-            <p class="text-white font-display font-bold text-base leading-tight">Twilight Conversion</p>
+      <!-- Portfolio Cards Grid -->
+      <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- ── PHOTO EDITING (HDR) ── -->
+        <div class="portfolio-card lg:col-span-2 relative overflow-hidden rounded-2xl cursor-pointer group border border-slate-800 h-72" data-cat="hdr">
+          <img src="images/BAS/PE/DSC02237_1.jpg" alt="HDR Blending result" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+            <div>
+              <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+              <p class="text-white font-display font-bold text-xl">Window Pull &amp; Ambient Blend</p>
+            </div>
           </div>
-        </a>
-        <a href="services.html#renovation" class="work-card reveal" style="height:220px;transition-delay:130ms">
-          <img src="images/BAS/RENOVATION/01122310_.jpg" alt="Virtual Renovation result"
-            loading="lazy" />
-          <div class="work-overlay"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
-              style="background:var(--orange);color:#fff">Virtual Renovation</span>
-            <p class="text-white font-display font-bold text-base leading-tight">Full Renovation Preview</p>
+        </div>
+
+        <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer group border border-slate-800 h-72" data-cat="hdr">
+          <img src="images/BAS/PE/DSC02242_1.jpg" alt="HDR Blending" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+            <div>
+              <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+              <p class="text-white font-display font-bold text-lg">Living Room — Natural Light</p>
+            </div>
           </div>
-        </a>
-        <a href="services.html#hdr" class="work-card reveal" style="height:220px;transition-delay:200ms">
-          <img src="images/BAS/PE/SKY-B.jpg" alt="Exterior editing result"
-            loading="lazy" />
-          <div class="work-overlay"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5">
-            <span class="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full mb-1.5"
-              style="background:var(--orange);color:#fff">Exterior Edit</span>
-            <p class="text-white font-display font-bold text-base leading-tight">Exterior Enhancement</p>
+        </div>
+
+        <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer group border border-slate-800 h-64" data-cat="hdr">
+          <img src="images/BAS/PE/DSC02272_1.jpg" alt="HDR Blending" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+            <div>
+              <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+              <p class="text-white font-display font-bold text-lg">Bedroom Detail Shot</p>
+            </div>
           </div>
-        </a>
+        </div>
+
+        <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer group border border-slate-800 h-64" data-cat="hdr">
+          <img src="images/BAS/PE/IMG_0015_1.jpg" alt="HDR Blending" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+            <div>
+              <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+              <p class="text-white font-display font-bold text-lg">Kitchen — Warm Tones</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer group border border-slate-800 h-64" data-cat="hdr">
+          <img src="images/BAS/PE/IMG_0020_1.jpg" alt="HDR Blending" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+            <div>
+              <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+              <p class="text-white font-display font-bold text-lg">Dining Room</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── ITEM REMOVAL (Before/After Sliders) ── -->
+        <div class="ba-card rounded-2xl overflow-hidden h-64 border border-slate-800 shadow-xl" data-cat="removal" style="position:relative;width:100%;user-select:none;">
+          <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8680.jpg" alt="Before" class="ba-before" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="ba-after" style="position:absolute;inset:0;clip-path:inset(0 50% 0 0);">
+            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8680_final.jpg" alt="After" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="ba-line" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;pointer-events:none;z-index:10;transform:translateX(-50%);">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#111;font-size:12px;font-weight:bold;">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-input" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:20;" />
+          <span style="position:absolute;bottom:12px;left:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Before</span>
+          <span style="position:absolute;bottom:12px;right:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">After</span>
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-64 border border-slate-800 shadow-xl" data-cat="removal" style="position:relative;width:100%;user-select:none;">
+          <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8685.jpg" alt="Before" class="ba-before" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="ba-after" style="position:absolute;inset:0;clip-path:inset(0 50% 0 0);">
+            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8685_done.jpg" alt="After" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="ba-line" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;pointer-events:none;z-index:10;transform:translateX(-50%);">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#111;font-size:12px;font-weight:bold;">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-input" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:20;" />
+          <span style="position:absolute;bottom:12px;left:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Before</span>
+          <span style="position:absolute;bottom:12px;right:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">After</span>
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-64 border border-slate-800 shadow-xl" data-cat="removal" style="position:relative;width:100%;user-select:none;">
+          <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8690.jpg" alt="Before" class="ba-before" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="ba-after" style="position:absolute;inset:0;clip-path:inset(0 50% 0 0);">
+            <img src="images/CHECKOUTS/ITEM_REMOVAL/0O2A8690_done.jpg" alt="After" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="ba-line" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;pointer-events:none;z-index:10;transform:translateX(-50%);">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#111;font-size:12px;font-weight:bold;">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-input" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:20;" />
+          <span style="position:absolute;bottom:12px;left:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Before</span>
+          <span style="position:absolute;bottom:12px;right:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">After</span>
+        </div>
+
+        <!-- ── VIRTUAL STAGING (Before/After Sliders) ── -->
+        <div class="ba-card rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="staging" style="position:relative;width:100%;user-select:none;">
+          <img src="images/BAS/VIRTUAL_STAGING/0O2A9176.jpg" alt="Before" class="ba-before" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="ba-after" style="position:absolute;inset:0;clip-path:inset(0 50% 0 0);">
+            <img src="images/BAS/VIRTUAL_STAGING/0O2A9176_final.jpg" alt="After" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="ba-line" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;pointer-events:none;z-index:10;transform:translateX(-50%);">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#111;font-size:12px;font-weight:bold;">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-input" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:20;" />
+          <span style="position:absolute;bottom:12px;left:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Before</span>
+          <span style="position:absolute;bottom:12px;right:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">After</span>
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="staging" style="position:relative;width:100%;user-select:none;">
+          <img src="images/BAS/VIRTUAL_STAGING/0O2A9182.jpg" alt="Before" class="ba-before" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="ba-after" style="position:absolute;inset:0;clip-path:inset(0 50% 0 0);">
+            <img src="images/BAS/VIRTUAL_STAGING/0O2A9182_final.jpg" alt="After" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="ba-line" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;pointer-events:none;z-index:10;transform:translateX(-50%);">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#111;font-size:12px;font-weight:bold;">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-input" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:20;" />
+          <span style="position:absolute;bottom:12px;left:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Before</span>
+          <span style="position:absolute;bottom:12px;right:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">After</span>
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="staging" style="position:relative;width:100%;user-select:none;">
+          <img src="images/BAS/VIRTUAL_STAGING/0O2A9543.jpg" alt="Before" class="ba-before" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="ba-after" style="position:absolute;inset:0;clip-path:inset(0 50% 0 0);">
+            <img src="images/BAS/VIRTUAL_STAGING/0O2A9543_final.jpg" alt="After" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="ba-line" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;pointer-events:none;z-index:10;transform:translateX(-50%);">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#111;font-size:12px;font-weight:bold;">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-input" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:20;" />
+          <span style="position:absolute;bottom:12px;left:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Before</span>
+          <span style="position:absolute;bottom:12px;right:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">After</span>
+        </div>
+
+        <!-- ── DAY TO DUSK (Before/After Sliders) ── -->
+        <div class="ba-card rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="dusk" style="position:relative;width:100%;user-select:none;">
+          <img src="images/BAS/DTD/f3653632.DTE.jpg" alt="Day" class="ba-before" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="ba-after" style="position:absolute;inset:0;clip-path:inset(0 50% 0 0);">
+            <img src="images/BAS/DTD/f3653632.jpg" alt="Dusk" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="ba-line" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;pointer-events:none;z-index:10;transform:translateX(-50%);">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#111;font-size:12px;font-weight:bold;">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-input" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:20;" />
+          <span style="position:absolute;bottom:12px;left:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Day</span>
+          <span style="position:absolute;bottom:12px;right:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Dusk</span>
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="dusk" style="position:relative;width:100%;user-select:none;">
+          <img src="images/BAS/DTD/0O2A3573.DTE.jpg" alt="Day" class="ba-before" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="ba-after" style="position:absolute;inset:0;clip-path:inset(0 50% 0 0);">
+            <img src="images/BAS/DTD/0O2A3573.jpg" alt="Dusk" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="ba-line" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;pointer-events:none;z-index:10;transform:translateX(-50%);">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#111;font-size:12px;font-weight:bold;">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-input" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:20;" />
+          <span style="position:absolute;bottom:12px;left:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Day</span>
+          <span style="position:absolute;bottom:12px;right:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Dusk</span>
+        </div>
+
+        <!-- ── VIRTUAL RENOVATION (Before/After Sliders) ── -->
+        <div class="ba-card rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="renovation" style="position:relative;width:100%;user-select:none;">
+          <img src="images/BAS/RENOVATION/01122303.jpg" alt="Before" class="ba-before" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="ba-after" style="position:absolute;inset:0;clip-path:inset(0 50% 0 0);">
+            <img src="images/BAS/RENOVATION/01122303_.jpg" alt="After" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="ba-line" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;pointer-events:none;z-index:10;transform:translateX(-50%);">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#111;font-size:12px;font-weight:bold;">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-input" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:20;" />
+          <span style="position:absolute;bottom:12px;left:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Before</span>
+          <span style="position:absolute;bottom:12px;right:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">After</span>
+        </div>
+
+        <div class="ba-card rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="renovation" style="position:relative;width:100%;user-select:none;">
+          <img src="images/BAS/RENOVATION/01122310.jpg" alt="Before" class="ba-before" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="ba-after" style="position:absolute;inset:0;clip-path:inset(0 50% 0 0);">
+            <img src="images/BAS/RENOVATION/01122310_.jpg" alt="After" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="ba-line" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;pointer-events:none;z-index:10;transform:translateX(-50%);">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#111;font-size:12px;font-weight:bold;">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-input" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:20;" />
+          <span style="position:absolute;bottom:12px;left:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">Before</span>
+          <span style="position:absolute;bottom:12px;right:12px;z-index:5;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;">After</span>
+        </div>
+
       </div>
 
     </div>
