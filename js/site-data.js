@@ -16,7 +16,6 @@ window.SITE_DATA = {
   // "services" carries the dropdown list, which is also reused
   // to build the footer's Services column.
   nav: [
-    { id: 'portfolio', label: 'Portfolio', href: 'portfolio.html' },
     {
       id: 'services',
       label: 'Services',
@@ -29,7 +28,6 @@ window.SITE_DATA = {
         { id: 'renovation', label: 'Virtual Renovation' },
       ],
     },
-    { id: 'pricing', label: 'Pricing', href: 'order.html' },
     { id: 'contact', label: 'Contact', href: 'contact.html' },
   ],
 

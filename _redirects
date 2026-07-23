@@ -1,6 +1,9 @@
 # Cloudflare Pages — redirect .html → clean URL (301 permanent)
 /index.html       /           301
-/portfolio.html   /portfolio  301
+/portfolio.html   /services   301
+/portfolio        /services   301
+/pricing.html     /services   301
+/pricing          /services   301
 /services.html    /services   301
 /contact.html     /contact    301
 /order.html       /order      301

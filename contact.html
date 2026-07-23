@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="images/logo/logo.png" />
-  <title>Contact — LOTUS</title>
+  <title>Contact &amp; Support — LOTUS</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: { extend: { fontFamily: { display: ['Poppins', 'sans-serif'], body: ['Inter', 'sans-serif'] } } }
     };
   </script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
-<body class="bg-white text-gray-900 antialiased" data-page="contact">
+<body class="bg-slate-50 text-gray-900 antialiased" data-page="contact">
 
   <!-- HEADER (rendered from js/site-data.js) -->
   <div id="header-placeholder"></div>
@@ -26,192 +22,150 @@
   <script src="js/layout.js"></script>
 
   <!-- PAGE HERO -->
-  <section class="page-hero pt-28 pb-12 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="w-2 h-2 rounded-full shrink-0" style="background:var(--orange)"></span>
-        <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Reach Out</span>
+  <section class="pt-28 pb-12 px-6 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 mb-4 border border-orange-100">
+        <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
+        <span class="text-xs font-bold uppercase tracking-wider text-orange-600">24/7 Direct Help &amp; Support</span>
       </div>
-      <h1 class="font-display font-extrabold text-4xl md:text-5xl text-gray-900 mb-3">Get In Touch</h1>
-      <p class="text-gray-500 max-w-xl">Have a question, a large batch, or a custom request? We typically reply within 2
-        business hours.</p>
+      <h1 class="font-display font-extrabold text-4xl md:text-5xl text-gray-900 mb-4 leading-tight">
+        Contact &amp; Support Center
+      </h1>
+      <p class="text-gray-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        Have a question, need custom agency pricing, or looking for instant support? Reach out directly through any of our channels below.
+      </p>
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section class="py-20 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid lg:grid-cols-5 gap-14">
-
-        <!-- Left: Info -->
-        <div class="lg:col-span-2 space-y-8 reveal">
-
-          <!-- Response time -->
-          <div class="p-6 rounded-2xl border border-gray-100" style="background:#FAFAFA">
-            <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background:#FFF3E0">
-              <svg width="22" height="22" fill="none" viewBox="0 0 22 22">
-                <circle cx="11" cy="11" r="9" stroke="#FF9500" stroke-width="1.8" />
-                <path d="M11 6v5l3 3" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" />
-              </svg>
+  <!-- DIRECT CONTACT CHANNELS -->
+  <section class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        
+        <!-- Email Support Card -->
+        <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center text-orange-500 mb-6 group-hover:scale-110 transition-transform">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" stroke-width="2"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <h3 class="font-display font-bold text-gray-900 mb-1">Fast Response</h3>
-            <p class="text-sm text-gray-500">We reply to all inquiries within 2 business hours, Mon – Sat 8am–8pm EST.
-            </p>
+            <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Email Support</h3>
+            <p class="text-xs text-gray-500 mb-6 leading-relaxed">Send us your project inquiry, agency proposals, or custom requests anytime.</p>
           </div>
-
-          <!-- Email -->
-          <div class="p-6 rounded-2xl border border-gray-100" style="background:#FAFAFA">
-            <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background:#FFF3E0">
-              <svg width="22" height="22" fill="none" viewBox="0 0 22 22">
-                <rect x="2" y="5" width="18" height="13" rx="2" stroke="#FF9500" stroke-width="1.8" />
-                <path d="M2 8l9 6 9-6" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" />
-              </svg>
-            </div>
-            <h3 class="font-display font-bold text-gray-900 mb-1">Email Us</h3>
-            <a href="mailto:hello@lotus.com" class="text-sm font-medium transition-colors hover:underline"
-              style="color:var(--orange)">contact.lotusfoto@gmail.com</a>
-          </div>
-
-          <!-- Support -->
-          <div class="p-6 rounded-2xl border border-gray-100" style="background:#FAFAFA">
-            <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background:#FFF3E0">
-              <svg width="22" height="22" fill="none" viewBox="0 0 22 22">
-                <path d="M4 4h14v10H4z" stroke="#FF9500" stroke-width="1.8" rx="1" />
-                <path d="M8 18h6M11 14v4" stroke="#FF9500" stroke-width="1.8" stroke-linecap="round" />
-              </svg>
-            </div>
-            <h3 class="font-display font-bold text-gray-900 mb-1">24/7 Support</h3>
-            <p class="text-sm text-gray-500">Critical orders and rush requests handled around the clock by our dedicated
-              team.</p>
-          </div>
-
-          <!-- Ready to order -->
-          <div class="p-6 rounded-2xl" style="background:var(--orange)">
-            <h3 class="font-display font-bold text-white text-lg mb-2">Ready to order?</h3>
-            <p class="text-orange-100 text-sm mb-4">Skip the form and go straight to placing your order.</p>
-            <a href="order.html"
-              class="inline-block bg-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:scale-105"
-              style="color:var(--orange)">Place an Order →</a>
-          </div>
+          <a href="mailto:contact.lotusfoto@gmail.com" class="btn-primary w-full text-center py-3.5 rounded-xl font-bold text-xs inline-flex items-center justify-center gap-2">
+            contact.lotusfoto@gmail.com ↗
+          </a>
         </div>
 
-        <!-- Right: Form -->
-        <div class="lg:col-span-3 reveal" style="transition-delay:100ms">
-          <form id="contact-form" onsubmit="handleContactForm(event)" class="space-y-5">
-            <div class="grid sm:grid-cols-2 gap-5">
-              <div>
-                <label class="form-label" for="c-name">Full Name <span style="color:var(--orange)">*</span></label>
-                <input id="c-name" type="text" class="form-input" placeholder="John Smith" required />
-              </div>
-              <div>
-                <label class="form-label" for="c-email">Email Address <span style="color:var(--orange)">*</span></label>
-                <input id="c-email" type="email" class="form-input" placeholder="john@agency.com" required />
-              </div>
+        <!-- Facebook Messenger Card -->
+        <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M12 3C6.477 3 2 7.03 2 12c0 2.828 1.474 5.34 3.784 6.942V21l3.52-1.936C10.36 19.387 11.168 19.5 12 19.5c5.523 0 10-4.03 10-7.5S17.523 3 12 3z" stroke="currentColor" stroke-width="2"/><path d="M7.5 13.5l3-3 2.25 2.25 3.75-3.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
+            <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Facebook Messenger</h3>
+            <p class="text-xs text-gray-500 mb-6 leading-relaxed">Chat with our customer care team live on Facebook for quick updates.</p>
+          </div>
+          <a href="https://www.facebook.com/profile.php?id=61579599152434" target="_blank" rel="noopener" class="w-full bg-slate-900 hover:bg-orange-500 text-white text-center py-3.5 rounded-xl font-bold text-xs transition-colors inline-flex items-center justify-center gap-2">
+            Chat on Facebook ↗
+          </a>
+        </div>
 
-            <div class="grid sm:grid-cols-2 gap-5">
-              <div>
-                <label class="form-label" for="c-phone">Phone (optional)</label>
-                <input id="c-phone" type="tel" class="form-input" placeholder="+1 (555) 000-0000" />
-              </div>
-              <div>
-                <label class="form-label" for="c-service">Service Interested In <span
-                    style="color:var(--orange)">*</span></label>
-                <select id="c-service" class="form-input" required>
-                  <option value="" disabled selected>Select a service…</option>
-                  <option>Photo Editing / HDR Blending</option>
-                  <option>Item Removal</option>
-                  <option>Virtual Staging</option>
-                  <option>Day to Dusk</option>
-                  <option>Virtual Renovation</option>
-                  <option>General Inquiry</option>
-                </select>
-              </div>
+        <!-- Instagram Direct Card -->
+        <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group sm:col-span-2 lg:col-span-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-pink-50 flex items-center justify-center text-pink-600 mb-6 group-hover:scale-110 transition-transform">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
             </div>
-
-            <div>
-              <label class="form-label" for="c-images">Estimated Number of Images</label>
-              <input id="c-images" type="number" min="1" class="form-input" placeholder="e.g. 25" />
-            </div>
-
-            <div>
-              <label class="form-label" for="c-msg">Message <span style="color:var(--orange)">*</span></label>
-              <textarea id="c-msg" class="form-input" rows="5"
-                placeholder="Tell us about your project, timeline, or any specific requirements…" required></textarea>
-            </div>
-
-            <!-- Success banner (hidden) -->
-            <div id="contact-success" class="hidden rounded-xl px-5 py-4 text-sm font-medium"
-              style="background:#F0FDF4;color:#16a34a;border:1.5px solid #bbf7d0">
-              ✓ Message sent! We'll get back to you within 2 business hours.
-            </div>
-
-            <button type="submit" id="contact-btn" class="btn-primary w-full font-semibold py-4 rounded-xl text-sm">
-              Send Message
-            </button>
-          </form>
+            <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Instagram Direct</h3>
+            <p class="text-xs text-gray-500 mb-6 leading-relaxed">Follow our latest editing work and DM us directly on Instagram.</p>
+          </div>
+          <a href="https://www.instagram.com/lotus_foto_editing/" target="_blank" rel="noopener" class="w-full bg-slate-900 hover:bg-orange-500 text-white text-center py-3.5 rounded-xl font-bold text-xs transition-colors inline-flex items-center justify-center gap-2">
+            @lotus_foto_editing ↗
+          </a>
         </div>
 
       </div>
+
+      <!-- READY TO PLACE AN ORDER CALLOUT BANNER -->
+      <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+        <div>
+          <span class="text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/30 mb-3 inline-block">Ready to Start?</span>
+          <h2 class="font-display font-extrabold text-2xl md:text-3xl text-white">Need a Quote or Ready to Submit Photos?</h2>
+          <p class="text-slate-400 text-sm mt-2 max-w-xl">Use our simple Quick Order form to submit your details and get started within 30 minutes.</p>
+        </div>
+        <a href="order.html" class="btn-primary font-extrabold px-8 py-4 rounded-2xl text-sm shrink-0 shadow-lg shadow-orange-500/30 inline-flex items-center gap-2">
+          Place an Order Now →
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- FAQ STRIP -->
-  <section class="py-20 px-6" style="background:#F5F5F5">
+  <!-- FAQ SECTION -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
     <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12 reveal">
-        <h2 class="font-display font-extrabold text-3xl text-gray-900 mb-2">Common Questions</h2>
-        <p class="text-gray-500">Quick answers before you reach out.</p>
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 mb-3 border border-orange-100">
+          <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-orange-600">FAQ</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl text-gray-900 mb-3">Frequently Asked Questions</h2>
+        <p class="text-gray-500 text-sm max-w-lg mx-auto">Everything you need to know about our editing workflow, turnaround, and support.</p>
       </div>
+
       <div class="space-y-4">
-        <details class="bg-white rounded-2xl px-6 py-5 reveal group">
-          <summary
-            class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 text-sm list-none">
-            How do I send my photos?
-            <svg class="shrink-0 transition-transform group-open:rotate-180" width="18" height="18" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <path d="M5 8l6 6 6-6" />
-            </svg>
+        
+        <details class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 group cursor-pointer transition-all hover:bg-slate-100">
+          <summary class="flex items-center justify-between font-bold text-gray-900 text-base list-none">
+            How fast will your team respond to my inquiry?
+            <svg class="shrink-0 transition-transform group-open:rotate-180 text-orange-500" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
           </summary>
-          <p class="text-gray-500 text-sm mt-3 leading-relaxed">You can share files via Google Drive, Dropbox,
-            WeTransfer, or FTP. We'll provide a dedicated folder link once your order is confirmed.</p>
+          <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+            We reply to all inquiries within 30 minutes during standard working hours. Our 24/7 dedicated support team handles urgent rush orders around the clock.
+          </p>
         </details>
-        <details class="bg-white rounded-2xl px-6 py-5 reveal group">
-          <summary
-            class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 text-sm list-none">
-            What's the typical turnaround time?
-            <svg class="shrink-0 transition-transform group-open:rotate-180" width="18" height="18" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <path d="M5 8l6 6 6-6" />
-            </svg>
+
+        <details class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 group cursor-pointer transition-all hover:bg-slate-100">
+          <summary class="flex items-center justify-between font-bold text-gray-900 text-base list-none">
+            Can I get a free sample edit for my real estate agency?
+            <svg class="shrink-0 transition-transform group-open:rotate-180 text-orange-500" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
           </summary>
-          <p class="text-gray-500 text-sm mt-3 leading-relaxed">Standard orders ship in 24 hours. Rush 12-hour delivery
-            is available on the Advanced plan. We'll always confirm your deadline before starting.</p>
+          <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+            Yes! We offer a free trial edit for real estate photographers and agencies so you can test our editing quality and turnaround speed risk-free. Simply send us an email or submit your details on the order page.
+          </p>
         </details>
-        <details class="bg-white rounded-2xl px-6 py-5 reveal group">
-          <summary
-            class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 text-sm list-none">
-            How many revisions are included?
-            <svg class="shrink-0 transition-transform group-open:rotate-180" width="18" height="18" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <path d="M5 8l6 6 6-6" />
-            </svg>
+
+        <details class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 group cursor-pointer transition-all hover:bg-slate-100">
+          <summary class="flex items-center justify-between font-bold text-gray-900 text-base list-none">
+            What is your standard turnaround time?
+            <svg class="shrink-0 transition-transform group-open:rotate-180 text-orange-500" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
           </summary>
-          <p class="text-gray-500 text-sm mt-3 leading-relaxed">Basic includes 1 round of revisions. Standard includes
-            2. Advanced includes unlimited revisions until you're 100% satisfied.</p>
+          <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+            Standard real estate photo editing orders are delivered within 12 to 24 hours. Rush 12-hour turnaround options are available for urgent listing deadlines.
+          </p>
         </details>
-        <details class="bg-white rounded-2xl px-6 py-5 reveal group">
-          <summary
-            class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 text-sm list-none">
-            What file formats do you deliver?
-            <svg class="shrink-0 transition-transform group-open:rotate-180" width="18" height="18" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <path d="M5 8l6 6 6-6" />
-            </svg>
+
+        <details class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 group cursor-pointer transition-all hover:bg-slate-100">
+          <summary class="flex items-center justify-between font-bold text-gray-900 text-base list-none">
+            How do revisions work?
+            <svg class="shrink-0 transition-transform group-open:rotate-180 text-orange-500" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
           </summary>
-          <p class="text-gray-500 text-sm mt-3 leading-relaxed">We deliver high-resolution JPEG (MLS-ready) by default.
-            TIFF or PSD source files can be arranged on Enterprise plans.</p>
+          <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+            We provide a 100% satisfaction guarantee. If you need any adjustments (color, brightness, sky tweak), simply let us know and we will edit it free of charge until you are completely satisfied.
+          </p>
         </details>
+
+        <details class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 group cursor-pointer transition-all hover:bg-slate-100">
+          <summary class="flex items-center justify-between font-bold text-gray-900 text-base list-none">
+            Do you offer volume discounts for high-volume photographers?
+            <svg class="shrink-0 transition-transform group-open:rotate-180 text-orange-500" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+            Yes! For high-volume photographers and real estate media agencies submitting regular daily/weekly batches, we offer custom volume discount rates and dedicated editor assignments.
+          </p>
+        </details>
+
       </div>
     </div>
   </section>
@@ -222,46 +176,5 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/floating-buttons.js" defer></script>
-  <script>
-    function handleContactForm(e) {
-      e.preventDefault();
-      const btn = document.getElementById('contact-btn');
-      const success = document.getElementById('contact-success');
-
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      btn.style.opacity = '0.7';
-
-      const data = {
-        name: document.getElementById('c-name').value,
-        email: document.getElementById('c-email').value,
-        phone: document.getElementById('c-phone').value || 'N/A',
-        service: document.getElementById('c-service').value,
-        image_count: document.getElementById('c-images').value || 'N/A',
-        message: document.getElementById('c-msg').value,
-        _subject: 'New Contact: ' + document.getElementById('c-name').value,
-        _captcha: 'false'
-      };
-
-      fetch('https://formsubmit.co/ajax/a8b080cfcdf58230f426c023651f9acc', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
-      })
-        .then(res => res.json())
-        .then(() => {
-          btn.style.display = 'none';
-          success.classList.remove('hidden');
-          e.target.querySelectorAll('input, textarea, select').forEach(el => { el.value = ''; });
-        })
-        .catch(() => {
-          btn.textContent = 'Send Message';
-          btn.disabled = false;
-          btn.style.opacity = '1';
-          alert('Something went wrong. Please email us directly at contact.lotusfoto@gmail.com');
-        });
-    }
-  </script>
 </body>
-
 </html>

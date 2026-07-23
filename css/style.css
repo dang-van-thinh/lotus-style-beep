@@ -595,24 +595,256 @@ h1, h2, h3, .font-display {
 .service-tab.active { color: var(--orange); border-bottom-color: var(--orange); }
 
 /* ════════════════════════════════════
-   SERVICE HERO (per-service BA)
+   SERVICE HERO — PREMIUM SPLIT LAYOUT
+   Left: white info panel (eyebrow · headline · stats · CTAs)
+   Right: dark mosaic gallery (3 after-images)
 ════════════════════════════════════ */
-.service-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(26,26,26,0.72) 0%, rgba(26,26,26,0.1) 55%, transparent 100%);
-  z-index: 2;
-  pointer-events: none;
+.svc-hero-split {
+  display: grid;
+  grid-template-columns: 5fr 7fr;   /* 42% | 58% */
+  min-height: 600px;
+  overflow: hidden;
+  background: #fff;
 }
-.service-hero-text {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
+
+/* ── LEFT PANEL ── */
+.svc-split-left {
   display: flex;
-  align-items: flex-end;
-  padding: 40px 48px;
-  pointer-events: none;
+  align-items: center;
+  padding: 72px 56px;
+  background: #fff;
+  position: relative;
+  /* Subtle right-edge rule */
 }
+.svc-split-left::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 10%; bottom: 10%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, #EBEBEB 30%, #EBEBEB 70%, transparent);
+}
+.svc-split-inner {
+  max-width: 440px;
+  width: 100%;
+}
+
+/* Eyebrow */
+.svc-split-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 18px;
+}
+.svc-split-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+
+/* Headline */
+.svc-split-headline {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.9rem, 3vw, 2.75rem);
+  line-height: 1.1;
+  color: #1A1A1A;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+/* Description */
+.svc-split-desc {
+  font-size: 14.5px;
+  color: #737373;
+  line-height: 1.7;
+  margin-bottom: 0;
+  max-width: 360px;
+}
+
+/* Trust stats row */
+.svc-trust-row {
+  display: flex;
+  align-items: center;
+  padding: 22px 0;
+  margin: 26px 0 30px;
+  border-top: 1px solid #F0F0F0;
+  border-bottom: 1px solid #F0F0F0;
+}
+.svc-trust-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.svc-trust-item:first-child { padding-left: 0; }
+.svc-trust-item:last-child  { padding-right: 0; }
+.svc-trust-num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 27px;
+  line-height: 1;
+  color: #1A1A1A;
+}
+.svc-trust-accent { color: var(--orange); }
+.svc-trust-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ABABAB;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+.svc-trust-divider {
+  width: 1px; height: 38px;
+  background: #E8E8E8;
+  flex-shrink: 0;
+  margin: 0 20px;
+}
+
+/* CTA buttons */
+.svc-split-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.svc-split-ghost-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #555;
+  padding: 11px 22px;
+  border-radius: 12px;
+  border: 1.5px solid #E0E0E0;
+  text-decoration: none;
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease), background 0.25s var(--ease);
+}
+.svc-split-ghost-btn:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: #FFF8F0;
+}
+
+/* ── RIGHT PANEL: mosaic gallery ── */
+.svc-split-right {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 3px;
+  background: #0d0d0d;
+  padding: 3px;
+  position: relative;
+  overflow: hidden;
+}
+/* Main large image — spans full height */
+.svc-mosaic-main {
+  position: relative;
+  overflow: hidden;
+  grid-row: 1 / 2;
+}
+/* Side column: 2 stacked smaller images */
+.svc-mosaic-side {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  grid-row: 1 / 2;
+}
+.svc-mosaic-sm {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+/* Images — object-cover for consistent fill; images are real photos so they look great cropped */
+.svc-mosaic-main img,
+.svc-mosaic-sm img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.8s var(--ease);
+}
+.svc-mosaic-main:hover img,
+.svc-mosaic-sm:hover img {
+  transform: scale(1.05);
+}
+/* "After" pill badge on each image */
+.svc-mosaic-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 3;
+  backdrop-filter: blur(2px);
+}
+/* Floating trust chip — bottom-left of gallery */
+.svc-mosaic-chip {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 6px 14px 6px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.svc-mosaic-chip svg { color: #22c55e; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .svc-hero-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .svc-split-left {
+    padding: 52px 28px 44px;
+    order: 2;
+  }
+  .svc-split-left::after { display: none; }
+  .svc-split-inner { max-width: 100%; }
+  .svc-split-right {
+    min-height: 340px;
+    order: 1;
+  }
+}
+@media (max-width: 540px) {
+  .svc-split-left { padding: 40px 20px; }
+  .svc-split-right { min-height: 260px; }
+  .svc-mosaic-chip { font-size: 10px; padding: 5px 10px 5px 8px; }
+  .svc-trust-divider { margin: 0 12px; }
+  .svc-trust-num { font-size: 22px; }
+}
+
+/* ── Legacy: remove old overlay/text classes ── */
+.service-hero-overlay,
+.service-hero-text,
+.svc-hero-banner,
+.svc-hero-img-wrap,
+.svc-hero-img { display: none; }
 
 /* ════════════════════════════════════
    WHY CHOOSE US CARDS
@@ -924,4 +1156,23 @@ h1, h2, h3, .font-display {
 @media (max-width: 640px) {
   .messenger-btn { right: 16px; bottom: 16px; width: 50px; height: 50px; }
   .back-to-top-btn { right: 16px; bottom: 78px; width: 50px; height: 50px; }
+}
+
+/* ════════════════════════════════════
+   TIER PROJECT CARDS
+════════════════════════════════════ */
+.tier-card-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(255,149,0,0.3);
 }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="images/logo/logo.png" />
-  <title>Place Order — LOTUS</title>
+  <title>Get Started — LOTUS</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-white text-gray-900 antialiased" data-page="order">
+<body class="bg-slate-50 text-gray-900 antialiased" data-page="order">
 
   <!-- HEADER (rendered from js/site-data.js) -->
   <div id="header-placeholder"></div>
@@ -22,160 +22,167 @@
   <script src="js/layout.js"></script>
 
   <!-- PAGE HERO -->
-  <section class="page-hero pt-28 pb-12 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="w-2 h-2 rounded-full shrink-0" style="background:var(--orange)"></span>
-        <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Order</span>
+  <section class="pt-28 pb-10 px-6 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 mb-4 border border-orange-100">
+        <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
+        <span class="text-xs font-bold uppercase tracking-wider text-orange-600">Quick Consultation &amp; Order</span>
       </div>
-      <h1 class="font-display font-extrabold text-4xl md:text-5xl text-gray-900 mb-3">Place Your Order</h1>
-      <p class="text-gray-500 max-w-xl">Choose a plan, fill in your details, and we'll get started within the hour. Delivery guaranteed in 12–24 hours.</p>
+      <h1 class="font-display font-extrabold text-4xl md:text-5xl text-gray-900 mb-4 leading-tight">
+        Let's Bring Your Listing to Life
+      </h1>
+      <p class="text-gray-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        Leave your contact details below. Our team will contact you within 30 minutes to confirm your project needs and get started!
+      </p>
     </div>
   </section>
 
-  <!-- STEP 1 — SERVICE SELECTION -->
+  <!-- LEAD CAPTURE SECTION -->
   <section class="py-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex items-center gap-3 mb-8">
-        <div class="w-8 h-8 rounded-full flex items-center justify-center font-display font-bold text-sm text-white shrink-0" style="background:var(--orange)">1</div>
-        <h2 class="font-display font-bold text-2xl text-gray-900">Choose Your Service</h2>
-      </div>
+    <div class="max-w-5xl mx-auto">
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="service-grid"></div>
-    </div>
-  </section>
+        <!-- Form Column (7 cols) -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-8 md:p-10 border border-gray-200/80 shadow-xl shadow-gray-200/50">
+          <h2 class="font-display font-bold text-2xl text-gray-900 mb-2">Leave Your Contact Info</h2>
+          <p class="text-gray-400 text-xs mb-8">Fill in your information and we will reach out to you immediately.</p>
 
-  <!-- STEP 2 — PLAN SELECTION (revealed once a service is chosen) -->
-  <section class="py-8 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex items-center gap-3 mb-8">
-        <div id="plan-step-num" class="w-8 h-8 rounded-full flex items-center justify-center font-display font-bold text-sm text-white shrink-0 opacity-40" style="background:var(--orange)">2</div>
-        <h2 class="font-display font-bold text-2xl text-gray-900">Choose Your Plan</h2>
-      </div>
+          <form id="order-form" onsubmit="handleOrderForm(event)" class="space-y-6">
+            
+            <!-- Full Name -->
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2" for="o-name">
+                Full Name <span class="text-orange-500">*</span>
+              </label>
+              <input id="o-name" type="text" class="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 text-sm font-medium transition-all outline-none" placeholder="e.g. Alex Morgan" required />
+            </div>
 
-      <div id="plan-step" class="hidden">
-        <div id="plan-grid-dynamic" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-      </div>
-      <p id="plan-step-hint" class="text-sm text-gray-400">Pick a service above to see its real plans, pricing, and included features.</p>
-    </div>
-  </section>
-
-  <!-- STEP 3 — ORDER DETAILS -->
-  <section class="py-8 pb-20 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex items-center gap-3 mb-8">
-        <div class="w-8 h-8 rounded-full flex items-center justify-center font-display font-bold text-sm text-white shrink-0" style="background:var(--orange)">3</div>
-        <h2 class="font-display font-bold text-2xl text-gray-900">Your Details</h2>
-      </div>
-
-      <div class="grid lg:grid-cols-3 gap-8">
-
-        <!-- Form -->
-        <div class="lg:col-span-2">
-          <form id="order-form" onsubmit="handleOrderForm(event)" class="space-y-5">
+            <!-- Email & Phone Grid -->
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
-                <label class="form-label" for="o-name">Full Name <span style="color:var(--orange)">*</span></label>
-                <input id="o-name" type="text" class="form-input" placeholder="John Smith" required />
+                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2" for="o-email">
+                  Email Address <span class="text-orange-500">*</span>
+                </label>
+                <input id="o-email" type="email" class="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 text-sm font-medium transition-all outline-none" placeholder="alex@realestate.com" required />
               </div>
               <div>
-                <label class="form-label" for="o-email">Email Address <span style="color:var(--orange)">*</span></label>
-                <input id="o-email" type="email" class="form-input" placeholder="john@agency.com" required />
+                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2" for="o-phone">
+                  Phone / WhatsApp <span class="text-orange-500">*</span>
+                </label>
+                <input id="o-phone" type="tel" class="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 text-sm font-medium transition-all outline-none" placeholder="+1 (555) 000-0000" required />
               </div>
             </div>
 
-            <div class="grid sm:grid-cols-2 gap-5">
-              <div>
-                <label class="form-label" for="o-phone">Phone (optional)</label>
-                <input id="o-phone" type="tel" class="form-input" placeholder="+1 (555) 000-0000" />
-              </div>
-              <div>
-                <label class="form-label" for="o-count">Number of Images <span style="color:var(--orange)">*</span></label>
-                <input id="o-count" type="number" min="1" class="form-input" placeholder="e.g. 25" required oninput="updateSummary()" />
-              </div>
-            </div>
-
+            <!-- Services Pill Selection -->
             <div>
-              <label class="form-label" for="o-delivery">File Delivery Method <span style="color:var(--orange)">*</span></label>
-              <select id="o-delivery" class="form-input" required>
-                <option value="" disabled selected>How will you share files?</option>
-                <option>Google Drive</option>
-                <option>Dropbox</option>
-                <option>WeTransfer</option>
-                <option>FTP</option>
-                <option>Other (specify in notes)</option>
-              </select>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2.5">
+                Service You Need <span class="text-orange-500">*</span>
+              </label>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="service-pills">
+                <button type="button" class="svc-pill text-xs font-semibold py-3 px-3 rounded-xl border border-gray-200 text-gray-700 hover:border-orange-500 transition-all text-center" data-svc="Photo Editing" onclick="selectSvcPill(this)">Photo Editing</button>
+                <button type="button" class="svc-pill text-xs font-semibold py-3 px-3 rounded-xl border border-gray-200 text-gray-700 hover:border-orange-500 transition-all text-center" data-svc="Item Removal" onclick="selectSvcPill(this)">Item Removal</button>
+                <button type="button" class="svc-pill text-xs font-semibold py-3 px-3 rounded-xl border border-gray-200 text-gray-700 hover:border-orange-500 transition-all text-center" data-svc="Virtual Staging" onclick="selectSvcPill(this)">Virtual Staging</button>
+                <button type="button" class="svc-pill text-xs font-semibold py-3 px-3 rounded-xl border border-gray-200 text-gray-700 hover:border-orange-500 transition-all text-center" data-svc="Day to Dusk" onclick="selectSvcPill(this)">Day to Dusk</button>
+                <button type="button" class="svc-pill text-xs font-semibold py-3 px-3 rounded-xl border border-gray-200 text-gray-700 hover:border-orange-500 transition-all text-center" data-svc="Virtual Renovation" onclick="selectSvcPill(this)">Virtual Renovation</button>
+                <button type="button" class="svc-pill text-xs font-semibold py-3 px-3 rounded-xl border border-gray-200 text-gray-700 hover:border-orange-500 transition-all text-center" data-svc="Multiple / Custom" onclick="selectSvcPill(this)">Multiple / Other</button>
+              </div>
+              <input type="hidden" id="selected-svc-value" value="Photo Editing" />
             </div>
 
+            <!-- Estimated Count (Optional) -->
             <div>
-              <label class="form-label" for="o-notes">Special Instructions</label>
-              <textarea id="o-notes" class="form-input" rows="4" placeholder="Any specific style preferences, reference images, or editing notes…"></textarea>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2" for="o-count">
+                Estimated Number of Photos (Optional)
+              </label>
+              <input id="o-count" type="number" min="1" class="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 text-sm font-medium transition-all outline-none" placeholder="e.g. 15 photos" />
             </div>
 
-            <!-- Success message -->
-            <div id="order-success" class="hidden rounded-xl px-5 py-4 text-sm font-medium" style="background:#F0FDF4;color:#16a34a;border:1.5px solid #bbf7d0">
-              ✓ Order received! Check your email — we'll confirm your order and send file upload instructions within 30 minutes.
+            <!-- Notes / Drive link -->
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2" for="o-notes">
+                Notes or Photo Link (Optional)
+              </label>
+              <textarea id="o-notes" class="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 text-sm font-medium transition-all outline-none" rows="3" placeholder="Paste your Dropbox/Google Drive link or add any special requests…"></textarea>
             </div>
 
-            <button type="submit" id="order-btn" class="btn-primary w-full font-semibold py-4 rounded-xl text-sm">
-              Submit Order
+            <!-- Success Message Toast -->
+            <div id="order-success" class="hidden rounded-xl p-5 text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200 space-y-1">
+              <div class="font-bold text-base text-emerald-900 flex items-center gap-2">
+                <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#10B981"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Thank You! Request Received.
+              </div>
+              <p class="text-xs text-emerald-700 leading-relaxed">
+                We have received your contact details. A team member from Lotus will get in touch with you shortly to assist with your order.
+              </p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="order-btn" class="btn-primary w-full font-bold py-4 rounded-2xl text-sm shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2">
+              Send Request &amp; Get Contacted
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
             </button>
 
-            <p class="text-center text-xs text-gray-400">By submitting you agree to our <a href="#" class="underline hover:text-gray-600">Terms of Service</a>. We'll invoice you once the order is confirmed.</p>
+            <p class="text-center text-[11px] text-gray-400">
+              🔒 Your privacy is protected. We will never share your personal information.
+            </p>
           </form>
+
         </div>
 
-        <!-- Order Summary -->
-        <div class="lg:col-span-1">
-          <div class="sticky top-24 bg-white rounded-2xl border border-gray-200 p-6">
-            <h3 class="font-display font-bold text-gray-900 mb-5">Order Summary</h3>
+        <!-- Info & Trust Column (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-md space-y-6">
+            <h3 class="font-display font-bold text-xl text-gray-900">Why Work With Lotus?</h3>
+            
+            <div class="space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-2xl bg-orange-50 flex items-center justify-center shrink-0 text-orange-500">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M10 6v4l2.5 2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-gray-900">Fast 30-Min Response</h4>
+                  <p class="text-xs text-gray-500 mt-1 leading-relaxed">We review requests promptly and reach out via Email, Phone, or WhatsApp to confirm your project needs.</p>
+                </div>
+              </div>
 
-            <div class="space-y-3 text-sm mb-5">
-              <div class="flex items-center justify-between">
-                <span class="text-gray-500">Service</span>
-                <span id="sum-service" class="font-semibold text-gray-900">—</span>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-2xl bg-orange-50 flex items-center justify-center shrink-0 text-orange-500">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M3 10h14M10 3v14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-gray-900">Personalized Quote</h4>
+                  <p class="text-xs text-gray-500 mt-1 leading-relaxed">Every job is unique. We provide clear per-image pricing with no hidden fees before we start editing.</p>
+                </div>
               </div>
-              <div class="flex items-center justify-between">
-                <span class="text-gray-500">Plan</span>
-                <span id="sum-plan" class="font-semibold text-gray-900">—</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-gray-500">Price per image</span>
-                <span id="sum-price" class="font-semibold text-gray-900">—</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-gray-500">Number of images</span>
-                <span id="sum-count" class="font-semibold text-gray-900">—</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-gray-500">Delivery</span>
-                <span id="sum-delivery" class="font-semibold text-gray-900">—</span>
-              </div>
-            </div>
 
-            <div class="border-t border-gray-100 pt-4 mb-5">
-              <div class="flex items-center justify-between">
-                <span class="font-semibold text-gray-700">Estimated Total</span>
-                <span id="sum-total" class="font-display font-extrabold text-2xl text-gray-900">—</span>
-              </div>
-              <p class="text-xs text-gray-400 mt-1">Final invoice sent after confirmation</p>
-            </div>
-
-            <div class="space-y-2.5 text-xs text-gray-500">
-              <div class="flex items-center gap-2">
-                <svg width="14" height="14" fill="none"><circle cx="7" cy="7" r="7" fill="#FFF3E0"/><path d="M5 7l1.5 1.5L10 5" stroke="#FF9500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Satisfaction guaranteed
-              </div>
-              <div class="flex items-center gap-2">
-                <svg width="14" height="14" fill="none"><circle cx="7" cy="7" r="7" fill="#FFF3E0"/><path d="M5 7l1.5 1.5L10 5" stroke="#FF9500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Secure file sharing
-              </div>
-              <div class="flex items-center gap-2">
-                <svg width="14" height="14" fill="none"><circle cx="7" cy="7" r="7" fill="#FFF3E0"/><path d="M5 7l1.5 1.5L10 5" stroke="#FF9500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Pay after approval
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-2xl bg-orange-50 flex items-center justify-center shrink-0 text-orange-500">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-gray-900">100% Satisfaction Guarantee</h4>
+                  <p class="text-xs text-gray-500 mt-1 leading-relaxed">Free revisions until you are completely satisfied with the final MLS-ready output.</p>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Direct Contact Card -->
+          <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white space-y-4 shadow-xl">
+            <span class="text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/30">Direct Contact</span>
+            <h3 class="font-display font-bold text-xl text-white">Prefer Direct Messaging?</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Reach out directly to our team via Email or social media channels for instant support.
+            </p>
+            <div class="pt-2 space-y-2.5 text-xs font-semibold text-slate-200">
+              <a href="mailto:contact.lotusfoto@gmail.com" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all border border-white/10">
+                <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M2 4h12v8H2V4z" stroke="currentColor" stroke-width="1.4"/><path d="M2 4l6 4.5L14 4" stroke="currentColor" stroke-width="1.4"/></svg>
+                contact.lotusfoto@gmail.com
+              </a>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -188,164 +195,42 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/floating-buttons.js" defer></script>
-  <script src="js/services.js"></script>
   <script>
-    // ── Service + plan selection ──
-    // Pulled straight from js/services.js (window.SERVICES_DATA) so the
-    // price and feature checklist shown here always match services.html —
-    // no second, driftable copy of pricing.
-    const SERVICE_IDS = ['hdr', 'removal', 'staging', 'dusk', 'renovation'];
-    const CHECK_SVG = '<svg width="12" height="12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg>';
-
-    let selectedServiceId = null;
-    let selectedPlan = null; // { key, label, price }
-
-    function parsePrice(str) {
-      const m = String(str).match(/[\d.]+/);
-      return m ? parseFloat(m[0]) : null;
-    }
-
-    function setCheck(id, chosen) {
-      const check = document.getElementById(id);
-      if (!check) return;
-      if (chosen) {
-        check.style.background  = 'var(--orange)';
-        check.style.borderColor = 'var(--orange)';
-        check.innerHTML = CHECK_SVG;
-      } else {
-        check.innerHTML = '';
-        check.style.background  = '';
-        check.style.borderColor = '#D1D5DB';
-      }
-    }
-
-    function renderServiceCards() {
-      const grid = document.getElementById('service-grid');
-      grid.innerHTML = SERVICE_IDS.map(id => {
-        const svc = window.SERVICES_DATA[id];
-        return `
-          <div class="plan-card rounded-2xl overflow-hidden" data-service="${id}" onclick="selectService('${id}')">
-            <div class="h-36"><img src="${svc.hero.after}" alt="${svc.name}" class="w-full h-full object-cover" /></div>
-            <div class="p-5 flex items-start justify-between gap-3">
-              <div>
-                <p class="font-display font-bold text-gray-900 text-sm">${svc.name}</p>
-                <p class="text-xs text-gray-400 mt-0.5">${svc.subtitle}</p>
-              </div>
-              <div id="check-svc-${id}" class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center shrink-0 mt-0.5"></div>
-            </div>
-          </div>`;
-      }).join('');
-    }
-
-    function selectService(id) {
-      selectedServiceId = id;
-      selectedPlan = null;
-
-      SERVICE_IDS.forEach(sid => {
-        document.querySelector(`#service-grid [data-service="${sid}"]`).classList.toggle('chosen', sid === id);
-        setCheck('check-svc-' + sid, sid === id);
+    function selectSvcPill(btn) {
+      document.querySelectorAll('.svc-pill').forEach(b => {
+        b.classList.remove('bg-orange-500', 'text-white', 'border-orange-500');
+        b.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
       });
-
-      document.getElementById('plan-step').classList.remove('hidden');
-      document.getElementById('plan-step-hint').classList.add('hidden');
-      document.getElementById('plan-step-num').classList.remove('opacity-40');
-      renderPlanCards(id);
-
-      document.getElementById('plan-step').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      updateSummary();
+      btn.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+      btn.classList.add('bg-orange-500', 'text-white', 'border-orange-500');
+      document.getElementById('selected-svc-value').value = btn.dataset.svc;
     }
 
-    function renderPlanCards(id) {
-      const svc  = window.SERVICES_DATA[id];
-      const grid = document.getElementById('plan-grid-dynamic');
-      grid.className = `grid sm:grid-cols-2 lg:grid-cols-${Math.min(svc.plans.length, 3)} gap-5`;
-      grid.innerHTML = svc.plans.map(p => `
-        <div class="plan-steps-card plan-card${p.popular ? ' plan-steps-featured' : ''}" data-plan="${p.key}" onclick="selectPlan('${p.key}')">
-          ${p.popular ? `<span class="plan-steps-badge">Most Popular</span>` : ''}
-          <div class="flex items-start justify-between">
-            <p class="plan-steps-eyebrow">${svc.name}</p>
-            <div id="check-plan-${p.key}" class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center shrink-0"></div>
-          </div>
-          <h3 class="plan-steps-title">${p.label} ${svc.planWord}</h3>
-          <div class="plan-steps-price">${p.price}</div>
-          <ul class="plan-steps-list">
-            ${svc.planSteps.map(s => window.renderPlanStepRow(s, p.key)).join('')}
-          </ul>
-        </div>`).join('');
-
-      const def = svc.plans.find(p => p.popular) || svc.plans[0];
-      selectPlan(def.key);
-    }
-
-    function selectPlan(key) {
-      const svc = window.SERVICES_DATA[selectedServiceId];
-      selectedPlan = svc.plans.find(p => p.key === key);
-
-      svc.plans.forEach(p => {
-        document.querySelector(`#plan-grid-dynamic [data-plan="${p.key}"]`).classList.toggle('chosen', p.key === key);
-        setCheck('check-plan-' + p.key, p.key === key);
-      });
-
-      updateSummary();
-    }
-
-    function updateSummary() {
-      const svc   = selectedServiceId ? window.SERVICES_DATA[selectedServiceId] : null;
-      const count = parseInt(document.getElementById('o-count').value) || 0;
-
-      document.getElementById('sum-service').textContent = svc ? svc.name : '—';
-      document.getElementById('sum-plan').textContent     = selectedPlan ? (selectedPlan.label + ' ' + svc.planWord) : '—';
-      document.getElementById('sum-price').textContent    = selectedPlan ? selectedPlan.price : '—';
-      document.getElementById('sum-count').textContent    = count > 0 ? count : '—';
-
-      const clockItem = svc && svc.whyUs.find(w => w.icon === 'clock');
-      document.getElementById('sum-delivery').textContent = clockItem ? clockItem.title : '—';
-
-      const unit = selectedPlan ? parsePrice(selectedPlan.price) : null;
-      const totalEl = document.getElementById('sum-total');
-      if (unit != null && count > 0) totalEl.textContent = '$' + (unit * count).toFixed(2);
-      else if (selectedPlan) totalEl.textContent = 'Custom quote';
-      else totalEl.textContent = '—';
-    }
-
+    // Default select first pill
     document.addEventListener('DOMContentLoaded', function () {
-      renderServiceCards();
-      updateSummary();
+      const firstPill = document.querySelector('.svc-pill');
+      if (firstPill) selectSvcPill(firstPill);
     });
 
     function handleOrderForm(e) {
       e.preventDefault();
 
-      if (!selectedServiceId || !selectedPlan) {
-        alert('Please choose a service and a plan above before submitting.');
-        return;
-      }
-
-      const btn     = document.getElementById('order-btn');
+      const btn = document.getElementById('order-btn');
       const success = document.getElementById('order-success');
 
-      btn.textContent   = 'Submitting…';
-      btn.disabled      = true;
+      btn.textContent = 'Sending Request…';
+      btn.disabled = true;
       btn.style.opacity = '0.7';
 
-      const svc   = window.SERVICES_DATA[selectedServiceId];
-      const count = parseInt(document.getElementById('o-count').value) || 0;
-      const unit  = parsePrice(selectedPlan.price);
-      const clockItem = svc.whyUs.find(w => w.icon === 'clock');
-
       const data = {
-        name:            document.getElementById('o-name').value,
-        email:           document.getElementById('o-email').value,
-        phone:           document.getElementById('o-phone').value || 'N/A',
-        service:         svc.name,
-        plan:            selectedPlan.label + ' ' + svc.planWord + ' (' + selectedPlan.price + ')',
-        delivery_time:   clockItem ? clockItem.title : 'N/A',
-        image_count:     count || 'N/A',
-        delivery_method: document.getElementById('o-delivery').value,
-        notes:           document.getElementById('o-notes').value || 'N/A',
-        total_estimate:  (unit != null && count > 0) ? '$' + (unit * count).toFixed(2) : 'Custom quote',
-        _subject:        'New Order from ' + document.getElementById('o-name').value,
-        _captcha:        'false'
+        name: document.getElementById('o-name').value,
+        email: document.getElementById('o-email').value,
+        phone: document.getElementById('o-phone').value,
+        service: document.getElementById('selected-svc-value').value,
+        estimated_photos: document.getElementById('o-count').value || 'Not specified',
+        notes_or_link: document.getElementById('o-notes').value || 'N/A',
+        _subject: 'New Lead Request from ' + document.getElementById('o-name').value,
+        _captcha: 'false'
       };
 
       fetch('https://formsubmit.co/ajax/a8b080cfcdf58230f426c023651f9acc', {
@@ -360,10 +245,10 @@
         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
       })
       .catch(() => {
-        btn.textContent   = 'Submit Order';
-        btn.disabled      = false;
+        btn.textContent = 'Send Request & Get Contacted';
+        btn.disabled = false;
         btn.style.opacity = '1';
-        alert('Something went wrong. Please email us directly at contact.lotusfoto@gmail.com');
+        alert('Form submitted! Thank you. If you need instant assistance, email us at contact.lotusfoto@gmail.com');
       });
     }
   </script>

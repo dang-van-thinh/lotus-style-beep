@@ -104,6 +104,36 @@
         { before: BA_PE + 'DSC_0622_1.jpg', after: BA_PE + 'DSC_0622.jpg' },
         { before: BA_PE + 'DSC02007.jpg', after: BA_PE + 'DSC02007_1.jpg' },
       ],
+      tierProjects: [
+        {
+          level: 'Basic',
+          price: '$0.60',
+          title: 'Basic Exposure & Color Correction',
+          desc: 'Single exposure balancing, white balance tuning, brightness & contrast adjustment, perspective straightening, and basic lens fix.',
+          before: BA_PE + 'DSC_0602_1.jpg',
+          after: BA_PE + 'DSC_0602.jpg',
+          features: ['Single Exposure Editing', 'Color & White Balance Tune', 'Straightening & Lens Fix']
+        },
+        {
+          level: 'Standard',
+          price: '$0.80',
+          badge: 'Most Popular',
+          title: 'Standard HDR & Sky Replacement',
+          desc: 'Multi-exposure HDR blending (2-3 bracketed shots), vivid exterior sky replacement, window pull composite, and glare reduction.',
+          before: BA_PE + 'DSC02007.jpg',
+          after: BA_PE + 'DSC02007_1.jpg',
+          features: ['2-3 Bracketed HDR Merge', 'Exterior Blue Sky Swap', 'Window View Pull Composite', 'Photographer Reflection Removal']
+        },
+        {
+          level: 'Advanced',
+          price: '$0.90',
+          title: 'Advanced Flash & Ambient Retouch',
+          desc: 'Complex multi-bracket flash & ambient merge (4+ exposures), custom sky gradient, TV & fireplace replacement, lawn enhancement.',
+          before: BA_PE + 'IMG_7775.jpg',
+          after: BA_PE + 'IMG_7775_1.jpg',
+          features: ['4+ Exposures Ambient Merge', 'TV Screen & Fireplace Insertion', 'Lawn Greening & Detail Polish', 'Rush 12h Turnaround Option']
+        }
+      ],
       popular: ['removal', 'staging', 'dusk', 'renovation'],
       // "Compare by Plan" step checklist — what THIS service includes at
       // each plan level. Kept consistent with the Basic/Standard/Advanced
@@ -199,6 +229,36 @@
         { before: BA_IR + 'ITEM0006.jpg', after: BA_IR + 'ITEM0006_1.jpg' },
         { before: BA_IR + 'ITEM0007.jpg', after: BA_IR + 'ITEM0007_1.jpg' },
       ],
+      tierProjects: [
+        {
+          level: 'Basic',
+          price: '$1.30',
+          title: 'Basic Clutter & Cord Removal',
+          desc: 'Removal of minor power cords, small trash cans, wall outlets, and minor surface distractions.',
+          before: BA_IR + 'ITEM0004.jpg',
+          after: BA_IR + 'ITEM0004_1.jpg',
+          features: ['Power Cords & Outlets', 'Small Trash & Distractions', 'Basic Surface Touch-up']
+        },
+        {
+          level: 'Standard',
+          price: '$5.00',
+          badge: 'Most Popular',
+          title: 'Standard Vehicle & Object Removal',
+          desc: 'Removal of cars from driveways or streets, power lines, garden hoses, and up to 10 medium items.',
+          before: BA_IR + 'ITEM0006.jpg',
+          after: BA_IR + 'ITEM0006_1.jpg',
+          features: ['Vehicle & Driveway Clean', 'Power Lines & Sky Obstructions', 'Up to 10 Items Removed']
+        },
+        {
+          level: 'Advanced',
+          price: '$12.00',
+          title: 'Advanced Room Rebuilding',
+          desc: 'Total removal of full furniture sets, complete floor, wall, and ceiling texture reconstruction from scratch.',
+          before: BA_IR + 'ITEM0007.jpg',
+          after: BA_IR + 'ITEM0007_1.jpg',
+          features: ['Unlimited Furniture Removal', 'Full Surface Reconstruction', 'Reflection & Shadow Clean', 'Rush 12h Turnaround Option']
+        }
+      ],
       popular: ['hdr', 'staging', 'dusk', 'renovation'],
       // "Compare by Plan" step checklist — see note in the hdr service above.
       planWord: 'Removal',
@@ -284,6 +344,36 @@
         { before: BA_VS + 'DSC01889_final.jpg', after: BA_VS + 'DSC01889.jpg' },
         { before: BA_VS + 'DSC01888_final.jpg', after: BA_VS + 'DSC01888.jpg' },
         { before: BA_VS + 'DSC01870_final.jpg', after: BA_VS + 'DSC01870.jpg' },
+      ],
+      tierProjects: [
+        {
+          level: 'Basic',
+          price: '$15.00',
+          title: 'Essential Single Room Staging',
+          desc: 'High-quality 3D virtual furniture placement from standard catalog matched to room dimensions.',
+          before: BA_VS + '0O2A5572_final.jpg',
+          after: BA_VS + '0O2A5572.jpg',
+          features: ['3D Furniture Catalog', 'Perspective & Scale Alignment', 'Basic Room Staging']
+        },
+        {
+          level: 'Standard',
+          price: '$17.00',
+          badge: 'Most Popular',
+          title: 'Standard Multi-Zone Staging',
+          desc: 'Living & dining area staging with realistic lighting, shadows, color palette match, and floor rug integration.',
+          before: BA_VS + '0O2A5557_final.jpg',
+          after: BA_VS + '0O2A5557.jpg',
+          features: ['Multi-Zone Furniture Layout', 'Lighting & Shadow Integration', 'Custom Color Palette Match', 'Rugs, Artwork & Decor']
+        },
+        {
+          level: 'Advanced',
+          price: '$24.00',
+          title: 'Advanced De-Staging & Restaging',
+          desc: 'Removal of existing old physical furniture followed by luxury custom-styled 3D virtual staging.',
+          before: BA_VS + '0O2A5582_final.jpg',
+          after: BA_VS + '0O2A5582.jpg',
+          features: ['Full Furniture Removal First', 'Bespoke Architectural Styles', 'Commercial & Luxury Decor', 'Unlimited Revisions']
+        }
       ],
       popular: ['hdr', 'removal', 'dusk', 'renovation'],
       // "Compare by Plan" step checklist — see note in the hdr service above.
@@ -375,7 +465,7 @@
         CHECK_DTD + '0O2A3565.DTE_1.jpg',
         CHECK_DTD + '0O2A3573.DTE.jpg',
       ],
-      checkOutMoreLink: '#',
+      checkOutMoreLink: 'https://drive.google.com/drive/folders/1xYok2PwS_JoVxdY6AQBTCHr7s3Jr5hxx?usp=sharing',
       projects: [
         { before: BA_DTD + 'sau lam.jpg', after: BA_DTD + 'truoc.jpg' },
         { before: BA_DTD + 'IMG_1134.DTE.jpg', after: BA_DTD + 'IMG_1134.jpg' },
@@ -384,43 +474,45 @@
         { before: BA_DTD + '0O2A3573.DTE.jpg', after: BA_DTD + '0O2A3573.jpg' },
         { before: BA_DTD + '0O2A9054dte.jpg', after: BA_DTD + '0O2A9054.jpg' },
       ],
+      tierProjects: [
+        {
+          level: 'Basic',
+          price: '$3.50',
+          title: 'Basic Dusk Sky Conversion',
+          desc: 'Conversion of daytime exterior sky to evening dusk gradient with global twilight tone adjustment.',
+          before: BA_DTD + 'DJI_20260512092645_0002_D_1.jpg',
+          after: BA_DTD + 'DJI_20260512092645_0002_D.jpg',
+          features: ['Twilight Sky Swap', 'Global Dusk Color Tone', 'Exterior Exposure Tuning']
+        },
+        {
+          level: 'Standard',
+          price: '$5.00',
+          badge: 'Most Popular',
+          title: 'Standard Window Glow & Lawn',
+          desc: 'Realistic warm interior window lighting simulation, porch lamp halos, and lawn color enrichment.',
+          before: BA_DTD + '0O2A3565.DTE_1.jpg',
+          after: BA_DTD + '0O2A3565.jpg',
+          features: ['Window Glow Simulation', 'Porch Light & Lantern Halos', 'Lawn & Landscape Polish', 'High-Res MLS Output']
+        },
+        {
+          level: 'Advanced',
+          price: '$8.00',
+          title: 'Advanced Architectural Twilight',
+          desc: 'Shimmering pool water lighting, illuminated pathway lanterns, driveway halos, and custom sky gradient mood.',
+          before: BA_DTD + 'IMG_1134.DTE.JPG',
+          after: BA_DTD + 'IMG_1134.jpg',
+          features: ['Pool Water & Pathway Glow', 'Custom Sky Gradient Mood', 'Complex Architectural Glass', '12h Rush Delivery Option']
+        }
+      ],
       popular: ['hdr', 'removal', 'staging', 'renovation'],
-      // "Compare by Plan" step checklist — see note in the hdr service above.
-      // Day-to-dusk conversion is an Advanced-only feature per order.html,
-      // so the core service itself only lights up on the Advanced column.
       planWord: 'Conversion',
-      // EXAMPLE pricing — replace with real per-service rates.
       plans: [
         { key: 'dtd', label: 'Day To Dusk', price: '$5.00 per photo' },
       ],
-      planSteps: [
-        { label: 'Color & Brightness Correction', basic: true, standard: true, advanced: true },
-        { label: 'Lens Distortion Correction', basic: true, standard: true, advanced: true },
-        { label: 'Straightening', basic: true, standard: true, advanced: true },
-        { label: 'HDR Blending & Exposure Merge', basic: false, standard: true, advanced: true },
-        { label: 'Daylight Sky Replacement', basic: false, standard: true, advanced: true },
-        { label: 'Twilight Sky Gradient', basic: false, standard: false, advanced: true },
-        { label: 'Window Glow Simulation', basic: false, standard: false, advanced: true },
-        { label: 'Landscape & Lawn Enhancement', basic: false, standard: false, advanced: true },
-        { label: 'Pool, Pathway & Driveway Lighting', basic: false, standard: false, advanced: true },
-        { label: 'Custom Sky Colour / Mood Request', basic: false, standard: false, advanced: true },
-        {
-          label: 'Delivery Speed', basic: true, standard: true, advanced: true,
-          basicNote: '48h delivery', standardNote: '24h delivery', advancedNote: '12h rush delivery'
-        },
-      ],
+      planSteps: [],
     },
 
-    /* ── 5. VIRTUAL RENOVATION ──────────────────────────────────────
-       Confirmed BA pairs (suffix _ or _1):
-         01122303 / 01122303_
-         01122310 / 01122310_
-         01122323_Room2 / 01122323_Room2_
-         DSC09914 / DSC09914_1
-         DSC09920 / DSC09920_1
-         DSC09921 / DSC09921_1
-       Gallery (after-only): same 6 after shots
-    ─────────────────────────────────────────────────────────────── */
+    /* ── 5. VIRTUAL RENOVATION ────────────────────────────────────── */
     renovation: {
       id: 'renovation',
       name: 'Virtual Renovation',
@@ -463,7 +555,7 @@
         BA_RENO + 'DSC09920_1.jpg',
         BA_RENO + 'DSC09921_1.jpg',
       ],
-      checkOutMoreLink: '#',
+      checkOutMoreLink: 'https://drive.google.com/drive/folders/1mnWXqZGylPYr9lxCDZTONqgnSrpsJMgh?usp=sharing',
       projects: [
         { before: BA_RENO + '01122303.jpg', after: BA_RENO + '01122303_.jpg' },
         { before: BA_RENO + '01122310.jpg', after: BA_RENO + '01122310_.jpg' },
@@ -471,6 +563,36 @@
         { before: BA_RENO + 'DSC09914.jpg', after: BA_RENO + 'DSC09914_1.jpg' },
         { before: BA_RENO + 'DSC09920.jpg', after: BA_RENO + 'DSC09920_1.jpg' },
         { before: BA_RENO + 'DSC09921.jpg', after: BA_RENO + 'DSC09921_1.jpg' },
+      ],
+      tierProjects: [
+        {
+          level: 'Basic',
+          price: '$10.00',
+          title: 'Basic Wall & Color Refresh',
+          desc: 'Repainting interior/exterior walls, wallpaper removal, and color updating with realistic lighting.',
+          before: BA_RENO + '01122310.jpg',
+          after: BA_RENO + '01122310_.jpg',
+          features: ['Wall Repainting & Color Swap', 'Wallpaper Removal', 'Shadow & Ambient Light Match']
+        },
+        {
+          level: 'Standard',
+          price: '$18.00',
+          badge: 'Most Popular',
+          title: 'Standard Flooring & Surface Swap',
+          desc: 'Replacing carpets or old tiles with hardwood/luxury vinyl plank flooring with accurate reflections.',
+          before: BA_RENO + '01122323_Room2.jpg',
+          after: BA_RENO + '01122323_Room2_.jpg',
+          features: ['Hardwood / Vinyl Flooring Swap', 'Skirting Board Replacement', 'Perspective & Reflection Match', 'Multiple Style Options']
+        },
+        {
+          level: 'Advanced',
+          price: '$28.00',
+          title: 'Full Kitchen & Space Transformation',
+          desc: 'Complete cabinet repainting, stone countertop replacement, tile backsplash, and full room overhaul.',
+          before: BA_RENO + '01122303.jpg',
+          after: BA_RENO + '01122303_.jpg',
+          features: ['Kitchen Cabinet & Counter Swap', 'Bathroom Tile & Vanity Update', '3D Architectural Rendering', 'Unlimited Revisions']
+        }
       ],
       popular: ['hdr', 'removal', 'staging', 'dusk'],
       // "Compare by Plan" step checklist — see note in the hdr service above.
@@ -670,24 +792,368 @@
   }
 
   /* ──────────────────────────────────
+     TIER COMPARISON & PORTFOLIO BUILDERS
+  ────────────────────────────────── */
+  function tierProjectCard(tier) {
+    const isStandard = tier.level === 'Standard';
+    const badgeHtml = tier.badge ? `<span class="tier-card-badge">${tier.badge}</span>` : '';
+    const priceHtml = tier.price ? `
+      <div class="flex items-baseline gap-1.5 my-3 pb-3 border-b border-gray-100">
+        <span class="font-display font-extrabold text-2xl text-gray-900" ${isStandard ? 'style="color:var(--orange)"' : ''}>${tier.price}</span>
+        <span class="text-xs text-gray-400 font-medium">/ photo</span>
+      </div>` : '';
+    const featuresHtml = (tier.features || []).map(f => `
+      <li class="flex items-center gap-2 text-xs text-gray-600">
+        <svg width="14" height="14" fill="none" viewBox="0 0 14 14" class="shrink-0"><path d="M2.5 7L5.5 10L11.5 4" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>${f}</span>
+      </li>`).join('');
+
+    return `
+      <div class="tier-project-card relative bg-white border ${isStandard ? 'border-orange-500 shadow-xl ring-2 ring-orange-500/20' : 'border-gray-200 shadow-sm'} rounded-2xl p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300">
+        ${badgeHtml}
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full ${isStandard ? 'bg-orange-500 text-white' : 'bg-gray-100 text-gray-700'}">${tier.level} Tier</span>
+          </div>
+
+          <h3 class="font-display font-bold text-gray-900 text-lg mb-1 leading-snug">${tier.title}</h3>
+          
+          ${priceHtml}
+
+          <p class="text-gray-500 text-xs mb-4 leading-relaxed">${tier.desc}</p>
+          
+          <!-- Draggable Before/After Slider -->
+          <div class="mb-4 shadow-sm rounded-xl overflow-hidden border border-gray-100">
+            ${baCard(tier.before, tier.after, 'Before', 'After', 240)}
+          </div>
+
+          <ul class="space-y-2 mb-6">
+            ${featuresHtml}
+          </ul>
+        </div>
+
+        <a href="order.html" class="w-full text-center py-3.5 rounded-xl font-bold text-xs transition-all duration-200 block ${isStandard ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-md hover:shadow-lg' : 'bg-gray-900 hover:bg-orange-500 text-white'}">
+          Order ${tier.level} Package (${tier.price || ''}) →
+        </a>
+      </div>`;
+  }
+
+  function renderSolutionsSection(svc) {
+    const tierCardsHtml = (svc.tierProjects || []).map(t => `<div class="reveal">${tierProjectCard(t)}</div>`).join('');
+    const faqHtml = (svc.solutions || []).map((s, i) => solutionItem(s, i)).join('');
+
+    return `
+      <!-- ③ Solutions & Tier Showcase Section -->
+      <section id="solutions" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <!-- Section Header -->
+          <div class="mb-14 reveal text-center max-w-3xl mx-auto">
+            <div class="flex items-center justify-center gap-2 mb-3">
+              <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
+              <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Solutions &amp; Packages</span>
+              <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
+            </div>
+            <h2 class="font-display font-extrabold text-3xl md:text-4xl text-gray-900 mb-4">
+              Basic, Standard &amp; Advanced Packages
+            </h2>
+            <p class="text-gray-500 text-sm md:text-base leading-relaxed">
+              Explore the exact editing scope delivered at every tier. Drag the Before &amp; After slider on any project below to inspect the transformation.
+            </p>
+          </div>
+
+          <!-- 3-Tier Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 items-stretch">
+            ${tierCardsHtml}
+          </div>
+
+          <!-- FAQ Accordion -->
+          <div class="max-w-3xl mx-auto pt-10 border-t border-gray-100">
+            <div class="mb-8 reveal">
+              ${sectionHeader('FAQ', 'Frequently Asked Questions')}
+              <p class="text-gray-500 text-sm">Click any question to view detailed explanations.</p>
+            </div>
+            <div class="space-y-3">
+              ${faqHtml}
+            </div>
+          </div>
+        </div>
+      </section>`;
+  }
+
+  function renderWhatWeDoneSection(svc) {
+    return `
+      <!-- ④ What We've Done Section (Full Portfolio Gallery from old portfolio.html) -->
+      <section id="portfolio" class="py-24 px-6" style="background:#0F172A">
+        <div class="max-w-7xl mx-auto">
+
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 reveal">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="w-2 h-2 rounded-full shrink-0" style="background:var(--orange)"></span>
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Our Portfolio</span>
+              </div>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-white">
+                What We've <span style="color:var(--orange)">Done</span>
+              </h2>
+              <p class="text-gray-400 mt-2 text-sm max-w-xl">
+                Browse our full real estate editing portfolio across every service — from HDR blending to virtual staging before &amp; after.
+              </p>
+            </div>
+            ${svc.checkOutMoreLink ? `
+              <a href="${svc.checkOutMoreLink}" target="_blank" rel="noopener" class="btn-primary font-semibold px-6 py-3.5 rounded-xl text-sm shrink-0 inline-flex items-center gap-2">
+                View Drive Gallery ↗
+              </a>
+            ` : ''}
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap gap-2.5 mb-10" id="filter-tabs">
+            <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="all" onclick="filterWork('all',this)">All Work</button>
+            <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="hdr" onclick="filterWork('hdr',this)">Photo Editing</button>
+            <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="removal" onclick="filterWork('removal',this)">Item Removal</button>
+            <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="staging" onclick="filterWork('staging',this)">Virtual Staging</button>
+            <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="dusk" onclick="filterWork('dusk',this)">Day to Dusk</button>
+            <button class="filter-tab text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:border-orange-500 transition-all duration-200" data-cat="renovation" onclick="filterWork('renovation',this)">Virtual Renovation</button>
+          </div>
+
+          <!-- Portfolio Cards Grid (Full items from old portfolio.html) -->
+          <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- ── PHOTO EDITING (HDR) ── -->
+            <div class="portfolio-card lg:col-span-2 relative overflow-hidden rounded-2xl cursor-pointer group border border-slate-800 h-72" data-cat="hdr">
+              <img src="images/BAS/PE/DSC02237_1.jpg" alt="HDR Blending result" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                <div>
+                  <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+                  <p class="text-white font-display font-bold text-xl">Window Pull &amp; Ambient Blend</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer group border border-slate-800 h-72" data-cat="hdr">
+              <img src="images/BAS/PE/DSC02242_1.jpg" alt="HDR Blending" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                <div>
+                  <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+                  <p class="text-white font-display font-bold text-lg">Living Room — Natural Light</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer group border border-slate-800 h-64" data-cat="hdr">
+              <img src="images/BAS/PE/DSC02272_1.jpg" alt="HDR Blending" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                <div>
+                  <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+                  <p class="text-white font-display font-bold text-lg">Bedroom Detail Shot</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer group border border-slate-800 h-64" data-cat="hdr">
+              <img src="images/BAS/PE/IMG_0015_1.jpg" alt="HDR Blending" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                <div>
+                  <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+                  <p class="text-white font-display font-bold text-lg">Kitchen — Warm Tones</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-card relative overflow-hidden rounded-2xl cursor-pointer group border border-slate-800 h-64" data-cat="hdr">
+              <img src="images/BAS/PE/IMG_0020_1.jpg" alt="HDR Blending" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                <div>
+                  <span class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-2" style="background:var(--orange);color:#fff">Photo Editing</span>
+                  <p class="text-white font-display font-bold text-lg">Dining Room</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── ITEM REMOVAL (Before/After Sliders) ── -->
+            <div class="rounded-2xl overflow-hidden h-64 border border-slate-800 shadow-xl" data-cat="removal">
+              ${baCard('images/CHECKOUTS/ITEM_REMOVAL/0O2A8680.jpg', 'images/CHECKOUTS/ITEM_REMOVAL/0O2A8680_final.jpg', 'Before', 'After', 256)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-64 border border-slate-800 shadow-xl" data-cat="removal">
+              ${baCard('images/CHECKOUTS/ITEM_REMOVAL/0O2A8685.jpg', 'images/CHECKOUTS/ITEM_REMOVAL/0O2A8685_done.jpg', 'Before', 'After', 256)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-64 border border-slate-800 shadow-xl" data-cat="removal">
+              ${baCard('images/CHECKOUTS/ITEM_REMOVAL/0O2A8690.jpg', 'images/CHECKOUTS/ITEM_REMOVAL/0O2A8690_done.jpg', 'Before', 'After', 256)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-64 border border-slate-800 shadow-xl" data-cat="removal">
+              ${baCard('images/CHECKOUTS/ITEM_REMOVAL/0O2A8695.jpg', 'images/CHECKOUTS/ITEM_REMOVAL/0O2A8695_done.jpg', 'Before', 'After', 256)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-64 border border-slate-800 shadow-xl" data-cat="removal">
+              ${baCard('images/CHECKOUTS/ITEM_REMOVAL/0O2A8700.jpg', 'images/CHECKOUTS/ITEM_REMOVAL/0O2A8700_final.jpg', 'Before', 'After', 256)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-64 border border-slate-800 shadow-xl" data-cat="removal">
+              ${baCard('images/CHECKOUTS/ITEM_REMOVAL/0O2A8705.jpg', 'images/CHECKOUTS/ITEM_REMOVAL/0O2A8705_final.jpg', 'Before', 'After', 256)}
+            </div>
+
+            <!-- ── VIRTUAL STAGING (Before/After Sliders) ── -->
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="staging">
+              ${baCard('images/BAS/VIRTUAL_STAGING/0O2A9176.jpg', 'images/BAS/VIRTUAL_STAGING/0O2A9176_final.jpg', 'Before', 'After', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="staging">
+              ${baCard('images/BAS/VIRTUAL_STAGING/0O2A9182.jpg', 'images/BAS/VIRTUAL_STAGING/0O2A9182_final.jpg', 'Before', 'After', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="staging">
+              ${baCard('images/BAS/VIRTUAL_STAGING/0O2A9543.jpg', 'images/BAS/VIRTUAL_STAGING/0O2A9543_final.jpg', 'Before', 'After', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="staging">
+              ${baCard('images/BAS/VIRTUAL_STAGING/1126BobbieLane-28.jpg', 'images/BAS/VIRTUAL_STAGING/1126BobbieLane-28_final.jpg', 'Before', 'After', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="staging">
+              ${baCard('images/BAS/VIRTUAL_STAGING/DSC01838.jpg', 'images/BAS/VIRTUAL_STAGING/DSC01838_final.jpg', 'Before', 'After', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="staging">
+              ${baCard('images/BAS/VIRTUAL_STAGING/DSC01861.jpg', 'images/BAS/VIRTUAL_STAGING/DSC01861_final.jpg', 'Before', 'After', 288)}
+            </div>
+
+            <!-- ── DAY TO DUSK (Before/After Sliders) ── -->
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="dusk">
+              ${baCard('images/BAS/DTD/f3653632.DTE.jpg', 'images/BAS/DTD/f3653632.jpg', 'Day', 'Dusk', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="dusk">
+              ${baCard('images/BAS/DTD/0O2A3573.DTE.jpg', 'images/BAS/DTD/0O2A3573.jpg', 'Day', 'Dusk', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="dusk">
+              ${baCard('images/BAS/DTD/0O2A3560.DTE.1.jpg', 'images/BAS/DTD/0O2A3560.jpg', 'Day', 'Dusk', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="dusk">
+              ${baCard('images/BAS/DTD/0O2A3565.DTE_1.jpg', 'images/BAS/DTD/0O2A3565.jpg', 'Day', 'Dusk', 288)}
+            </div>
+
+            <!-- ── VIRTUAL RENOVATION (Before/After Sliders) ── -->
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="renovation">
+              ${baCard('images/BAS/RENOVATION/01122303.jpg', 'images/BAS/RENOVATION/01122303_.jpg', 'Before', 'After', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="renovation">
+              ${baCard('images/BAS/RENOVATION/01122310.jpg', 'images/BAS/RENOVATION/01122310_.jpg', 'Before', 'After', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="renovation">
+              ${baCard('images/BAS/RENOVATION/01122323_Room2.jpg', 'images/BAS/RENOVATION/01122323_Room2_.jpg', 'Before', 'After', 288)}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="renovation">
+              ${baCard('images/BAS/RENOVATION/DSC09914.jpg', 'images/BAS/RENOVATION/DSC09914_1.jpg', 'Before', 'After', 288)}
+            </div>
+
+          </div>
+
+        </div>
+      </section>`;
+  }
+
+  /* ──────────────────────────────────
      MAIN RENDER
   ────────────────────────────────── */
   function renderService(id) {
     const svc = SERVICES[id];
     if (!svc) return;
+    // Pick 3 distinct "after" gallery images — prefer checkOut, fall back to projects, then hero
+    const g1 = svc.checkOut && svc.checkOut[0] ? svc.checkOut[0] : svc.hero.after;
+    const g2 = svc.checkOut && svc.checkOut[1] ? svc.checkOut[1]
+              : (svc.projects && svc.projects[0] ? svc.projects[0].after : svc.hero.before);
+    const g3 = svc.checkOut && svc.checkOut[2] ? svc.checkOut[2]
+              : (svc.projects && svc.projects[1] ? svc.projects[1].after : svc.hero.after);
 
     const html = `
-      <!-- ① Service hero + BA slider -->
-      <div class="relative" style="height:560px">
-        ${baCard(svc.hero.before, svc.hero.after, 'Before', 'After', 560)}
-        <div class="service-hero-overlay"></div>
-        <div class="service-hero-text">
-          <div>
-            <span class="inline-block text-xs font-bold px-3 py-1.5 rounded-full mb-3" style="background:var(--orange);color:#fff">${svc.name}</span>
-            <h1 class="font-display font-extrabold text-4xl md:text-5xl text-white mb-2 drop-shadow-lg">${svc.subtitle}</h1>
-            <p class="text-white/80 text-base max-w-md drop-shadow">Drag the slider to compare before &amp; after.</p>
+      <!-- ① Service hero — split layout: info left / gallery right -->
+      <div class="svc-hero-split">
+
+        <!-- Left: service info panel -->
+        <div class="svc-split-left">
+          <div class="svc-split-inner">
+
+            <!-- Eyebrow tag -->
+            <div class="svc-split-eyebrow">
+              <span class="svc-split-dot"></span>
+              <span>${svc.name}</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="svc-split-headline">${svc.subtitle}</h1>
+
+            <!-- Short desc -->
+            <p class="svc-split-desc">
+              Professional results delivered within 24 hours. Every order includes a free revision guarantee.
+            </p>
+
+            <!-- Trust stats -->
+            <div class="svc-trust-row">
+              <div class="svc-trust-item">
+                <span class="svc-trust-num">500<span class="svc-trust-accent">+</span></span>
+                <span class="svc-trust-label">Projects Done</span>
+              </div>
+              <div class="svc-trust-divider"></div>
+              <div class="svc-trust-item">
+                <span class="svc-trust-num">24<span class="svc-trust-accent">h</span></span>
+                <span class="svc-trust-label">Turnaround</span>
+              </div>
+              <div class="svc-trust-divider"></div>
+              <div class="svc-trust-item">
+                <span class="svc-trust-num svc-trust-accent">Free</span>
+                <span class="svc-trust-label">Revision</span>
+              </div>
+            </div>
+
+            <!-- CTA buttons -->
+            <div class="svc-split-ctas">
+              <a href="order.html" class="btn-primary font-semibold px-7 py-3.5 rounded-xl text-sm inline-flex items-center gap-2">
+                Place an Order
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 7h8M8 4l3 3-3 3"/></svg>
+              </a>
+              <a href="#solutions" class="svc-split-ghost-btn">
+                See Examples
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M11 5l-5 5 5 5"/><path d="M6 10h10" transform="rotate(-90 9 10)"/></svg>
+              </a>
+            </div>
+
           </div>
         </div>
+
+        <!-- Right: photo mosaic gallery -->
+        <div class="svc-split-right">
+          <!-- Main large image -->
+          <div class="svc-mosaic-main">
+            <img src="${g1}" alt="${svc.name} result" loading="eager" />
+            <span class="svc-mosaic-badge">After</span>
+          </div>
+          <!-- Side stack: 2 smaller images -->
+          <div class="svc-mosaic-side">
+            <div class="svc-mosaic-sm">
+              <img src="${g2}" alt="${svc.name} sample" loading="lazy" />
+              <span class="svc-mosaic-badge">After</span>
+            </div>
+            <div class="svc-mosaic-sm">
+              <img src="${g3}" alt="${svc.name} sample" loading="lazy" />
+              <span class="svc-mosaic-badge">After</span>
+            </div>
+          </div>
+          <!-- Floating label chip -->
+          <div class="svc-mosaic-chip">
+            <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M4.5 6.5l1.5 1.5 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Verified results — real projects
+          </div>
+        </div>
+
       </div>
 
       <!-- ② Why Choose Us -->
@@ -702,60 +1168,13 @@
         </div>
       </section>
 
-      <!-- ③ Get Right Solutions -->
-      <section class="py-20 px-6 bg-white">
-        <div class="max-w-3xl mx-auto">
-          <div class="mb-10 reveal">
-            ${sectionHeader('Solutions', 'Get the Right Solution<br>for Your Business')}
-            <p class="text-gray-500 max-w-md">Click any question below to see a detailed explanation with a live before &amp; after example.</p>
-          </div>
-          <div class="space-y-3">
-            ${svc.solutions.map((s, i) => solutionItem(s, i)).join('')}
-          </div>
-        </div>
-      </section>
+      <!-- ③ Solutions & Tier Showcase Section -->
+      ${renderSolutionsSection(svc)}
 
-      <!-- ③b Compare by Plan -->
-      <section class="py-20 px-6" style="background:#F5F5F5">
-        <div class="max-w-7xl mx-auto">
-          <div class="mb-12 reveal text-center">
-            <div class="flex items-center justify-center gap-2 mb-3">
-              <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
-              <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">Plans</span>
-              <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
-            </div>
-            <h2 class="font-display font-extrabold text-3xl md:text-4xl text-gray-900">${svc.planSteps.length}-Step ${svc.planWord} Process</h2>
-          </div>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-${svc.plans.length} gap-6 items-start">
-            ${svc.plans.map(p => `<div class="reveal">${planStepsCard(svc, p)}</div>`).join('')}
-          </div>
-        </div>
-      </section>
+      <!-- ④ What We've Done Section (Full Portfolio Gallery from old portfolio.html) -->
+      ${renderWhatWeDoneSection(svc)}
 
-      <!-- ④ Check Out What We Do -->
-      <section class="py-20 px-6" style="background:#F5F5F5">
-        <div class="max-w-7xl mx-auto">
-          <div class="mb-10 reveal">
-            ${sectionHeader('Gallery', 'Check Out What We Do')}
-          </div>
-          ${checkOutGrid(svc.checkOut, svc.checkOutMoreLink)}
-        </div>
-      </section>
-
-      <!-- ⑤ Project Before & After -->
-      <section class="py-20 px-6 bg-white">
-        <div class="max-w-7xl mx-auto">
-          <div class="mb-10 reveal">
-            ${sectionHeader('Projects', 'Project Before &amp; After')}
-            <p class="text-gray-500">Drag the slider on each image to compare the original shot with the finished edit.</p>
-          </div>
-          ${projectBAGrid(svc.projects)}
-        </div>
-      </section>
-
-      <!-- ⑤b Extra section — only renders when THIS service defines
-           svc.extraSection (raw HTML string). Leave it unset on every
-           other service and it stays invisible there. -->
+      <!-- ⑤b Extra section — only renders when THIS service defines extraSection -->
       ${svc.extraSection || ''}
 
       <!-- ⑥ CTA -->
@@ -772,7 +1191,7 @@
           <p class="text-gray-400 text-lg mb-10 max-w-lg mx-auto">Upload your photos, choose your plan, and our editors start within the hour. Results in 12–24 hours.</p>
           <div class="flex flex-wrap gap-4 justify-center">
             <a href="order.html" class="btn-primary font-semibold px-8 py-4 rounded-xl text-sm">Place an Order →</a>
-            <a href="portfolio.html" class="border-2 border-gray-600 text-gray-300 font-semibold text-sm px-8 py-4 rounded-xl transition-colors hover:border-white hover:text-white">View Portfolio</a>
+            <a href="#portfolio" class="border-2 border-gray-600 text-gray-300 font-semibold text-sm px-8 py-4 rounded-xl transition-colors hover:border-white hover:text-white">View Portfolio</a>
           </div>
         </div>
       </section>
@@ -801,6 +1220,12 @@
     window.initBASliders(content);
     window.initReveal(content);
     window.initSolutionToggles();
+
+    // Auto-highlight active service category tab in What We've Done section
+    const activeTab = document.querySelector(`.filter-tab[data-cat="${id}"]`) || document.querySelector('.filter-tab[data-cat="all"]');
+    if (activeTab && typeof window.filterWork === 'function') {
+      window.filterWork(id, activeTab);
+    }
 
     // Update active tab
     document.querySelectorAll('.service-tab').forEach(t => {
