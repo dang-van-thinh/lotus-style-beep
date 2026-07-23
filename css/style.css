@@ -885,7 +885,7 @@ h1, h2, h3, .font-display {
   overflow: hidden;
   transition: max-height 0.5s var(--ease);
 }
-.solution-body.open { max-height: 700px; }
+.solution-body.open { max-height: 2000px; }
 .solution-body-inner { padding: 0 24px 24px; }
 .solution-chevron {
   flex-shrink: 0;

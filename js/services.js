@@ -690,7 +690,7 @@
 
   function solutionItem(item, idx) {
     const baHtml = (item.before && item.after)
-      ? `<div class="mt-5">${baCard(item.before, item.after, 'Before', 'After', 260)}</div>`
+      ? `<div class="mt-5">${baCard(item.before, item.after, 'Before', 'After', 380)}</div>`
       : '';
     return `
       <div class="solution-item" id="sol-${idx}">
@@ -702,7 +702,7 @@
         </button>
         <div class="solution-body" id="sol-body-${idx}">
           <div class="solution-body-inner">
-            <p class="text-gray-500 text-sm leading-relaxed">${item.text}</p>
+            <p class="text-gray-500 text-sm leading-relaxed mb-3">${item.text}</p>
             ${baHtml}
           </div>
         </div>
@@ -876,11 +876,40 @@
               ${faqHtml}
             </div>
           </div>
+
+          <!-- Service Before & After Projects (Right after FAQ) -->
+          ${svc.projects && svc.projects.length ? `
+            <div class="pt-14 mt-16 border-t border-gray-100">
+              <div class="mb-10 reveal text-center max-w-2xl mx-auto">
+                <div class="flex items-center justify-center gap-2 mb-2">
+                  <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
+                  <span class="text-xs font-bold text-gray-400 uppercase tracking-[0.18em]">${svc.name} Showcase</span>
+                  <span class="w-2 h-2 rounded-full" style="background:var(--orange)"></span>
+                </div>
+                <h3 class="font-display font-extrabold text-2xl md:text-3xl text-gray-900 mb-2">
+                  ${svc.name} Before &amp; After Projects
+                </h3>
+                <p class="text-gray-500 text-sm">
+                  Drag the slider on any project below to inspect the detailed transformation for ${svc.name}.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                ${svc.projects.map(p => `
+                  <div class="reveal rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white">
+                    ${baCard(p.before, p.after, 'Before', 'After', 270)}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
         </div>
       </section>`;
   }
 
   function renderWhatWeDoneSection(svc) {
+    const checkoutThumbs = svc.checkOut || [];
     return `
       <!-- ④ What We've Done Section (Full Portfolio Gallery from old portfolio.html) -->
       <section id="portfolio" class="py-24 px-6" style="background:#0F172A">
@@ -1051,11 +1080,40 @@
               ${baCard('images/BAS/RENOVATION/01122323_Room2.jpg', 'images/BAS/RENOVATION/01122323_Room2_.jpg', 'Before', 'After', 288)}
             </div>
 
-            <div class="rounded-2xl overflow-hidden h-72 border border-slate-800 shadow-xl" data-cat="renovation">
-              ${baCard('images/BAS/RENOVATION/DSC09914.jpg', 'images/BAS/RENOVATION/DSC09914_1.jpg', 'Before', 'After', 288)}
-            </div>
-
           </div>
+
+          <!-- Checkout Completed Works Gallery (Service-Specific) -->
+          ${checkoutThumbs.length ? `
+            <div class="pt-12 mt-12 border-t border-slate-800">
+              <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+                <div>
+                  <h3 class="font-display font-bold text-xl text-white flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full" style="background:var(--orange)"></span>
+                    Completed MLS-Ready Results — ${svc.name}
+                  </h3>
+                  <p class="text-slate-400 text-xs mt-1">High-resolution verified output samples for ${svc.name}</p>
+                </div>
+                ${svc.checkOutMoreLink ? `
+                  <a href="${svc.checkOutMoreLink}" target="_blank" rel="noopener" class="btn-primary font-semibold px-5 py-2.5 rounded-xl text-xs shrink-0 inline-flex items-center gap-2">
+                    View Full Drive Gallery ↗
+                  </a>
+                ` : `<span class="text-xs text-slate-400 font-medium">${checkoutThumbs.length} Samples</span>`}
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                ${checkoutThumbs.map(src => `
+                  <div class="portfolio-thumb rounded-xl overflow-hidden h-48 group relative cursor-pointer border border-slate-800 bg-slate-950">
+                    <img src="${src}" alt="${svc.name} sample" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                      <span class="text-xs font-semibold text-white flex items-center gap-1.5">
+                        <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" stroke="#FF9500" stroke-width="1.4"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#FF9500" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Verified Output
+                      </span>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
 
         </div>
       </section>`;
@@ -1168,11 +1226,8 @@
         </div>
       </section>
 
-      <!-- ③ Solutions & Tier Showcase Section -->
+      <!-- ③ Solutions & Tier Showcase Section (Includes Packages, FAQ & Before/After Projects) -->
       ${renderSolutionsSection(svc)}
-
-      <!-- ④ What We've Done Section (Full Portfolio Gallery from old portfolio.html) -->
-      ${renderWhatWeDoneSection(svc)}
 
       <!-- ⑤b Extra section — only renders when THIS service defines extraSection -->
       ${svc.extraSection || ''}
@@ -1191,7 +1246,7 @@
           <p class="text-gray-400 text-lg mb-10 max-w-lg mx-auto">Upload your photos, choose your plan, and our editors start within the hour. Results in 12–24 hours.</p>
           <div class="flex flex-wrap gap-4 justify-center">
             <a href="order.html" class="btn-primary font-semibold px-8 py-4 rounded-xl text-sm">Place an Order →</a>
-            <a href="#portfolio" class="border-2 border-gray-600 text-gray-300 font-semibold text-sm px-8 py-4 rounded-xl transition-colors hover:border-white hover:text-white">View Portfolio</a>
+            <a href="#solutions" class="border-2 border-gray-600 text-gray-300 font-semibold text-sm px-8 py-4 rounded-xl transition-colors hover:border-white hover:text-white">View Solutions</a>
           </div>
         </div>
       </section>
